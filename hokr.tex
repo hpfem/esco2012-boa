@@ -1,0 +1,59 @@
+\title{Comparison of Finite Volume Method and Particle Tracking Method on the Solution of Complex Solute Transport Problem}
+\tocauthor{M. Hokr} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Milan Hokr}}\\
+Technical University of Liberec\\
+{\tt milan.hokr@tul.cz}
+\\ \vspace{4mm}{\large Jiri Havlicek}\\
+Technical University of Liberec\\
+{\tt jiri.havlicek@tul.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+The background of problem we solve is the role of mechanical stress effects on hydraulic properties
+of fractured rock \cite{bag}. We consider several variations of 2D fracture network (set of lines in a plane), differing
+by aperture and the hydraulic conductivity of fractures over several orders of magnitude, given by set of
+different ratios of external mechanical stress field applied in x and y direction \cite{hud}.
+On such tasks we solve equations of water flow and solute transport using Flow123D software, developed at
+Technical university of Liberec \cite{flow123}. The flow equation is solved by the mixed-hybrid finite element method.
+The advective transport equation is solved by the finite volume method, with upwind weighting and
+explicit time steps. We evaluate the breakthrough curve and the residence time, that is determined as a
+weighted average of time for each part of the mass on the output for each time step of calculation.
+We compare our results with calculations produced by the software NAPSAC, using standard finite
+element method for flow and  particle tracking method for solute transport calculation. The
+residence time value is a direct result of calculation for each particle \cite{pol}.
+The present comparison follows the previous work comparing the results of flow only \cite{hokr}. We obtain
+a comparison of two principles of the transport solution -- continuous and discrete approach -- to the data
+and geometrically complex task. Both methods produce consistent results with diference in ``tails'' of
+the breakthrough curves, where only small number of particles and small mass remains in the domain.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{bag}
+{\sc A. Baghbanan and L. Jing}. {Stress Effects on Permeability in Fractured Rock Mass with Correlated Fracture Length and Aperture}. Int. J. of Rock Mech. and Min. Sci. 45(8), pp. 1320-1334, 2008.
+
+
+
+\bibitem{hud}
+{\sc J. Hudson and L. Jing and I. Neretnieks}. {Technical Defnition of the 2-D BMT Problem for Task C}. Technical report, DECOVALEX-2011 project, 2008.
+
+
+
+\bibitem{flow123}
+{\sc O. Severyn and M. Hokr and J. Kralovcova and J. Kopal and M. Tauchman}. {Flow123D: Numerical Simulation Software for Flow and Solute Transport Problems in Combination of Fracture Network and Continuum}. Technical report, Technical University of Liberec, Liberec, Czech Republic, 2008.
+
+
+
+\bibitem{pol}
+{\sc M. Polak}. {Transport Simulation Using Particle Tracking Method}. Technical report, Progeo Ltd., Czech Republic, 2010.
+
+
+
+\bibitem{hokr}
+{\sc M. Hokr and J. Kopal and J. Brezina and P. Ralek}. {Sensitivity of Results of the Water Flow Problem in a Discrete Fracture Network with Large Coefficient Differences}. In: I. Dimov et al (Eds.): NMA 2010, LNCS 6046, pp. 420-427, Springer, 2011.
+
+\end{thebibliography}

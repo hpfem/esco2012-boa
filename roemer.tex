@@ -1,0 +1,37 @@
+\title{Sensitivity Analysis Techniques for the Quantification of Uncertainty in Electromagnetic Simulations}
+\tocauthor{U. Roemer} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Ulrich R\"omer}\\
+Technische Universit\"at Darmstadt\\
+{\tt roemer@temf.tu-darmstadt.de}
+\\ \vspace{4mm}{\large Stephan Koch}\\
+Technische Universit\"at Darmstadt\\
+{\tt koch@temf.tu-darmstadt.de}
+\\ \vspace{4mm}{\large Thomas Weiland}\\
+Technische Universit\"at Darmstadt\\
+{\tt weiland@temf.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+The input parameters of models used for the simulation of technical devices exhibit uncertainties, e.g., due to the manufacturing process. Consequently, the model outputs, representing physical quantities of interest, also deviate from their nominal values. The quantification of these uncertainties is important with respect to the reliability of numerical simulations. Given the statistical descriptions of the input uncertainty, the problem can be treated systematically in a probabilistic setting. On the contrary, deterministic approaches, where tolerance bounds and statistics of the outputs are determined by perturbation techniques, may prove useful in several situations \cite{Babuska,Harbrecht}. Restrictive design specifications, for instance, may only require worst case tolerances. Moreover, cheap and efficient approximation schemes can be obtained. Therefore, this work addresses deterministic techniques for the quantification of uncertainty, mainly applied to low-frequency approximations of Maxwell's equations. Special emphasis is put on sensitivity analysis techniques for the variation of geometrical parameters \cite{Hiptmair}. Equally, variations in the material parameters as well as sources will be considered. Numerical examples obtained by the Finite Element Method will be given and discussed.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Babuska}
+{\sc I. Babu\v{s}ka and F. Nobile and R. Tempone}. {Worst case scenario analysis for elliptic problems with uncertainty}. Numerische Mathematik, 101(2):185-219, 2005.
+
+
+
+\bibitem{Harbrecht}
+{\sc Helmut Harbrecht}. {On output functionals of boundary value problems on stochastic domains}. Mathematical Methods in the Applied Sciences, 33(1):91102, 2010.
+
+
+
+\bibitem{Hiptmair}
+{\sc Ralf Hiptmair and Jingzhi Li}. {Shape derivatives in differential forms I: An intrinsic perspective}. Technical Report 2011/42, Seminar for Applied Mathematics, ETH Z\"urich, 2011.
+
+\end{thebibliography}

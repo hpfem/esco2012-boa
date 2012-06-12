@@ -1,0 +1,31 @@
+\title{GPU Implementation of K-cycle AMG for General Purpose Fluid Flow Solvers}
+\tocauthor{M. Emans} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Maximilian Emans}, Manfred Liebmann}\\
+Johann Radon Institute for Computational and Applied Mathematics\\
+{\tt maximilian.emans@avl.com}
+
+\end{center}
+
+\section*{Abstract}
+
+Krylov-acceleration on each grid level of an AMG algorithm and adaptive recursive preconditioning as introduced by Axelsson and Vassilevski [1] and presented in compact form by Notay [2] has been shown to be very efficient in the context of linear solvers within general purpose industrial CFD software, see e.g. Emans [3]. We present an implementation of such an algorithm on GPU: This implementation relies on a modified storage format of the matrices associated with the problem on different grid levels and on a related specialised representation of the grid transfer operators. Moreover, different aggregation techniques are examined, aiming at the minimisation of the computational effort for the setup that is not readily accelerated on GPU. The speed-up GPU vs. CPU of our implementation of the Krylov-accelerated AMG is shown to lie in the range of reported speed-up of conventional algebraic multigrid algorithms.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{notay-vassilevski}
+{\sc O. Axelsson and P.S. Vassilevski}. {Variable-step Multilevel Preconditioning Methods, {I}: Self-adjoint and Positive Definite Elliptic Problems}. Numerical Linear Algebra with Applications 1 pp. 75--101, 1994.
+
+
+
+\bibitem{notay-etna}
+{\sc Y. Notay}. {An aggregation-based algebraic multigrid method}. Electronic Transactions on Numerical Analysis, 37, pp. 123-146. 2010.
+
+
+
+\bibitem{emans-SIAM}
+{\sc M. Emans}. {Benchmarking aggregation {AMG} for linear systems in {CFD} simulations of compressible internal flows}. Electronic Transactions on Numerical Analysis, 37, pp. 351--366, 2010.
+
+\end{thebibliography}

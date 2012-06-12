@@ -1,0 +1,41 @@
+\title{Flows in Convergent Channel - Comparison of Numerical Results of Different Mathematical Models}
+\tocauthor{P. Porizkova} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Petra Po\v{r}\'izkov\'a}\\
+Czech Technical University in Prague\\
+{\tt puncocha@marian.fsik.cvut.cz}
+\\ \vspace{4mm}{\large Karel Kozel}\\
+Institute of Thermomechanics Academy of Sciences\\
+{\tt Karel.Kozel@fs.cvut.cz}
+\\ \vspace{4mm}{\large Jarom\'ir Hor\'a\v{c}ek}\\
+Institute of Thermomechanics Academy of Sciences\\
+{\tt jaromirh@it.cas.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This study deals with numerical solution of 2D unsteady flow of compressible and incompressible viscous fluid in convergent channel for low inlet airflow velocity. Authors present four mathematical models based on system of Navier-Stokes equations for laminar flow and compare numerical results of the models in the channel.
+The unsteadiness of the flow is caused by a prescribed periodic motion of a part of the channel wall with large amplitudes, nearly closing the channel during oscillations.
+The numerical solution is implemented using the finite volume method (FVM) and the predictor-corrector MacCormack scheme with Jameson artificial viscosity using a grid of quadrilateral cells. The unsteady grid of quadrilateral cells is considered in the form of conservation laws using Arbitrary Lagrangian-Eulerian method.
+The numerical results, acquired from a developed program, are presented for inlet velocity $\hat u_{\infty}=4.12 {\rm ms^{-1}}$ and Reynolds number Re$_{\infty}$ = $4 \times 10^3$ and the wall motion frequency 100 Hz.
+Goal of this work is to describe mathematical model of flow in 2D convergent channel which involves attributes of real flow as is ``Coand\u{a} phenomenon'', vortex convection and diffusion, jet flapping etc. along with lower call on computer time, due to later extension in 3D channel flow. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{porizkovaIM}
+{\sc P. Pun\v{c}och\'a\v{r}ov\'a - Po\v{r}\'izkov\'a and J. Hor\'a\v{c}ek and K. Kozel and J. F\"urst}. {Numerical simulation of unsteady compressible low Mach number flow in a channel}. Engineering mechanics, {\bf 17}(2), 83-97, 2010..
+
+
+
+\bibitem{CaF2011}
+{\sc P. Po\v{r}\'izkov\'a and K. Kozel and J. Hor\'a\v{c}ek}. {Flow in a Channel with Vibrating Walls - Influence of the Frequency}. Computers \& Fluids, {\bf 46}(1), 404-410, 2011. ISSN 0045-7930..
+
+
+
+\bibitem{MaCinS2010}
+{\sc P. Pun\v{c}och\'a\v{r}ov\'a - Po\v{r}\'izkov\'a and J. F\"{u}rst and J. Hor\'a\v{c}ek and K. Kozel}. {Numerical Solutions of Unsteady Flows with Low Inlet Mach Numbers}. Mathematics and Computers in Simulation, {\bf 80}(8), 1795-1805, 2010. ISSN 0378-4754..
+
+\end{thebibliography}

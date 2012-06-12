@@ -1,0 +1,44 @@
+\title{An Error Minimized Pseudospectral Penalty Direct Poisson Solver}
+\tocauthor{T.-L. Horng} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Tzyy-Leng Horng}\\
+Feng Chia University\\
+{\tt tlhorng123@gmail.com}
+
+\end{center}
+
+\section*{Abstract}
+
+This paper presents a direct Poisson solver based on an error minimized Chebyshev pseudospectral
+penalty formulation for problems defined on rectangular domains. The current method is based
+on eigenvalue-eigenvector matrix diagonalization methods developed long time before and elaborated
+by Chen, Su, and Shizgal (2000). However, this kind of fast Poisson solvers utilizing pseudospectral
+discretization is usually restricted to periodic or Dirichlet boundary conditions only for
+efficient implementation. Enforcement of Neumann or Robin boundary conditions requests messive
+row operations that reduces the easiness of operation. The current method can easily accommodate all
+three types of boundary conditions: Dirichlet, Neumann, and Robin boundary conditions. The reason
+for that is that it employs penalty method. Besides, the penalty parameters are determined analytically
+such that the discrete L2 error is minimized. 2D and 3D numerical experiments are conducted and the
+results show that the penalty scheme computes numerical solutions with better accuracy, compared
+to the traditional approaches with boundary conditions enforced strongly. The current method can
+be extended to generally linear 2nd order elliptic-type partial differential boundary value problems
+with arbitrary coefficients with only one restrction that those arbitrary coefficients must be able to be
+separable to coordinate-variable functions. Under this generalization, this method can be surely applied
+to solve famous Helmholtz equation too. As to computing efficiency, the asymptotic operation
+count for current method in 3D case is 2NxNyNz(Nx + Ny + Nz), and its counterpart for 2D case
+is 2NxNy(Nx + Ny). Obviously, it is far superior to method expressing Laplace operator in tensor
+product. For an FFT-based method the asymptotic operation count is basically 2NxNyNz(log(Nx) +
+log(Ny) + log(Nz)) for 3D case, and 2NxNy(log(Nx) + log(Ny)) for 2D case. Indeed, the current
+method which relies on extensive matrix-matrix multiplications is inferior to FFT-based methods
+in theory. However, this inferiority also depends on hardware. For moderate Nx, Ny, and Nz, it is not
+necessarily inferior in computers nowadays. Of course, for large grid resolution, FFTbased methods
+remain the the best choice if handling boundary conditions is not a problem.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Chen-Su-Shizgal}
+{\sc H. Chen and Y. Su and B.D. Shizgal}. {A Direct Spectral Collocation Poisson Solver in Polar and Cylinder Coordinates}. J. Comput. Phys. 160 (2000) 453-469.
+
+\end{thebibliography}

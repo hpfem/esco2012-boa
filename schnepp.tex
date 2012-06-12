@@ -1,0 +1,32 @@
+\title{An Efficient Dynamic $hp$-Discontinuous Galerkin Formulation for Time-Domain Electromagnetics}
+\tocauthor{S. Schnepp} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Sascha Schnepp}\\
+Graduate School CE, TU Darmstadt\\
+{\tt schnepp@gsc.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+The discontinuous Galerkin method (DGM) \cite{reed} received considerable development over the past two decades leading it to a mature state. In many cases the DGM is applied in a spectral-like manner on static meshes using a fixed approximation order throughout all elements. The strictly local support of the basis functions, however, renders the method highly suitable for adapting the local element size, $h$, as well as the local approximation order, $p$, in an element-wise fashion based on the local solution behavior.
+In this talk a DG formulation on hexahedral meshes \cite{cohen} supporting dynamic $hp$-refinement \cite{houston} containing high-level hanging nodes and anisotropic refinement in both, $h$ and $p$, is presented. During the development special care of the computational efficiency of the basic algorithm and the adaptation procedures has been taken. The method is especially successful for multi-scale problems, where the adaptive approach leads to significant savings in computational resources and time.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{reed}
+{\sc W. Reed and T. Hill}. {Triangular mesh methods for the neutron transport equation}. Tech. rep., Los Alamos Scientific Laboratory Report (1973).
+
+
+
+\bibitem{cohen}
+{\sc G. Cohen and X. Ferrieres and S. Pernet}. {A spatial high-order hexahedral discontinuous Galerkin method to solve Maxwell's equations in time domain}. J. Comput. Phys. 217 (2) (2006) 340-363.
+
+
+
+\bibitem{houston}
+{\sc P. Houston and E. S\"uli}. {A note on the design of hp-adaptive finite element methods for elliptic partial differential equations}. Comput. Method Appl. M 194 10 (2-5) (2005) 229-243.
+
+\end{thebibliography}

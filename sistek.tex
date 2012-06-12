@@ -1,0 +1,54 @@
+\title{Application of Multilevel BDDC Method to Elasticity Analysis}
+\tocauthor{J. Sistek} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Jakub \v{S}\'{\i}stek}\\
+Institute of Mathematics AS CR, Prague, Czech Republic\\
+{\tt sistek@math.cas.cz}
+\\ \vspace{4mm}{\large Jan Mandel}\\
+Department of Mathematical and Statistical Sciences, University of Colorado Denver, USA\\
+{\tt jan.mandel@ucdenver.com}
+\\ \vspace{4mm}{\large Bed\v{r}ich Soused\'{\i}k}\\
+Department of Aerospace and Mechanical Engineering, University of Southern California, Los Angeles, USA\\
+{\tt sousedik@usc.edu}
+
+\end{center}
+
+\section*{Abstract}
+
+The Balancing Domain Decomposition by Constraints (BDDC) method by Dohrmann \cite{Dohrmann-2003-PSC} 
+is one of the most advanced methods of iterative substructuring for the solution of large systems of linear algebraic
+equations arising from discretization of boundary value problems.  
+However, in the case of many substructures, solving the coarse problem exactly becomes a bottleneck. 
+
+As was mentioned already in \cite{Dohrmann-2003-PSC}, 
+for BDDC method, it is straightforward to substitute the exact solution of the coarse problem by another step of BDDC method
+with subdomains playing the role of elements. 
+In this way, the algorithm of three-level BDDC method is obtained (studied e.g. in \cite{Tu-2007-TBT3D}).
+If this approach is applied recursively, \emph{Multilevel BDDC} \cite{Mandel-2008-MMB} method is obtained.
+Unlike for other methods, such extension is natural for BDDC, since the coarse problem has the same structure as the original problem. 
+Details of the three-level BDDC algorithm (as a special case of the Multilevel BDDC algorithm) can be found in \cite{Mandel-2008-MMB}.
+
+We present a recently developed parallel implementation of the multilevel BDDC method.
+The implementation has been tested on a large 3D problems of linear elasticity.
+Results by the multilevel approach are compared to the standard (two-level) BDDC method.
+Even these preliminary results suggest which drawbacks of the two-level implementation might be overcome by the extension to more levels.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Dohrmann-2003-PSC}
+{\sc C.R. Dohrmann}. {A preconditioner for substructuring based on constrained energy minimization }. SIAM J. Sci. Comput. 25, 1 (2003), 246--258.
+
+
+
+\bibitem{Mandel-2008-MMB}
+{\sc J. Mandel and B. Soused{\'\i}k and C.R. Dohrmann}. {Multispace and multilevel {BDDC}}. Computing 83, 2-3 (2008), 55--85.
+
+
+
+\bibitem{Tu-2007-TBT3D}
+{\sc X. Tu}. {Three-level {BDDC} in three dimensions}. SIAM J. Sci. Comput. 29, 4 (2007), 1759--1780.
+
+\end{thebibliography}

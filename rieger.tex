@@ -1,0 +1,38 @@
+\title{Semi-Implicit Euler Schemes for Ordinary Differential Inclusions}
+\author{} \tocauthor{J. Rieger} \institute{}
+\maketitle
+\begin{center}
+{\large Janosch Rieger}\\
+Goethe-Universit\"{a}t Frankfurt\\
+{\tt rieger@math.uni-frankfurt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+The implicit Euler scheme for ODIs (ordinary differential inclusions) was recently shown to possess favorable
+analytical and convergence properties, in particular when the underlying ODI
+is stiff. In numerical tests, it is much more efficient than the explicit Euler scheme that represents the state of the art in set-valued dynamics (see \cite{veliov} for the only nonlinear setting in which second order convergence has been achieved). The spatial discretization of the implicit scheme, however, is problematic, because its construction involves explicit knowledge of the modulus of continuity of the right-hand side. The semi-implicit Euler schemes presented in this talk overcome this problem. In addition, their performance is significantly better than that of the fully implicit Euler scheme. The development of semi-implicit schemes for ODIs may therefore be an important step on the way to an efficient treatment of parabolic partial differential inclusions.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{beyn:rieger}
+{\sc W.-J. Beyn and J. Rieger}. { The implicit Euler scheme for one-sided Lipschitz differential inclusions}. DCDS-B 14 (2010), no. 2, 409-428 .
+
+
+
+\bibitem{baier:lempio:chahma}
+{\sc R. Baier and I. A. Chahma and F. Lempio}. {Stability and convergence of Euler's method for state-constrained differential inclusions}. SIAM J. Optim.  18  (2007),  no. 3, 1004-1026.
+
+
+
+\bibitem{sandberg}
+{\sc M. Sandberg}. {Convergence of the forward Euler method for nonconvex differential inclusions}. SIAM J. Numer. Anal.  47  (2008/09),  no. 1, 308-320.
+
+
+
+\bibitem{veliov}
+{\sc V. Veliov}. {Second order discrete approximations to strongly convex differential inclusions}. Systems Control Lett.  13  (1989),  no. 3, 263-269.
+
+\end{thebibliography}

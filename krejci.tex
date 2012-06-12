@@ -1,0 +1,51 @@
+\title{Modeling of Moisture Transfer in Soils}
+\tocauthor{T. Krejci} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Tomas Krejci}}\\
+Faculty of Civil Engineering, Czech Technical University in Prague\\
+{\tt krejci@cml.fsv.cvut.cz}
+\\ \vspace{4mm}{\large Tomas Koudelka}\\
+Faculty of Civil Engineering, Czech Technical University in Prague\\
+{\tt koudelka@cml.fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+A numerical model describing coupled hydro-mechanical behaviour of soils is presented. The paper
+deals with micro-mechanics-based model based on Lewis and Schrefler's approach of heat and mois-
+ture transfer in deforming porous media [1]. The theory of deformation of soils (soil skeleton) and
+other porous materials comes out from the concept of effective stresses [2]. Soils consists generally
+from three components - grains (skeleton), liquid (water) and gas (water vapour and air). Total stress
+in soil can be expressed as a combination of effective stress between grains and pore water pressure
+and pore gas pressure.
+Three types of equations must be solved during non-linear coupled transport problems. There
+are constitutive equations (retention curves, material properties), transport equations (Fick's law and
+Darcy's law) and continuity equations. After discretization of driving equations using finite elements
+method, a system of non-symmetric and non-linear algebraic equations is obtained, even when defor-
+mation of the solid is linear elastic. Iteration is then required within each time step.
+The moisture transfer is a very slow process. Therefore, in case of linear consolidation no iteration
+is necessary within time steps. There exists experimental evidence that such a description of consoli-
+dation by the linear elastic model for a porous medium along with the constant permeability could not
+be realistic. At least the permeability is mostly subject of variation reflecting the dependence of the
+permeability on void ratio. The CAM clay model with the bilinear form of the normal consolidation
+line (NCL) is then adopted as a suitable model which describes the effect of over-consolidation and
+structure strength on time dependent processes in soils.
+The numerical model is applied to a computer simulation of a soil consolidation process. The
+wide area of application can be found, e.g, in the structure - subsoil interaction influenced by changes
+of ground water level.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{[1]}
+{\sc R. W.  Lewis and B. A. Schrefler.}. {The finite element method in static and dynamic deformation and consolidation of porous media.}. John Wiley \& Sons, Chiester-Toronto (1998)..
+
+
+
+\bibitem{[2]}
+{\sc J. \v{S}ejnoha et. al.}. {Structure - subsoil interaction in view of transport processes in porous media.}. CTU Reports 1(5) (2001)..
+
+\end{thebibliography}

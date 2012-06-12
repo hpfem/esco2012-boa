@@ -1,0 +1,42 @@
+\title{Some Numerical Methods for Stiff Problems}
+\author{}
+\tocauthor{J. Butcher} \institute{}
+\maketitle
+\begin{center}
+{\large John Butcher}\\
+University of Auckland\\
+{\tt butcher@math.auckland.ac.nz}
+
+\end{center}
+
+\section*{Abstract}
+
+Since stiffness was identified and analysed [4], many proposals have been made on how to deal with this phenomenon. One family of methods, the  DIRK or SDIRK methods, was advocated by R. Alexander [1] but there are also advantages in the so-called singly-implicit (SIRK) methods [2], [3].
+
+This lecture will start from a central question "What numerical methods should be used for stiff problems"?  There are many alternatives both within the families of single-value methods and multivalue methods, and the answer is complicated and far from straightforward.  However, time stepping in large scientific and engineering problems is a significant computational cost and explicit methods, such as Euler or low order Runge-Kutta methods, are usually inefficient and constitutes a false economy.
+
+It is a common belief that implicit methods should be avoided because of their cost but this assumption should be challenged because highly stable methods can take large time-steps and this can often more than compensate for the cost of individual steps.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{bu1}
+{\sc R. Alexander}. {Diagonally implicit Runge-Kutta methods for stiff ODEs}. SIAM J. Numer. Anal., 14 (1977),1006-1021.
+
+
+
+\bibitem{bu2}
+{\sc K. Burrage}. {A special family of Runge--Kutta methods for solving stiff differential equations}. BIT18 (1978), 22-41.
+
+
+
+\bibitem{bu3}
+{\sc J. C. Butcher}. {A transformed implicit Runge-Kutta method}. J. Assoc. Comput. Mach. 26 (1979), 731-738.
+
+
+
+\bibitem{bu4}
+{\sc C. F. Curtiss and J. O. Hirschfelder}. {Integration of stiff equations}. Proc. Nat. Acad. Sci. U.S.A. 38 (1952), 235-243.
+
+\end{thebibliography}

@@ -1,0 +1,45 @@
+\title{Analysis and Application of PDEs with Random Parameters}
+\tocauthor{B. Schieche} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Bettina Schieche}\\
+Graduate School CE, Technische Universit\"at Darmstadt, Germany\\
+{\tt schieche@gsc.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Numerical simulations become more reliable if random effects are taken into account. To this end, uncertain parameters can be expressed by random variables or random fields, which leads to partial differential equations (PDEs) with random parameters.
+
+Common numerical methods to solve such problems are spectral methods of Galerkin type \cite{Schieche1} and stochastic collocation on sparse grids \cite{Schieche11}. We focus on the latter, because it decouples the random PDE into a set of deterministic equations.
+
+Our aim is to analyze and improve adaptive stochastic collocation methods \cite{Nobile1,Ma1,Liu1}. A problem with adaptive strategies is to provide error estimates that capture the deterministic and stochastic error, without being too costly. Therefore, a compromise between efficient error indicators and impracticle exact error estimators is required.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Schieche1}
+{\sc B. Schieche}. {Stochastische Finite Elemente}. diploma thesis, 2009.
+
+
+
+\bibitem{Schieche11}
+{\sc B. Schieche}. {Stochastic Analysis of Nusselt Numbers for Natural Convection with Uncertain Boundary Conditions}. Preprint, 2010.
+
+
+
+\bibitem{Nobile1}
+{\sc F. Nobile and R. Tempone and C.G. Webster}. {An Anisotropic Sparse Grid Stochastic Collocation Method for Partial Differential Equations with Random Input Data}. SIAM J. Numer. Anal., 46, pp 2411--2442, 2008.
+
+
+
+\bibitem{Ma1}
+{\sc X. Ma and N. Zabaras}. {An Adaptive Hierarchical Sparse Grid Collocation Algorithm for the Solution of Stochastic Differential Equations}. J. Comput. Phys., 228, pp 3084--3113, 2009.
+
+
+
+\bibitem{Liu1}
+{\sc M. Liu and Z. Gao and J.S. Hesthaven}. {Adaptive Sparse Grid Algorithms with Applications to Electromagnetic Scattering under Uncertainty}. Appl. Numer. Math., 61, pp 24-37, 2011.
+
+\end{thebibliography}

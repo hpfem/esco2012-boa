@@ -1,0 +1,51 @@
+\title{$hp$-Adaptive Eigensolution: Benchmark Studies}
+\tocauthor{H. Hakula} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Harri Hakula}}\\
+Aalto University\\
+{\tt Harri.Hakula@aalto.fi}
+\\ \vspace{4mm}{\large Tomi Tuominen}\\
+Aalto University\\
+{\tt tatuomin@math.hut.fi}
+
+\end{center}
+
+\section*{Abstract}
+
+In this paper we discuss the use of $hp$-adaptive methods of Houston \& S\"uli-type 
+\cite{HSS} in the context of eigenproblems. 
+Using a combination of bubble modes and Sobolev-regularity estimation
+we arrive at an adaptive algorithm controlling both $h$ and $p$. 
+In broad terms our work can also be interpreted as an extension of \cite{GO} to 
+high-order FEM.
+
+For an eigenpair $(\mu,\textbf{u})$ we define a discrete variational problem
+(omitting the customary use of $h$): Find $\textbf{u} \in V$ and $\mu \in \mathbb{R}$ such that
+$a(\textbf{u},\textbf{v}) = \mu\,m(\textbf{u},\textbf{v}), \forall\, \textbf{v} \in V$, where
+$a(\cdot,\cdot)$ and $m(\cdot,\cdot)$ are the bilinear forms of stiffness and mass matrices, respectively.
+
+Let us assume that $V$ corresponds to standard elements of $p=4$.
+Then we consider an extension $V^+$ with bubbles for $p=5,6,7$, say, and compute a local (elemental)
+error estimator $\boldsymbol{\epsilon}$: 
+Find $\boldsymbol{\epsilon} \in V^+$ such that
+$a(\textbf{u}+\boldsymbol{\epsilon},\textbf{v}) = \mu\,m(\textbf{u},\textbf{v}), \forall\, \textbf{v} \in V^+$,
+i.e., $a(\boldsymbol{\epsilon},\textbf{v})~=~\mu\,m(\textbf{u},\textbf{v}) - a(\textbf{u},\textbf{v})$.
+
+In this work we present results on two benchmark problems: isospectral drums (Laplace operator) and
+rotor blade (piece of a cylindrical shell). These results are then compared with the best
+a priori results in both cases.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{HSS}
+{\sc P. {Houston} and B. {Senior} and E. {S\"uli}}. {Sobolev regularity estimation for $hp$-adaptive finite element methods}. Proceedings of ENUMATH 2001, pp. 631--656..
+
+
+
+\bibitem{GO}
+{\sc L. Grubisic and J. S. Ovall.}. {On estimators for eigenvalue/eigenvector approximations}. {Math. Comp.}, 78 (2009), 739--770.
+
+\end{thebibliography}

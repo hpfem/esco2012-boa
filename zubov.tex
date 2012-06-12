@@ -1,0 +1,36 @@
+\title{Dynamic Model of Processes in Spatially 3D Reconstructed Column for Inverse Gas Chromatography (iGC)}
+\tocauthor{A. Zubov} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Alexandr Zubov}}\\
+Insitute of Chemical Technology Prague, Dpt. of Chemical Engineering\\
+{\tt alexandr.zubov@vscht.cz}
+\\ \vspace{4mm}{\large Jan Kolda}\\
+Insitute of Chemical Technology Prague, Dpt. of Chemical Engineering\\
+{\tt jan.kolda@vscht.cz}
+\\ \vspace{4mm}{\large Juraj Kosek}\\
+Insitute of Chemical Technology Prague, Dpt. of Chemical Engineering\\
+{\tt juraj.kosek@vscht.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Inverse gas chromatography (iGC) represents useful experimental technique for the characterization of important thermodynamic and transport properties of porous media (e.g., adsorption isotherms, binary diffusion coefficients, glass transition temperatures). Measurements on the iGC apparatus are conducted by injecting short pulse of a tracer gas into the carrier gas flowing in the iGC column. The detector records time evolution of tracer concentration at the column output. The outgoing tracer peak is subjected to statistical analysis, allowing calculation of the properties of the stationary phase.
+
+The theoretical framework for the description of processes inside chromatography columns is represented by the well-known Van Deemter theory. However, experiments performed in our laboratory showed that this approach cannot describe transport of ethylene in porous polyethylene particles used as the mobile and the stationary phase, respectively, because it assumes diffusion of tracer only in the pores of the column packing. Theory considering diffusion both in the pores and in the solid (polymer) phase of particles filling the column is still missing. Therefore we have developed our own mathematical model of iGC transport dynamics.
+
+Mathematical model uses spatially three-dimensional digitally reconstructed porous medium (e.g., isolated polyolefin particle, artificial medium with granular morphology) as an input for the computations. Calculation of the tracer dynamics in 3D porous medium proceeds in two steps: (i) calculation of the steady-state pressure and velocity field by solving Navier-Stokes equations, and (ii) solution of non-stationary balance of tracer including appropriate convection and dispersion terms. Model equations are processed by the finite volume method and the resulting large system of linear algebraic equations is solved by aggregation-based algebraic multigrid algorithm.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{seda}
+{\sc L. Seda and A. Zubov and M. Bobak and J. Kosek and A. Kantzas}. {Transport and reaction characteristics of reconstructed polyolefin particles}. Macr. React. Eng. 2, 495-512 (2008).
+
+
+
+\bibitem{vandeemter}
+{\sc J. J. Van Deemter and F. J. Zuiderweg and A. Klinkenberg}. {Longitudinal diffusion and ressistance to mass transfer as causes of nonideality in chromatography}. Chem. Eng. Sci. 5, 271-289 (1956).
+
+\end{thebibliography}

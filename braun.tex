@@ -1,0 +1,54 @@
+\title{Comparing Different Approaches to the Numerical Solution of the Poisson Equation in 3D via the Method of Finite Elements}
+\tocauthor{M. Braun} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Moritz Braun}\\
+University of South Africa\\
+{\tt moritz.braun@gmail.com}
+
+\end{center}
+
+\section*{Abstract}
+
+The accurate solution of the three dimensional Poisson equation 
+$
+-\nabla^2 \Phi = 4 \pi \rho
+$
+is important in many  areas of science and engineering:
+\begin{enumerate}
+\item Eletrical Engineering: Design of complex semiconductor devices
+\item Molecular and Theoretical Solid State Physics: Input for density
+functional approach
+\item 
+Chemistry of Solutions  and Molecular Dynamics: Ingredient for solving the Poisson-Boltzmann equation 
+\end{enumerate}
+Efficient solution methods are needed since self-consistent calculations
+require the repeated solution of the Poisson equation.\\
+In this contribution we consider the weak formulation of the Poisson equation
+\cite{SolinBook} 
+and compare the solutions 
+obtained using  different polynomial orders $p$ of the FEM
+as well as for different types of grid and for both 
+direct and iterative solvers for the resulting linear equation. We also
+investigate the performance of different iterative algorithms as
+provided by pysparse\cite{pysparse}.
+We finally  report on results obtained with  the factorization approach for the case of a cartesian tensor grid 
+pioneered by Berger and Sundholm \cite{NonIterFact} adjusted to non-zero boundary conditions, that promises to allow a direct solution even for very large linear systems.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{SolinBook}
+{\sc P. Solin}. {Partial Differential Equations and the Finite Element Method}. John Wiley and Sons, 2004.
+
+
+
+\bibitem{pysparse}
+{\sc R. Geus and D. Wheeler and D. Orban}. {Pysparse Documentation Release 1.0.2}. http://pysparse.sf.netPysparse.pdf.
+
+
+
+\bibitem{NonIterFact}
+{\sc R. J. F. Berger and D. Sundholm }. {A non-iterative Numerical Solver of Poisson and Helmholtz Equations in Three Dimensions}. Advances in Quantum Chemistry, {\bf 50} 234-246 (2005).
+
+\end{thebibliography}

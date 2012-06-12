@@ -1,0 +1,36 @@
+\title{New Advances  in Parallel Solution of Large Sparse Linear Systems}
+\tocauthor{M. Manguoglu} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Murat Manguoglu}\\
+Department of Computer Engineering, Middle East Technical University, Ankara, Turkey \\
+{\tt manguoglu@ceng.metu.edu.tr}
+
+\end{center}
+
+\section*{Abstract}
+
+Many simulations in science and engineering give rise to sparse linear systems of equations.  Typically sparse linear systems of equations arise from the discretization of Partial Differential Equations (PDEs) while some sparse systems are not governed by PDEs.  Sparse algorithms are well-known for their poor utilization of the cache due to irregular memory access. In addition, traditional algorithms that are designed for sequential platforms usually have inherited limitations for parallelism. Therefore, there is a need for novel algorithms to work on today's multicore clusters. Significant amount of effort has been devoted to design and implementation of parallel sparse linear systems solvers. Existing parallel sparse direct solvers, such as MUMPS, Pardiso, SuperLU, and WSMP, are all based on some form of LU factorization. Therefore, the speed improvements realized by such solvers are often limited due to the inherited limitations of sparse LU factorizations and sparse triangular forward-backward sweeps. Iterative solvers, such as preconditioned Krylov subspace methods with sparse approximate inverse or incomplete LU factorization based preconditioners, on the other hand, are often more scalable but not as robust as direct solvers. We have developed a class of hybrid solvers that are based on reordering the coefficient matrix based on the weights of the matrix elements and extracting a banded preconditioner~\cite{wso}. Banded DS factorization (also known as Spike algorithm) is used for solution of systems involving the banded preconditioner. One drawback of this method is that it requires an expensive matrix reordering as a preprocessing step which can be amortized if the multiple systems with the same (or slightly different) coefficient matrix need to be solved. More  recently,  a  new  algorithm  that  uses  a  generalized  form  DS factorization  (and  hence  eliminates  the  need for reordering step completely) was introduced in ~\cite{ddps1,ddps2}. 
+
+In this talk, we present two robust hybrid algorithms based on DS factorization for parallel solution of general sparse linear systems. At the cost of increased computation, DS factorization for solving the system allows us to minimize the inter-process communications and, hence, enhances concurrency.  We will provide examples of parallel scalability of this solver compared to other well-known traditional LU factorization based direct methods and iterative preconditioned Krylov subspace methods. Class of problems from various application areas will be studied. 
+
+
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{wso}
+{\sc M. Manguoglu and M. Koyuturk and A. H. Sameh and A. Grama }. {Weighted Matrix Ordering and Parallel Banded Preconditioners for Iterative Linear System Solvers}. SIAM J. Scientific Computing, vol. 32, no. 3, pp. 1201-1216, 2010.
+
+
+
+\bibitem{ddps1}
+{\sc M. Manguoglu and K. Takizawa and A. Sameh and T. Tezduyar}. {Nested and Parallel Sparse Algorithms for Arterial Fluid Mechanics Computations with Boundary Layer Mesh Refinement}. International Journal for Numerical Methods in Fluids, vol. 65, pp. 135-149, 2011.
+
+
+
+\bibitem{ddps2}
+{\sc M. Manguoglu }. {A Domain-decomposing Parallel Sparse Linear System Solver}. Journal of Computational and Applied Mathematics, 236, 319-325, 2011.
+
+\end{thebibliography}

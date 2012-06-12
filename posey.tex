@@ -1,0 +1,43 @@
+\title{GPU Progress in Sparse Matrix Solvers for Applications in Computational Mechanics}
+\author{} \institute{}
+\tocauthor{S. Posey}
+\maketitle
+\begin{center}
+{\large Stan Posey}\\
+NVIDIA, Santa Clara CA, USA\\
+{\tt sposey@nvidia.com}, {\tt akoehler@nvidia.com}
+
+\end{center}
+
+\section*{Abstract}
+
+Current trends in high performance computing (HPC) are moving towards the use of graphics processing units (GPUs) to achieve speed-ups through the extraction of fine-grain parallelism of applications. GPUs have been developed exclusively for computational tasks as massively-parallel co-processors to the CPU, and during 2010 an extensive set of new HPC architectural features were developed in the third generation of GPUs from NVIDIA that provided new opportunities for sparse matrix solvers in computational mechanics applications. This paper examines the current state of GPU parallel solvers in computational mechanics with a review of applications in computational structural mechanics (CSM) and computational fluid dynamics (CFD) that support product development in the manufacturing industry. 
+
+Today computational efficiency and simulation turnaround times continue to be important factors behind scientific and engineering decisions to develop models at higher fidelity, and recent history has shown that a rapid simulation capability with increased model fidelity has the potential to transform current practices in engineering analysis and design optimization procedures. HPC trends for CSM and CFD software show substantial gains in parallel efficiency from a second-level fine-grain parallelism under first-level distributed memory parallel through implementation of hybrid CPU-GPU co-processing. Examples are provided that are relevant to industry-scale HPC practice of CPU-GPU configurations that were developed based on the physics-driven algorithm and model resolution requirements of a particular simulation. Performance results compare use of conventional CPUs with and without GPU acceleration.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ref1zz}
+{\sc Kodiyalam, S., Kremenetsky, M., and Posey S.} Balanced HPC Infrastructure for CFD and Associated Multidiscipline Simulations of Engineering Systems. In: Proceedings, 7th Asia CFD Conference 2007. Bangalore, India, November 26 – 30, 2007.
+
+
+\bibitem{ref2zz}
+{\sc Corrigan, A., Camelli, F., Lohner R., and Mut, F.} Porting of an edge-based CFD solver to GPUs. In: 48th AIAA Aerospace Sciences Meeting Including The New Horizons Forum and Aerospace Exposition, number AIAA-2010-522. Orlando, FL, January 2010.
+
+
+\bibitem{ref3zz}
+{\sc Bell, N., and Garland, M.} Implementing sparse matrix-vector multiplication on throughput-oriented processors. In: SC '09: Proceedings of the Conference on High Performance Computing Networking, Storage and Analysis, pages 1-11. New York, NY, USA, 2009. ACM.
+
+\bibitem{ref4zz}
+{\sc Brandvik, T. and Pullan, G.} An accelerated 3D Navier-Stokes Solver for Flows in Turbomachines. In: Proceedings of GT2009 ASME Turbo Expo 2009: Power for Land, Sea and Air, June 2009.
+
+\bibitem{ref5zz}
+{\sc Bell, N., Dalton, S., Olson, L.} Exposing Fine-Grained Parallelism in Algebraic Multigrid Methods. NVIDIA Technical Report NVR-2011-002, June 2011.
+
+\bibitem{ref6zz}
+{\sc Beisheim, J.} Accelerate FEA Simulations with a GPU. Proceedings of NAFEMS 
+World Congress, Boston, Mass., U.S.A., May 23−26, 2011.
+
+
+\end{thebibliography}

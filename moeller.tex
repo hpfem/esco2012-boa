@@ -1,0 +1,47 @@
+\title{A Comparative Study of Conforming and Nonconforming High-Resolution Finite Element Schemes}
+\tocauthor{M. Moeller} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Matthias M\"oller}\\
+Institute of Applied Mathematics (LS III),\\ TU Dortmund University of Technology,\\ Vogelpothsweg 87, 44227 Dortmund, Germany\\
+{\tt matthias.moeller@math.tu-dortmund.de}
+
+\end{center}
+
+\section*{Abstract}
+
+The algebraic flux correction (AFC) methodology introduced by Kuzmin in \cite{Kuzmin2001,Kuzmin2002} and refined in a series of publications (see \cite{Kuzmin2012} and the references therein) is revisited in the framework of nonconforming finite element approximations. In particular, the rotated (multi-)linear Rannacher-Turek element \cite{RannacherTurek1992} is employed to compute the approximate solution $u_h$ to the conservation law $\partial_tu+\nabla\cdot\mathbf{f}(u)=0$.
+
+Following the work by Kuzmin \cite{Kuzmin2002}, the group finite element formulation \cite{Fletcher1983} is adopted. That is, the approximate solution and the fluxes are interpolated in a similar manner using the coefficients $u_j(t)$ and $\mathbf{f}_j(t)$ at the degrees of freedom. They coincide with the vertices of the mesh if the standard $Q_1$-basis is used and are located at the edge midpoints of the quadrilaterals (2D) or the face centers of the hexahedra (3D) if the $\tilde Q_1$-approximation is adopted. The transition to nonconforming finite elements relaxes the continuity requirement across element borders at the cost of a slight increase of unknowns. Moreover, each interior degree of freedom  is coupled with \textit{exactly} 6/10 (2D/3D) neighboring degrees of freedom. This property carries over to the number of off-diagonal coefficients in each matrix row. The connectivity structure for the $Q_1$-basis depends on the number of elements meeting at a vertex, and therefore, the matrix pattern may be highly nonuniform especially for unstructured meshes.
+
+Many algorithmic components of AFC-schemes \cite{Kuzmin2002,Kuzmin2012} can be implemented using one or more loops over the edges of the sparsity graph. A common approach to parallelizing edge-based assembly loops is to employ graph-coloring techniques which ensure that no two edges sharing a common endpoint feature the same color. For $\tilde Q_1$-finite elements not more than 7/11 colors suffice to partition the edges into groups which can be processed simultaneously. Moreover, each group receives approximately the same number of edges so that the work load is equally distributed.
+
+Numerical results computed by $Q_1$- and $\tilde Q_1$-finite elements will be presented to compare both approaches with regard to the accuracy of approximate solutions and the computational efficiency.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Fletcher1983}
+{\sc C.A.J. Fletcher}. {The group finite element formulation}. Comput. Methods Appl. Mech. Engrg. 37 (1983) 225-243.
+
+
+
+\bibitem{Kuzmin2001}
+{\sc D. Kuzmin}. {Positive finite element schemes based on the flux-corrected transport procedure}. In: K. J. Bathe (ed), Computational Fluid and Solid Mechanics, Elsevier, 2001, 887-888.
+
+
+
+\bibitem{Kuzmin2002}
+{\sc D. Kuzmin and S. Turek}. {Flux correction tools for finite elements}. J. Comp. Phys. 175 (2002) 525-558.
+
+
+
+\bibitem{Kuzmin2012}
+{\sc D. Kuzmin}. {Algebraic flux correction I. Scalar conservation laws}. Chapter 6 in: D. Kuzmin, R. L\"ohner, S. Turek: Flux-Corrected Transport, Springer, 2nd edition to appear 2012, 163-215.
+
+
+
+\bibitem{RannacherTurek1992}
+{\sc R. Rannacher and S. Turek}. {A simple nonconforming quadrilateral Stokes element}. Numer. Meth. PDEs, 8 (1992), no. 2, 97-111.
+
+\end{thebibliography}

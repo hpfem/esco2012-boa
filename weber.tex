@@ -1,0 +1,31 @@
+\title{Parallel and Adaptive Numerical Techniques Applied to Cardiac Modeling }
+\author{} \tocauthor{R. Weber dos Santos} \institute{}
+\maketitle
+\begin{center}
+{\large Rodrigo Weber  dos Santos}\\
+UFJF\\
+{\tt rodrigo.weber@ufjf.edu.br}
+\\ \vspace{4mm}{\large Rafael Sachetto de Oliveira}\\
+UFSJ\\
+{\tt rsachetto@gmail.com}
+\\ \vspace{4mm}{\large Ricardo Silva Campos}\\
+UFJF\\
+{\tt ricardo@ice.ufjf.br}
+
+\end{center}
+
+\section*{Abstract}
+
+Computer models have become valuable tools for the study and comprehension of the complex phenomena of cardiac electrophysiology. However, the high complexity of the biophysical processes translates into complex mathematical and computational models. 
+In this paper we evaluate different parallel and numerical techniques to accelerate these simulations. 
+At tissue level we have used mesh adaptivity and finite volume method, which is a very attractive approach since the spreading electrical wavefront corresponds only to a small fraction of the cardiac tissue. Usually, the numerical solution of the partial differential equations that model the phenomenon requires very fine spatial discretization to follow the wavefront, which is approximately 0.2 mm. The use of uniform meshes leads to high computational cost as it requires a large number of mesh points. In this sense, the tests reported in this work show that simulations of two-dimensional models of cardiac tissue have been accelerated by more than 80 times using the adaptive mesh algorithm. At cell level we have used an adaptive time step method, that is up to 65 times faster than Euler method. Furthermore, we have combined this method with Partial Evaluation,  Lookup Tables and OpenMP, speeding it up 4 times. These techniques are a promising tool for cardiac simulation that reduce the execution time without significant loss in accuracy. 
+
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{pe-lut-omp-malha}
+{\sc R. W. dos Santos and R. S. de Oliveira and R. S. Campos}. {Parallel and adaptive numerical techniques applied to cardiac modeling }. Universidade Federal de Juiz de Fora - PPG Modelagem Computacional.
+
+\end{thebibliography}

@@ -1,0 +1,41 @@
+\title{Numerical Simulation of Fluid-Structure Interaction of Compressible Flow and Elastic Structure}
+\tocauthor{J. Hasnedlova-Prokopova} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Jaroslava Hasnedlov\'{a}-Prokopov\'{a}}\\
+Charles University Prague, Faculty of Mathematics and Physics\\
+Institute of Thermomechanics, Academy of Sciences of Czech Republic\\
+{\tt jarkaprokop@post.cz}
+\\ \vspace{4mm}{\large Miloslav Feistauer}\\
+Charles University Prague, Faculty of Mathematics and Physics\\
+{\tt feist@karlin.mff.cuni.cz}
+\\ \vspace{4mm}{\large Jarom\'{i}r Hor\'{a}\v{c}ek}\\
+Institute of Thermomechanics, Academy of Sciences of Czech Republic\\
+{\tt jaromirh@it.cas.cz}
+\\ \vspace{4mm}{\large Adam Kos\'{i}k, V\'{a}clav Ku\v{c}era}\\
+Charles University Prague, Faculty of Mathematics and Physics\\
+{\tt adam.kosik@atlas.cz, vaclav.kucera@email.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+The paper will be concerned with fluid-structure interaction problem of com\-pressible flow and elastic structure in 2D domains with a special interest in medical applications to airflow in human vocal folds. The viscous flow in time dependent domain is described by the Navier-Stokes equations and with the aid of the Arbitrary Lagrangian-Eulerian (ALE) method [\cite{nom-hug}]. The equations of motion for elastic deformations of the human vocal folds are coupled with the equations for the fluid flow using either loose or strong coupling. The space discretization of the flow problem is carried out by the discontinuous Galerkin finite element method [\cite{ces-feist-hor-kuc-prok}]. For the time discretization we use a semi-implicit scheme. In order to derive the space-time discretization of the elastic body problem, we apply the finite element method  using continuous piecewise linear elements [\cite{kos-feist-hor-svac}]. For the time discretization we use the Newmark scheme. The results of the numerical simulations will be presented.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{nom-hug}
+{\sc T. Nomura and T.J.R. Hughes}. {An arbitrary Lagrangian-Eulerian finite element method for interaction of fluid and rigid body}. Comput. Methods Appl. Mech. Engrg. 95 (1992) 115-138.
+
+
+
+\bibitem{ces-feist-hor-kuc-prok}
+{\sc J. \v{C}esenek and M. Feistauer and J. Hor\'{a}\v{c}ek and V. Ku\v{c}era and J. Prokopov\'{a}}. {Simulation of compressible viscous flow in time-dependent domains}. Applied Mathematics and Computation, 2011 (published electronicly).
+
+
+
+\bibitem{kos-feist-hor-svac}
+{\sc A. Kos\'{i}k and M. Feistauer and J. Hor\'{a}\v{c}ek and P. Sv\'{a}\v{c}ek}. {Numerical simulation of interaction of human vocal folds and fluid flow}. Vibration problems ICOVP 2011, J. N\'{a}prstek, J. Hor\'{a}\v{c}ek, M. Okrouhl\'{i}k, B. Marvalov\'{a}, F. Verhulst, J. T. Sawicki (eds.), Springer Proceedings in Physics 139 (2011), 765 - 771.
+
+\end{thebibliography}

@@ -1,0 +1,43 @@
+\title{Higher-Order Finite Element Modeling and Optimization of Actuator with Non-Linear Materials }
+\author{} \tocauthor{P. Kropik} \institute{}
+\maketitle
+\begin{center}
+{\large Petr Krop\'{i}k}\\
+University of West Bohemia, Pilsen, Czech republic\\
+{\tt pkropik@kte.zcu.cz}
+\\ \vspace{4mm}{\large Lenka \v{S}roubov\'{a}}\\
+University of West Bohemia, Pilsen, Czech republic\\
+{\tt lsroubov@kte.zcu.cz}
+\\ \vspace{4mm}{\large Roman Hamar}\\
+University of West Bohemia, Pilsen, Czech republic\\
+{\tt hamar@kte.zcu.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+An electromagnetic actuator with nonlinear structural parts (permanent-magnet core, steel shell) is modeled and optimized. One of the crucial factors of computations is the convergence rate of the solution. In the course of the numerical solution we test the convergence rate that depends on the order of the approximation polynomials corresponding to the related mesh elements.
+
+The computations are carried out numerically by the professional code COMSOL Multiphysics not using the GUI, but fully controlled by a lot of own scripts and procedures.
+
+The principal aim of the optimization is to obtain the maximum possible force acting on the core at its smallest possible dimensions. For the optimization process, fminsearch (first step) and finally fmincon functions have been used. While the fminsearch function is designed for non-linear optimizations without constraints based on the Nelder-Meade non-linear simplex method, the fmincon function intended for non-linear constrained optimizations is based on the trust-region-reflective algorithm based on the interior-reflective Newton method.
+
+The methodology is illustrated by computations of several different electromagnetic actuator configurations whose results are discussed.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Kucz-Iv}
+{\sc M. Kuczmann and A. Ivanyi}. {The finite element method in magnetics}. Akademiai Kiado, Budapest, 2008.
+
+
+
+\bibitem{Stratt}
+{\sc J. A. Stratton}. {Electromagnetic theory}. McGraw-Hill College; 1st edition, 1941.
+
+
+
+\bibitem{Tr-Gobb}
+{\sc D. W. Trott and M. K. Gobbert}. {Conducting Finite Element Convergence Studies using COMSOL 4.0}. in Proceedings of the COMSOL Conference 2010, Boston, 2010.
+
+\end{thebibliography}

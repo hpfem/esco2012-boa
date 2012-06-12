@@ -1,0 +1,46 @@
+\title{High-Order/$hp$-Adaptive Discontinuous Galerkin Finite Element Methods for Compressible Fluid Flows}
+\author{} \tocauthor{S. Giani} \institute{}
+\maketitle
+\begin{center}
+{\large Stefano Giani}\\
+University of Nottingham\\
+{\tt stefano.giani@nottingham.ac.uk}
+\\ \vspace{4mm}{\large Paul Houston}\\
+University of Nottingham\\
+{\tt Paul.Houston@nottingham.ac.uk}
+
+\end{center}
+
+\section*{Abstract}
+
+We present an overview of some recent developments concerning the a posteriori error analysis
+of h- and hp-version finite element approximations to compressible fluid flows for a specific
+discretisation scheme: the hp-version of the discontinuous Galerkin finite element method.
+This method is capable of exploiting both local polynomial-degree-variation (p-refinement)
+and local mesh subdivision (h-refinement), thereby offering greater flexibility and efficiency
+than numerical techniques which only incorporate h-refinement or p-refinement in isolation.
+
+We shall be particularly concerned with the derivation of a posteriori bounds on the error in
+certain output functionals of the solution of practical interest; relevant examples include the lift
+and drag coefficients for a body immersed into a fluid, the local mean value of the field or its
+flux through the outflow boundary of the computational domain, and the pointwise evaluation
+of a component of the solution.
+
+By employing a duality argument we derive so-called weighted or Type I a posteriori estimates
+which bound the error between the true value of the prescribed functional, and the actual computed value. In these error estimates, the element residuals of the computed numerical solution
+are multiplied by local weights involving the solution of a certain dual or adjoint problem. On
+the basis of the resulting a posteriori error bound, we design and implement an adaptive finite
+element algorithm to ensure reliable and efficient control of the error in the computed functional with respect to a user-defined tolerance. Our adaptive finite element algorithm decides
+automatically between isotropic and anisotropic refinement either in h-refine or in p-refine.
+The performance of the resulting hp-refinement algorithm is demonstrated through a series of
+numerical experiments.
+
+This research has been funded by the EU under the ADIGMA project.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{giani-paul-1}
+{\sc S. Giani and P. Houston}. {Anisotropic hp-adaptive discontinuous Galerkin finite element methods for compressible fluid flows}. International Journal of Numerical Analysis and Modeling, Accepted.
+
+\end{thebibliography}

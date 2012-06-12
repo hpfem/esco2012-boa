@@ -1,0 +1,44 @@
+\title{An \emph{Ab-initio} Approach to Geometric and Physical Modeling with Cellular Decompositions}
+\tocauthor{A. DiCarlo} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Alberto Paoluzzi}\\
+University Roma Tre\\
+{\tt paoluzzi@dia.uniroma3.it}
+\\ \vspace{4mm}{\large \underline{Antonio DiCarlo}}\\
+University Roma Tre\\
+{\tt adicarlo@mac.com}
+
+\end{center}
+
+\section*{Abstract}
+
+Building on earlier results from our group \cite{AP&93,AP03,GS&08,adc&092,adc&09a2}, we introduce a novel approach to solid modeling where geometry and physics are \emph{ab-initio} integrated on general cellular decompositions, including polytope complexes and hyper-cuboidal meshes. Previous approaches to solid modeling were rather limited in scope, being usually restricted to certain classes of triangulations or tensor-product domains in 2D or 3D, and most often confined to boundary representations. Conversely, we aim at producing out-of-the-box instruments that support geometric and physical computations on meshes of any sort. To this end, we are developing a library of Python classes that provides scientists and engineers with friendly and effective tools for dealing with computational models that require demanding field problems to be formulated and solved on discrete domains of any complexity and dimension. We also allow for hierarchically organized decompositions and support multiresolution and multigrid techniques. Our library provides both local and global access to cell complexes and their associated (co-)chain complexes for generation, analysis and editing at local, intermediate and global levels. In order to make it available on the emerging web platform, the library is being ported to JavaScript. For the sake of efficiency, critical parts of the code are implemented in OpenCL and OpenGL---as well as in their web analogs, WebCL and WebGL---thereby allowing for its streamlined use on multi-core computers, computational clusters and supercomputers. In this talk, we intend to highlight the design choices and the fundamental architecture of the geometric kernel and its basic representation schemes, which make use of well-blended numerical and symbolic algorithms.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{AP&93}
+{\sc A. Paoluzzi and F. Bernardini and C. Cattani and V. Ferrucci}. {Dimension-independent modeling with simplicial complexes}. \textit{ACM Trans. Graph.} 12 (1993) 56--102 \texttt{[doi:10.1145/169728.169719]}.
+
+
+
+\bibitem{AP03}
+{\sc A. Paoluzzi}. {\textit{Geometric Programming for Computer Aided Design}}. John Wiley \& Sons, 2003 \texttt{[doi:10.1002/0470013885]}.
+
+
+
+\bibitem{GS&08}
+{\sc G. Scorzelli and A. Paoluzzi and V. Pascucci}. {Parallel solid modeling using BSP dataflow}. \textit{Int. J. Comp. Geom. \& Appl.} 18 (2008) 441--467 \texttt{[doi:10.1142/S0218195908002714]}.
+
+
+
+\bibitem{adc&092}
+{\sc A. DiCarlo and F. Milicchio and A. Paoluzzi and V. Shapiro}. {Chain-based representations for solid and physical modeling}. \textit{IEEE Trans. Auto. Sci. Eng.} 6 (2009) 454--467 \texttt{[doi:10.1109/TASE.2009.2021342]}.
+
+
+
+\bibitem{adc&09a2}
+{\sc A. DiCarlo and F. Milicchio and A. Paoluzzi and V. Shapiro}. {Discrete physics using metrized chains}. In: W.F.~Bronsvoort et al., eds., \textit{Proc. SPM'09 -- 2009 SIAM/ACM Joint Conference on Geometric and Physical Modeling}, ACM, pp.~135--145, 2009 \texttt{[doi:10.1145/1629255.1629273]}.
+
+\end{thebibliography}

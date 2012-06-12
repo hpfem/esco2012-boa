@@ -1,0 +1,36 @@
+\title{Numerical Simulation of Transitional Flows}
+\tocauthor{J. Furst} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Ji\v{r}\'{\i} F\"urst}\\
+Czech Technical University in Prague\\
+{\tt Jiri.Furst@fs.cvut.cz}
+\\ \vspace{4mm}{\large Jarom\'{\i}r P\v{r}\'{\i}hoda}\\
+Institute of Thermomechanics AS CR\\
+{\tt prihoda@it.cas.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+The turbulent-laminar transition is critical for accurate loss and heat transfer calculation in many engineering applications. However the transition is not included in the majority of today's CFD simulations. It is well known that the standard turbulence models (e.g. $k-\epsilon$ or $k-\omega$) tend to predict the transition to early and therefore it is necessary to include a transition model.
+
+We present here the results obtained with an empirically based algebraic intermittency model of P\v{r}\'{\i}hoda \cite{prihoda} and with a two-scale $k-k_L-\omega$ model of Walters and Leylek. Both models were coupled with the in-house FVM code for 2D simulations of compressible flows and with the OpenFOAM package.
+
+Both models are verified by means of ERCOFTAC test cases covering flows over a flat plate with different turbulence level. Finally both models were applied for the simulation of flows through 2D turbine cascade.
+
+We show that both models give satisfactory results when comparing to experimental data. Moreover the simple algebraic model of P\v{\i}hoda allows to include easily in-house correlations for transition onset and transition length. On the other hand the $k-k_L-\omega$ is more suitable for general unstructured three-dimensional CFD solver.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{walters-leylek}
+{\sc D. K. Walters and J. H. Leylek}. {A New Model for Boundary Layer Transition Using a Single Point RANS Approach}. Journal of Turbomachinery, 126 (2004).
+
+
+
+\bibitem{prihoda}
+{\sc P. Straka and J. P\v{r}\'{\i}hoda}. {Application of the algebraic bypass-transition model for internal and external flows}. Proc Conf. Experimental Fluid Mechanics (EFM10), TU Liberec, 636-641, 2010.
+
+\end{thebibliography}

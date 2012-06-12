@@ -1,0 +1,33 @@
+\title{Combination of Genetic Programming and Conceptual Models in Runoff Modeling }
+\tocauthor{V. Havlicek} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Vojtech  Havlicek}\\
+Czech University of Life Sciences Prague, Faculty of Environmental Sciences, Department of Water Resources and Environmental Modeling, Czech Republic\\
+{\tt havlicekv@fzp.czu.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This contribution is focused on combination of genetic programming (GP)~\cite{GP} and simple conceptual modeling in rainfall-runoff prediction. Genetic programming (herein GP) is a general optimization technique, it is an automated search of the computer program, that is some particular problem solution.
+
+For the purposes of this research the SORD! program was developed (R programming language \cite{R}). It is an implementation of canonical GP.  Three special functions were used for the combined approach of conceptual runoff modeling and GP.
+ The first two  functions were simple conceptual models - reservoir model and simple moving average model, and the third function was a delay operator.
+
+The efficiency of presented approach was tested in two studies. The first study was focused on runoff prediction on large catchments. The second study was focused on runoff prediction on single flood waves of small catchment. The data time step was one day and one hour respectively (small catchment). The prediction step was one day on large catchments and one hour on small catchment. Rainfall and runoff (1st study) were the model inputs. The results were compared with the results of the artificial neural network model (herein ANN) and with the GP model without the special functions.
+
+The results of GP combined with conceptual models were generally good and the simulations were better than the results of ANN  and GP model without the special functions. Program SORD! provides a relatively easy-to-use alternative for data-oriented modeling combined with conceptual modeling approach.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{R}
+{\sc R Development Core Team}. {R: A Language and Environment for Statistical Computing}. R Foundation for Statistical Computing, Vienna - Austria , \url{http://www.R-project.org/}, 2011.
+
+
+
+\bibitem{GP}
+{\sc J. R. Koza}. {Genetic Programming: On the Programming of Computers by Means of Natural Selection}. MIT Press, Cambridge, MA, USA, 1992.
+
+\end{thebibliography}

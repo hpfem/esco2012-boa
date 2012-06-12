@@ -1,0 +1,24 @@
+\title{Coupled Heat and Moisture Transport Solved by Modified Kunzel's Model}
+\tocauthor{J. Kruis} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Jaroslav Kruis}}\\
+Department of Mechanics, Faculty of Civil Engineering, Czech Technical University in Prague\\
+{\tt jk@cml.fsv.cvut.cz}
+\\ \vspace{4mm}{\large Ji\v{r}\'{\i} Mad\v{e}ra}\\
+Department of Materials Engineering and Chemistry, Faculty of Civil Engineering, Czech Technical University in Prague\\
+{\tt madera@fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Kunzel's model of coupled heat and moisture transport published in \cite{Kunzel} is very popular in civil engineering community. The model is based on the heat balance equation and mass balance equation, where the temperature and relative humidity are used. The relative humidity can be replaced by water content which is non-continuous on material interfaces. The balance equations are solved numerically by the finite element method. Unfortunately, the magnitudes of particular conductivities are very different and poorly conditioned systems of algebraic equations are obtained. Moreover, the systems of equations are not symmetric. In order to reduce the condition number of system matrix, the model has to be modified. Gradients of the temperature and relative humidity are evaluated and contributions to the heat and mass fluxes are computed. If some contribution is significantly smaller than others, it is neglected and appropriate rows and columns of element matrix are removed. In special cases (e.g. isolation with zero mass flux), some degrees of freedom are removed from the system. The resulting system of equations has better properties and can be solved more efficiently.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Kunzel}
+{\sc H. M. Kunzel}. {Simultaneous Heat and Moisture Transport in Building Components}. Fraunhofer Institute of Building Physics, Stuttgart, 1995, ISBN 3-8167-4103-7.
+
+\end{thebibliography}

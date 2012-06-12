@@ -1,0 +1,35 @@
+\title{Numerical Solution of Coupled Problems of Fluid Flow and Elastic Structure}
+\tocauthor{A. Kosik} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Adam Kos\' ik}\\
+Charles University in Prague, Faculty of Mathematics and Physics\\
+{\tt adam.kosik@atlas.cz}
+\\ \vspace{4mm}{\large Miloslav Feistauer}\\
+Charles University in Prague, Faculty of Mathematics and Physics\\
+{\tt feist@karlin.mff.cuni.cz}
+\\ \vspace{4mm}{\large Petr Sv\' a\v cek}\\
+Czech Technical University in Prague, Department of Technical Mathematics\\
+{\tt Petr.Svacek@fs.cvut.cz}
+\\ \vspace{4mm}{\large Jarom\' ir Hor\' a\v cek}\\
+Institute of Thermomechanics, Academy of Sciences of Czech Republic\\
+{\tt jaromirh@it.cas.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Our motivation is to simulate the phonation onset in biomechanics of voice. This problem is simplified to the two-dimensional problem of the interaction of incompressible viscous flow and the flow-induced vibrations of elastic bodies. Hence we have to deal with significant deformations of the computational domain. In order to simulate the fluid flow in the time-dependent domain we formulate the Navier-Stokes equations in the arbitrary Lagrangian-Eulerian form. We use the strongly coupled partitioned approach for the coupling of the problems. The fluid and structure problem are discretized in space with the use of conforming finite element method and in time with the use of second order backward difference formula and the Newmark method, respectively.  The developed solution of the coupled problem based on the finite element method is demonstrated by numerical experiments and applied to the simulation of vibrations of vocal folds. Finally the analysis of the numerical results was performed and presented.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{nomura}
+{\sc T. Nomura and T.J.R. Hughes}. {An arbitrary Lagrangian-Eulerian finite element method for interaction of fluid and rigid body}. Comput. Methods Appl. Mech. Engrg., 95 (1992), pp. 115-138.
+
+
+
+\bibitem{feistauer}
+{\sc M. Feistauer and J. \v Cesenek and J. Hor\' a\v cek and V. Ku\v cera and J. Prokopov\' a}. {DGFEM for the numerical solution of compressible flow in time dependent domains and applications to fluid-structure interaction}. In: ECCOMAS CFD 2010, J.C.F. Pereira and A.Sequeira (Eds), Lisbon, Portugal, 14-17 June 2010, CDROM, ISBN 978-989-96778-1-4.
+
+\end{thebibliography}

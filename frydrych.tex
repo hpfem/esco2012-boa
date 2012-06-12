@@ -1,0 +1,42 @@
+\title{Groundwater Flow Simulation with Combinations of Discrete Fractures and Continuum - Model Scale and Discretisation Issues}
+\author{} \tocauthor{D. Frydrych} \institute{}
+\maketitle
+\begin{center}
+{\large Milan Hokr}\\
+Technical University of Liberec\\
+{\tt milan.hokr@tul.cz}
+\\ \vspace{4mm}{\large Ilona \v{S}karydov\'a}\\
+Technical University of Liberec\\
+{\tt ilona.skarydova@tul.cz}
+\\ \vspace{4mm}{\large Ale\v{s} Balv\'{\i}n}\\
+Technical University of Liberec\\
+{\tt ales.balvin@tul.cz}
+\\ \vspace{4mm}{\large \underline{Dalibor Frydrych}}\\
+Technical University of Liberec\\
+{\tt dalibor.frydrych@tul.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+We solve a groundwater flow problem, evaluating the inflow into a tunnel and fitting to the field measurement. 
+Model concept and numerical scheme are based on combination of 2D discrete fractures and 3D equivalent continuum \cite{Mar08}, which is available in only few numerical simulation software and is still not widely used for solving field problems.
+The site of interest is in the north of the Czech Republic, a water supply tunnel 2.5~km long in average 100~m depth, with geological research \cite{klom2010}.
+
+The difficulties and issues we concentrate on in this study are first the technical processing of geometry and discretisation and the second the effect of model scale on the ability to fit the measurement.
+ The 3D model contains vertical 2D planes representing conductive fault zones with dominating water inflow. The geometrical input data come from GIS input, processed by own converters to either GMSH input format or to python script within the SALOME platform. The main difficulty if to include precisely the cross-section of planes representing the fractures (kilometer scale) and the tunnel (meter scale) and the following discretisation.
+
+In general it is uncertainty about choice if model size in groundwater simulation -- what is the sufficient distance not influenced by the studied local phenomenon. Here the as small as possible model is motivated by the complicated geometry. Thus we compare and compile results of smaller model with more details with larger and coarser model (simplified shape of tunnel, large elements).
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Mar08}
+{\sc J. Mary\v{s}ka and O. Sever\'{y}n and M. Tauchman and D. Tondr}. {Modelling of Processes in Fractured Rock Using FEM/FVM on Multidimensional Domains.}. J. Comp. Appl. Math., 215/2  (2008), 495--502.
+
+
+
+\bibitem{klom2010}
+{\sc J. Klom\'{\i}nsk\'y and F. Woller (Eds.)}. {Geological Studies in the Bed\v{r}ichov Water Supply Tunnel}. Technical report  02/2010, S\'URAO(RAWRA), Czech Republic.
+
+\end{thebibliography}

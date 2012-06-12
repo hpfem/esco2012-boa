@@ -1,0 +1,34 @@
+\title{Numerical Solution of Turbulent Plasma Models Using PETSc Parallel Libraries}
+\author{} \tocauthor{R. Paprok} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Richard Paprok}}\\
+Charles University in Prague, Faculty of Mathematics and Physics\\
+{\tt paprok@ipp.cas.cz}
+\\ \vspace{4mm}{\large Ladislav Krlin}\\
+Institute of Plasma Physics AS CR, v.v.i.\\
+{\tt krlin@ipp.cas.cz}
+\\ \vspace{4mm}{\large Jakub Seidl}\\
+Institute of Plasma Physics AS CR, v.v.i.\\
+{\tt seidl@ipp.cas.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+We are using PETSc [1] libraries for simplification of development of parallel highly scalable codes. This enables fast solution of complex systems of PDEs arising from plasma theory. We test the method on two well established plasma models: Hasegawa-Watakani [2] and ESEL [3]. Currently we use 2D models with trivial Cartesian geometry but in the future there is a possibility to use more realistic geometries in 3D.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{petsc-1p}
+{\sc PETSc Team}. {Portable, Extensible Toolkit for Scientific Computation}.  http://www.mcs.anl.gov/petsc/petsc-as/.
+
+\bibitem{HW-1p}
+{\sc M. Wakatani and A. Hasegawa and undefined }. {A collisional drift wave description of plasma edge turbulence}. Physics of Fluids, vol. 27, 1984, pp. 611-618.
+
+
+
+\bibitem{garcia-1p}
+{\sc O.E. Garcia and J. Horacek and R.A. Pitts and A.H. Nielsen and W. Fundamenski and J.P. Graves and V. Naulin and J.J. Rasmussen}. {Interchange turbulence in the TCV scrape-off layer}. Plasma Physics and Controlled Fusion, vol. 48, Jan. 2006, p. L1-L10.
+\end{thebibliography}

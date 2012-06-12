@@ -1,0 +1,32 @@
+\title{Goal-Oriented $hp$-Adaptive DGFEM for the Time-Dependent Maxwell Problem}
+\tocauthor{M. Lilienthal} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Martin Lilienthal}\\
+TU Darmstadt, Graduate School Computational Engineering\\
+{\tt lilienthal@gsc.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+A goal oriented $hp$-adaptive space-time DG method for the time-dependent Maxwell problem is presented. 
+We partition the time axis in intervals $I^k=(t_{k-1},t_k]$. For each time interval we allow for a different (possibly anisotropically) refined spatial mesh  $\mathcal{T}^k$, consisting of hexahedra. Within each time interval $I^k$ a Galerkin method \cite{akrivis2010galerkin}  is employed for temporal discretization and a $hp$-version DG method for spatial discretization. At the event of a mesh change a projection is carried out. Thus we can utilize grids which contain hanging nodes due to spatial $hp$-refinement or mesh change (see \cite{rannacher2010adaptive}) without the need for their elimination or the introduction of unwanted refinements. The resulting method is a space-time galerkin method which allows for obtaining a representation formula of the error in terms of a goal functional by employing a duality argument (see \cite{becker2001optimal}). We conclude the talk with numerical experiments in 3D.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{becker2001optimal}
+{\sc R. Becker and R. Rannacher}. {An optimal control approach to a posteriori error estimation in finite element methods}. Acta Numerica 10 (2001) 1-102.
+
+
+
+\bibitem{akrivis2010galerkin}
+{\sc G. Akrivis and C. Makridakis and R.H. Nochetto}. {Galerkin and Runge--Kutta methods: unified formulation, a posteriori error estimates and nodal superconvergence}. Numerische Mathematik 118 (2011) 429-456.
+
+
+
+\bibitem{rannacher2010adaptive}
+{\sc W. Bangerth and M. Geiger and R. Rannacher}. {Adaptive Galerkin finite element methods for the wave equation}. Computational Methods in Applied Mathematics, 10 (2010) 3-48.
+
+\end{thebibliography}

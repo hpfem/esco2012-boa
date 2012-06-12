@@ -1,0 +1,35 @@
+\title{Simulation of Convection in the Atmospheric Boundary Layer using GPU}
+\tocauthor{V. Fuka} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Vladimir Fuka}}\\
+Charles University in Prague, Fac. of Math. and Physics, Dept. of Meteorology and Env. Protect.\\
+{\tt vladimir.fuka@mff.cuni.cz}
+\\ \vspace{4mm}{\large Josef Brechler}\\
+Charles University in Prague, Fac. of Math. and Physics, Dept. of Meteorology and Env. Protect.\\
+{\tt vladimir.fuka@mff.cuni.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This study concentrates on the experience of porting a small in-house CFD (computational fluid dynamics) large-eddy simulation model written in Fortran for usage of graphical accelerators (GPU). An important type of flow in the atmosphepheric boundary layer â€“ the cellular convection is simulated and the performance of the code is evaluated. The framework chosen for the acceleration is (open)HMPP [1], which is one of the candidates to serve as a basis to upcoming standard openMP 4.0. A similar alternative is PGI Accelerator [2]. HMPP translates portions of the code, that should be computed on the GPU to CUDA or OpenCL functions, so called codelets. Main problems of the translation of the code are presented, for example lack of derived types in the codelets, problems with the modular structure and other modern features in the code. A big problem with the usage of GPU for CFD calculation are memory transfers,which means that very large part of the code must be translated to codelets and hence only a subset of Fortran can be used in them. The flow simulation is analyzed in terms of performance of the code, but also in terms of evolution of spectral characteristics of the boundary layer in time. The main concern is the existence or nonexistence of horizontal scales larger than the boundary layer top (cf. [3]).
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{openhmpp}
+{\sc OpenHMPP consortium}. {OpenHMPP, New HPC Open Standard for Many-Core}. http://www.openhmpp.org.
+
+
+
+\bibitem{pgacc}
+{\sc PGI Accelerator Compilers}. {The Portland Group}. http://www.pgroup.com/resources/accel.htm.
+
+
+
+\bibitem{deroode-etal}
+{\sc deRoode  and S. R. and Duynkerke  and P. G. and Jonker  and H.J.J. }. {Large-Eddy Simulation: How Large is Large Enough?}. Journal of the Atmospheric Sciences Vol. 61, 2004..
+
+\end{thebibliography}

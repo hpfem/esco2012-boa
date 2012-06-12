@@ -1,0 +1,41 @@
+\title{Experience with Open Source Coupling and Python on T-H-M-C Modeling}
+\tocauthor{A. Dimier} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Alain Dimier}\\
+Eifer institute, University Karlsruhe\\
+{\tt alain.dimier@eifer.uni-karlsruhe.de}
+\\ \vspace{4mm}{\large Elodie Jeandel}\\
+Eifer institute, University Karlsruhe\\
+{\tt Elodie.Jeandel@eifer.uni-karlsruhe.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Investigating the physics of CO2 storage; associated to the acquisition of an experimental CO2-brine-rock percolation test bench, Eifer decided to put some effort on numerical modelling within that field.
+Considering the evolution over time of a CO2 storage, the geochemistry of the reservoir is one of the main mechanisms to be evaluated. To tackle that physics we choose phreeqC which is probably the most widely used geochemical model. Developed by the USGS [http://wwwbrr.cr.usgs.gov], it enables to simulate chemical reactions in natural or polluted water; cf. [2]. The choice of phreeqC was primarily determined by its ability to make a mass balance on involved gaseous components, that point being mandatory when considering unsaturated hydro-geochemical modelling. 
+To deal with flow, ion transport, temperature and mechanics, we have made the choice of Elmer. Developed by CSC-IT [1], it is a soft based on finite element technologies; written mainly in fortran90, C and C++. Elmer, in its 6.1 version, is distributed under the GNU license (GPL 2.) and is accessible through sourceforge.
+To couple the different physics, we choose an operator splitting algorithm. The main interest of the method is its ease of implementation. The main drawback is the occurrence of "operator-splitting errors", see [3], these ones can be partially damped through iterative splitting algorithms.
+To setup the coupling between phreeqC, as geochemical tool, and Elmer as multiphysics modeller, we made the choice of Python to enable a good readability and maintainability, Python appearing as the best potential solution. The scripting framework being defined, the first step is to define the data model covering the physics to be handled. 
+To implement an efficient algorithm, the main requirement is to "wrap" the legacy codes, phreeqC and Elmer,  in Python; these ones becoming Python extensions modules. 
+We will present here the main paths of the development process using the modelling of the percolation bench experiment as illustrative background. Efficiency issues will be discussed through soft profiling results, potential enhancements using C++, or tools like cython [http://cython.org] and shed-skin [http://sourceforge.net/projects/shedskin] will be presented.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Elmer-1}
+{\sc P. Raback and al.}. {CSC}. http://www.csc.fi/english.
+
+
+
+\bibitem{phreeqC-2}
+{\sc D. Parkhurst and T. Appelo}. {phreeqC}. http://www.usgs.gov.
+
+
+
+\bibitem{Strang-3}
+{\sc G. Strang}. {On the construction and comparison of difference schemes}. SIAM J. Numerical analysis, vol.5 1968.
+
+\end{thebibliography}

@@ -1,0 +1,63 @@
+\title{Comparison of Optimal Designs of Experiments \\ Suitable for Inverse Analysis}
+\tocauthor{A. Kucerova} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Eli\v{s}ka Janouchov\'a}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt eliska.janouchova@fsv.cvut.cz}
+\\ \vspace{4mm}{\large Tom\'a\v{s} Mare\v{s}}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt tomas.mares.1@fsv.cvut.cz}
+\\ \vspace{4mm}{\large Anna Ku\v{c}erov\'a}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt anicka@cml.fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Design of experiments has a wide usage in the field of inverse
+analysis. One possible application appears in sampling-based
+sensitivity analysis~\cite{Helton:2006:RESS2}, the other in a
+surrogate modelling~\cite{Simpson:2001:EC}. In these situations, two
+principal requirements are placed on design of experiments quality:
+space-filling properties and orthogonality. To define an optimal
+design of experiments, a number of different criteria were formulated
+in literature. Some of them prefer mainly the space-filling designs,
+e.g.  Audze-Eglais potential energy~\cite{Audze:1977} or Euclidean
+maximin distance~\cite{Johnson:1990:JSPI}, others put more emphasis on
+minimising the non-orthogonality such as correlation coefficients.
+
+The aim of this contribution is to compare different criteria for an
+optimal design formulation. We focus on the quality of the resulting
+optimal designs regarding their application in sampling-based
+sensitivity analysis and in an artificial neural network training
+process. We also compare the computational time required for a
+particular optimal design generation taking into account possible
+parallelization of a relating optimization process. Finally, we 
+discuss the suitability of particular criteria for a design extension
+by new sample points.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Helton:2006:RESS2}
+{\sc J.C. Helton and J.D. Johnson and C.J. Sallaberry and C.B. Storlie}. {Survey of sampling-based methods for   uncertainty and sensitivity analysis}. Reliab Eng Syst Safe,   91:10-11 (2006), 1175-1209.
+
+
+
+\bibitem{Simpson:2001:EC}
+{\sc  T.W. Simpson and J. D. Peplinski and P. N. Koch and J. K. Allen}. {Metamodels for computer-based engineering design:   Survey and recommendations}. Engineering with Computers, 17 (2001) 129-150.
+
+
+
+\bibitem{Audze:1977}
+{\sc P. Audze and V. Eglais}. {New approach for planning   out of experiments}. Problems of Dynamics and Strengths, 35 (1977) 104-107, Zinatne Publishing House.
+
+
+
+\bibitem{Johnson:1990:JSPI}
+{\sc  M. Johnson and L. Moore and D. Ylvisaker}. {Minimax and maximin distance designs}. J Stat Plan Infer, 26:2 (1990) 131-148.
+
+\end{thebibliography}

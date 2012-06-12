@@ -1,0 +1,33 @@
+\title{An Optimal Eigenvalue Solver}
+\tocauthor{J. Gedicke} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Joscha Gedicke}\\
+Dipl.-Math.\\
+{\tt gedicke@math.hu-berlin.de}
+
+\end{center}
+
+\section*{Abstract}
+
+This talk presents the optimal computational complexity of a combined adaptive finite
+element method (AFEM) with an iterative algebraic eigenvalue solver for a simple
+symmetric model problem. The analysis is based on a direct approach for eigenvalue
+problems and allows the use of higher order conforming finite element spaces with fixed
+polynomial degree. First the quasi-optimal convergence for the eigenvalue problem
+under the usual assumption that the sub-problems are solved exactly is shown. As for
+the source problem the convergence analysis for the quasi error does not need the inner
+node property. These results are relaxed to the inexact approximations of some iterative
+eigenvalue solver and thus lead to a combined AFEM and iterative eigenvalue solver
+algorithm. The proposed optimal algorithm involves a proper termination criterion for
+the iterative algebraic eigenvalue solver and does not need any coarsening. Numerical
+examples show optimal computational complexity.
+This contribution is joint work with Carsten Carstensen (HU Berlin, Germany).
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{CG_OptimalAFEMES}
+{\sc C. Carstensen and J. Gedicke}. {An Adaptive Finite Element Eigenvalue Solver of Quasi-Optimal Computational Complexity}. MATHEON Preprint 662 (2009), TU Berlin.
+
+\end{thebibliography}

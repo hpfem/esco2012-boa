@@ -1,0 +1,66 @@
+\title{Algebraic Multigrid in Fluid-Structure Interaction and Convection Dominated Problems}
+\author{} \tocauthor{M. Gee} \institute{}
+\maketitle
+\begin{center}
+{\large Michael Gee}\\
+Technische Universit\"at M\"unchen\\
+{\tt gee@tum.de}
+
+\end{center}
+
+\section*{Abstract}
+
+In the last decades algebraic multigrid principles have been extensively
+applied in various real world single field applications. Less attention though has been paid to adopting AMG principles to the specific needs of multifield problems. In this talk, I
+focus on two recent developments made in the field of algebraic
+multigrid (AMG) methods:
+
+The first is a new monolithic AMG scheme for the implicit solution
+of fluid-structure interaction (FSI) simulations
+\cite{geekuettlerwall}. Therein, an AMG hierarchy for the
+nonsymmetric monolithic fluid, structure and mesh movement system of
+equations is constructed that also considers a coarse representation
+of interfield off-diagonal coupling blocks in a variationally
+consistent way. This  FSI multigrid preconditioner is based on a
+mixed smoothed aggregation and
+nonsymmetric smoothed aggregation approach \cite{SalaTuminaro,wiesnertuminarogee} that
+accounts for the hybrid nature of the monolithic FSI problem. It
+limits the amount of artificial smearing of individual fields on
+coarse levels by construction and allows for field specific
+smoothers within its block oriented smoothing procedure. It is
+mainly utilized in the very challenging regime of soft tissue
+biomechanics of the vascular and respiratory system where
+disadvantageous density ratios and large deformations appear.
+
+The second recent development is a framework for constructtion of algebraic transfer operator for highly non symmetric systems that arise from the discretization of convection dominated problems such as e.g. the (Navier-) Stokes equations \cite{wiesnertuminarogee}.
+This framework follows a Schur complement perspective as this is suitable for 
+both symmetric and nonsymmetric systems.  In particular, a connection between 
+algebraic multigrid and approximate block factorizations is explored. This 
+connection demonstrates that the convergence rate of a two-level model 
+multigrid iteration is completely governed by how well the coarse 
+discretization approximates a Schur complement operator. The new grid 
+transfer algorithm is then based on computing a Schur complement but
+restricting the solution space of the corresponding grid transfers
+in a Galerkin-style so that a far less
+expensive approximation
+is obtained. The final
+algorithm corresponds to a Richardson-type iteration that is used to 
+improve a simple initial prolongator or a simple initial restrictor. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{geekuettlerwall}
+{\sc M.W. Gee and U. K\"uttler and W.A. Wall}. {Truly Monolithic Algebraic Multigrid for Fluid-Structure Interation}. International Journal for Numerical Methods in Engineering, (2010), 85, 987-1016.
+
+
+
+\bibitem{wiesnertuminarogee}
+{\sc T. Wiesner and R.S. Tuminaro and W.A. Wall and M.W. Gee }. {Multigrid Transfers for Nonsymmetric Systems based on Schur Complements and Galerkin Projections}. (2011), Numerical Linear Algebra With Applications, submitted.
+
+
+
+\bibitem{SalaTuminaro}
+{\sc M.~Sala and R.S. Tuminaro}. {A new petrov-galerkin smoothed aggregation preconditioner for   nonsymmetric linear systems}. Siam J. Scientific Comp, (2008), 31, 143--166.
+
+\end{thebibliography}

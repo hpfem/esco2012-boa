@@ -1,0 +1,39 @@
+\title{Mechanical Model of Plant Cell Tissue with Water Transport}
+\tocauthor{R. Cimrman} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Robert Cimrman}}\\
+University of West Bohemia, Univerzitni 8, 306 14 Plzen, Czech Republic\\
+{\tt cimrman3@ntc.zcu.cz}
+\\ \vspace{4mm}{\large Ales Janka}\\
+Ecole d'Ingenieurs et d'Architectes de Fribourg, Bd Perolles 80, CP 32, CH-1705 Fribourg, Switzerland\\
+{\tt ales.janka@hefr.ch}
+
+\end{center}
+
+\section*{Abstract}
+
+To understand the growths of plant cells and organs and especially the origin of regular patterns so often seen in nature [1], a model of the cells mechanical behaviour including the transport of water/hormones/nutrients is needed. Contemporary plant biomechanics is still behind its animal counterpart, and, to our knowledge, still somewhat lacks the strong mathematical/mechanical foundation upon which to build biologically relevant hypotheses. We try to fill in this gap a bit by proposing and implementing in a computer code a mechanical model of plant cell tissue including water transport. The model consists of hyperelastic (Mooney-Rivlin) membranes [2, 3] corresponding to the stiff cell walls filled with liquid represented by volume and hydrostatic (turgor) pressure. The water transport between individual cells and between cells and environment is governed by Vant'Hoff/Morse's law [4] connecting pressure and osmotic potential differences with cell volume changes. We plan to present numerical examples explaining role of water transport for mechanical properties, as measured by our collaborators in Bern (Institute of Plant Sciences).
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{patterns-1}
+{\sc P. Prusinkiewicz and A. Lindenmayer}. {The Algorithmic Beauty of Plants}. Springer-Verlag New York, 1990.
+
+
+
+\bibitem{mr-1}
+{\sc J. E. Adkins and R. S. Rivlin}. {Large Elastic Deformations of Isotropic Materials. IX. The Deformation of Thin Shells}. Phil. Trans. R. Soc. Lond. A 1952 244, 505-531.
+
+
+
+\bibitem{mr-2}
+{\sc B. Wu and X. Du and H. Tan}. {A Three-dimensional FE Nonlinear Analysis of Membranes}. Computers \& Structures Vol 59, No. 4, pp. 6O1-605, 1996.
+
+
+
+\bibitem{morse-1}
+{\sc K. Niklas}. {Plant biomechanics -- An Engineering Approach to Plant Form and Function}. Univ. of Chicago Press, London 1992.
+
+\end{thebibliography}

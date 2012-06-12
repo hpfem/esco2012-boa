@@ -1,0 +1,47 @@
+\title{Abdominal Aorta Flow: The Lattice Boltzmann and Finite Volume Methods}
+\tocauthor{M. Matyka} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Maciej Matyka}}\\
+University of Wroclaw\\
+{\tt maq@ift.uni.wroc.pl}
+\\ \vspace{4mm}{\large Zbigniew Koza}\\
+University of Wroclaw\\
+{\tt zkoza@ift.uni.wroc.pl}
+\\ \vspace{4mm}{\large Lukasz Miroslaw}\\
+Wroclaw University of Technology\\
+{\tt lukasz.miroslaw@pwr.wroc.pl}
+
+\end{center}
+
+\section*{Abstract}
+
+Computer simulations of the blood flow in the human circular system could allow physicians to visualize the internal flow structure, a capability that might have a significant impact on diagnosis and treatment of several diseases, e.g. aneurysm. One of the key problems in applying flow simulations in medical applications is a prohibitively long computation time. It is widely believed that this time could be significantly reduced by using efficient parallel algorithms on emerging massively parallel architectures, e.g. graphics processing units (GPUs). The lattice Boltzmann method (LBM) is a recently developed algorithm for fluid flow simulations, which has proven to have good parallelization properties for a single [Toelke08] and multiple [Xian11] GPUs. In this work we address the question of efficiency and accuracy of a GPU LBM implementation in medical applications. In particular, we investigate the flow through abdominal aorta (see [Artoli06, Gohil10] as examples of similar study). In contrast to previous LBM studies, where the vectors normal to the boundaries were calculated from the flow solution [Stahl10], we introduce a simple procedure for their determination directly from the voxel data. Using it, we calculate the wall shear stress (WSS) function at the aortic walls and compare it to the solution obtained with a standard FVM solver.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Artoli06}
+{\sc A. M. Artol and A. G. Hoekstra and P. M. A. Sloot}. {Mesoscopic simulations of systolic flow in the human abdominal aorta}. Journal of Biomechanics 39, 873-884 (2006).
+
+
+
+\bibitem{Gohi10}
+{\sc T. Gohil and R. H. P. McGregor and D. Szczerba and K. Burckhardt and K. Muralidhar and G. Szekely}. {Simulation of oscillatory flow in an aortic bifurcation using FVM and FEM: A comparative study of implementation strategies}. International Journal for Numerical Methods in Fluids (2010), n/a. doi: 10.1002/fld.2301.
+
+
+
+\bibitem{Stahl10}
+{\sc B. Stahl and B. Chopard and J. Latt}. {Measurements of wall shear stress with the lattice Boltzmann method and staircase approximation of boundaries}. Computers \& Fluids 39, 1625-1633 (2010) .
+
+
+
+\bibitem{Toelke08}
+{\sc J. Toelke and M. undefined and Krafczyk undefined}. {TeraFLOP computing on a desktop PC with GPUs for 3D CFD}. International Journal of Computational Fluid Dynamics, 22:7, 443-456 (2008).
+
+
+
+\bibitem{Xian11}
+{\sc W. Xian and A. Takayuki}. {Multi-GPU performance of incompressible flow computation by lattice Boltzmann method on GPU cluster}. Parallel Computing 37, 521-535, (2011).
+
+\end{thebibliography}

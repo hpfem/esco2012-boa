@@ -1,0 +1,36 @@
+\title{An Overview of the Trilinos Project}
+\author{} \tocauthor{C. Baker} \institute{}
+\maketitle
+\begin{center}
+{\large Christian Baker}\\
+Oak Ridge National Laboratories\\
+{\tt bakercg@ornl.gov}
+
+\end{center}
+
+\section*{Abstract}
+
+
+Trilinos~\cite{trilinoshomepage,Trilinos-Overview-TOMS} is a large collection of open source libraries for scalable technical computing, winner of an R\&D 100 award and the HPC Software Challenge award at the IEEE/ACM Supercomputing conference in 2004.  The name Trilinos is a Greek term that loosely translates to ``a string of pearls'' and is meant to evoke the image of useful, independently-developed packages that are even more valuable as a collection.  Although the ``Tri'' in Trilinos symbolizes our grand vision of 3 packages when the project started ten years ago, we quickly realized that the community, infrastructure and package concepts were useful on a broader scope.  Presently Trilinos contains more than 60 packages and continues growing.  
+
+The computing community is in the midst of a fundamental shift in parallel computing from single core nodes to large-count multicore and GPU (collectively called manycore) nodes.  Trilinos is well on the path to execution on scalable manycore systems, providing basic computational capabilities using OpenMP, Pthreads, Intel Threading Building Blocks and CUDA.  Presently we are performing research and development in manycore algorithms in areas such as sparse factorizations and solves, communication-avoiding methods and multi-precision methods.
+
+In this presentation we discuss how we are addressing scalability of Trilinos in (i) coordinating the efforts of project contributors, (ii) developing processes that enable scalability in package count and (iii) migration to new parallel systems at the desktop, department and computing center design points.
+
+We conclude the presentation with lessons learned about large-scale scientific software engineering and our view of architecting software for current and future parallel systems.
+
+
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Trilinos-Overview-TOMS}
+{\sc Michael A. Heroux and et. al.}. {An Overview of the Trilinos Project}. ACM Trans. Math. Softw., 31(3):397--423, 2005.
+
+
+
+\bibitem{trilinoshomepage}
+{\sc Michael A. Heroux and James M. Willenbring}. {The Trilinos Project Website}. 2011.
+
+\end{thebibliography}

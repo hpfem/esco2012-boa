@@ -1,0 +1,41 @@
+\title{High Order DGTD Method with Local Time Stepping for the Solution of the First Order Maxwell Equations}
+\tocauthor{S. Descombes} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large St\'ephane Descombes}\\
+UniversitÃ© Nice Sophia Antipolis and {\sc Nachos} project-team, INRIA Sophia Antipolis - M\'editerran\'ee research center\\
+{\tt sdescomb@unice.fr}
+\\ \vspace{4mm}{\large St\'ephane Lanteri, Jospeh Charles}\\
+{\sc Nachos} project-team, INRIA Sophia Antipolis - M\'editerran\'ee  research center\\
+{\tt Stephane.Lanteri@inria.fr, Joseph.Charles@inria.fr}
+\\ \vspace{4mm}{\large Julien Diaz}\\
+{\sc Magique-3D} project-team, INRIA Bordeaux - Sud-Ouest                research cente\\
+{\tt Julien.Diaz@inria.fr}
+
+\end{center}
+
+\section*{Abstract}
+
+In this talk we are interested in the discretization in space and time of the
+Maxwell's equations in the presence of locally refined meshes.
+A discontinuous Galerkin methods is
+used and naturally allow high order spatial
+approximation of the field in each cell.
+The question is now the choice of the
+time discretization. Most explicit time stepping methods are conditionally stable and
+the finest element in a non-uniform mesh dictates the maximum time step allowed
+to all the other elements of the computational domain. 
+Various local explicit time stepping strategies have been then proposed,
+presenting the advantage to use non-uniform time step sizes on non-uniform meshes to
+further improve the efficiency of the numerical scheme by setting time steps accordingly to their corresponding element size.
+In this talk, we propose fully explicit high order local time stepping strategies in the spirit of those
+recently proposed in [1]. This is done here in the framework
+of a non-dissipative discontinuous Galerkin time domain (DGTD) method for the solution of the first order form of the system of Maxwell's equations.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{1zz}
+{\sc J. Diaz and M.J. Grote}. {Energy conserving explicit local time-stepping for second-order wave equations}. SIAM J. Sci. Comput. 31 (2009) 1985--2014.
+
+\end{thebibliography}

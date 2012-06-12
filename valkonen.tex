@@ -1,0 +1,26 @@
+\title{GPU-Accelerated Regularisation of Large Diffusion Tensor Volumes}
+\tocauthor{T. Valkonen} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Tuomo Valkonen}}\\
+University of Graz\\
+{\tt tuomov@iki.fi}
+\\ \vspace{4mm}{\large Manfred Liebmann}\\
+University of Graz\\
+{\tt manfred.liebmann@uni-graz.at}
+
+\end{center}
+
+\section*{Abstract}
+
+In our talk, we discuss the benefits, difficulties, and performance of a GPU implementation of the Chambolle-Pock algorithm for TGV (total generalised variation) and TD (total deformation) denoising of medical diffusion tensor images. Whereas we have previously [1] studied the denoising of 2D slices of $2 \times 2$ and $3 \times 3$ tensors, attaining satisfactory performance on a normal CPU, here we concentrate on full 3D volumes of data, where each 3D voxel consists of a symmetric $3 \times 3$ tensor. One of the major computational bottle-necks in the Chambolle-Pock algorithm for these
+problems is that on each iteration at each voxel of the data set, a tensor needs to be projected to the positive definite cone. This in practise requires QR iteration at each voxel, as explicit solutions are not numerically stable. For a $128 \times 128 \times 128$ data set, for example, the count is 2 megavoxels, which lends itself to massively parallel GPU implementation. Further performance enhancements are obtained by parallelising basic arithmetic operations and differentiation.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{valkonen-liebmann-1}
+{\sc T. Valkonen and M. Knoll}. {Total generalised variation in diffusion tensor imaging}. SFB-Report  2012-003, University of Graz.
+
+\end{thebibliography}

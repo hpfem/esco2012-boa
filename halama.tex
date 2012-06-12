@@ -1,0 +1,40 @@
+\title{Numerical Simulation of Transonic Flow of Wet Steam in Nozzles and Turbines}
+\tocauthor{J. Halama} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Jan Halama}}\\
+Department of Technical Mathematics, FME, CTU Prague\\
+{\tt halama@marian.fsik.cvut.cz}
+\\ \vspace{4mm}{\large Jaroslav Fo\v rt}\\
+Department of Technical Mathematics, FME, CTU Prague\\
+{\tt fort@marian.fsik.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Steam in a typical technical application expands from overheated into wet steam. The appearance of a liquid phase is a non-negligible phenomenon from many points view. Current 
+work\footnote{This work is supported by the grant no. 101/11/1593 of GACR.} is aimed at numerical solution of flow in steam turbines. Considered flow model consists of transport equations for the mixture of gas with dispersed droplets. The model of non-equilibrium condensation includes nucleation \cite{bd} and  droplet growth. The problem is the evolution problem with chosen initial conditions and time 
+independent boundary conditions. It can yield steady as well as unsteady solution. Phenomena like convection, nucleation and droplet growth have very different time scales, especially nucleation is very fast. Therefore used numerical method is based on the fractional step method, where each step of time evolution
+is divided into sub-steps where convection and condensation are solved separately by different
+methods. We discuss the effects of some model as well as numerical method issues. The artificial dissipation introduced by numerical method has impact on intensity of nucleation shock and on droplet size. The wetness seems not to be affected by artificial dissipation. Our test computations have shown, that the correct position of nucleation zone for the convergent-divergent nozzle case can be reached either with model based on the perfect gas assumption together with surface tension correction \cite{kor} or with the model based on virial equation of state \cite{vir}. We also discuss the sensitivity of droplet growth model on the apriori droplet size distribution function. Current method has been also applied for the solution of stator-rotor interaction in last stage of large steam turbine. We compare results computed by model without nucleation
+and droplet growth with the results of full model.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{bd}
+{\sc R. Becker and W. Doering}. {Kinetische Behandlung der Keimbildung in uebersaettingten Daempfen}. Journal Ann. d. Physik, Vol. 24, No. 8, 1935.
+
+
+
+\bibitem{kor}
+{\sc V. Petr and M. Kolovratnik}. {Heterogenous Effects in the Droplet Nucleation Process in LP Steam Turbines}. 4th European Conference on Turbomachinery, Firenze, 2001.
+
+
+
+\bibitem{vir}
+{\sc SUN Lan-xin and ZHENG Qun and LIU Shun-long}. {2D-simulation of wet steam flow in a steam turbine with spontaneous condensation}. Journal of Marine Science and Application, Vol.6, No.2, June 2007, pp. 59-63.
+
+\end{thebibliography}

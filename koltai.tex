@@ -1,0 +1,28 @@
+\title{Global Stability Design for Non-Linear Dynamical Systems}
+\tocauthor{P. Koltai} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large P\'eter Koltai}\\
+Technische Universit\"at  M\"unchen\\
+{\tt koltai@ma.tum.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Given a stable non-linear system, one would like to compute its stability region. Often, the system depends on parameters, which should be tuned in order to shape this region according to one's needs. More generally, one would like to optimize the global stable behavior of the system; e.g. reducing transient motions.
+
+In this talk I introduce a fairly general framework for doing this by approximating the dynamics by a finite dimensional stochastic process (closely related to the upwind scheme). Translating the desired objectives in the terms of this process enables the simple application of many optimization algorithms. In particular, no trajectory simulation is needed during the computation. The main advantage of the method lies in the resulting numerical efficiency and the general applicability for a wide range of different objectives.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Ko-10}
+{\sc P. Koltai}. {A Stochastic Approach for Computing the Domain of Attraction Without Trajectory Simulation}. Proceedings of the 8th AIMS International Conference on Dynamical Systems, Differential Equations and Applications (2010), to appear, .
+
+
+
+\bibitem{Ko-11}
+{\sc P. Koltai and A. Volf}. {Optimizing the Stable Behavior of Parameter-Dependent Dynamical Systems - Maximal Domains of Attraction, Minimal Absorption Times}. submitted, e-print arXiv:1111.0495.
+
+\end{thebibliography}

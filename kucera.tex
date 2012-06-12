@@ -1,0 +1,28 @@
+\title{Error Estimates for Nonlinear, Purely Convective Problems in Finite Element Methods}
+\tocauthor{V. Kucera} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large V\'{a}clav Ku\v{c}era}\\
+Charles University in Prague, Faculty of Mathematics and Physics\\
+{\tt vaclav.kucera@email.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This paper is concerned with the analysis of finite element methods (standard conforming FEM and discontinuous Galerkin) applied to a nonstationary nonlinear convective problem with mixed Dirichlet-Neumann boundary conditions. Using the technique introduced in \cite{ZhangShu}, we prove apriori error estimates for higher order finite element discretizations of such an equation, assuming the exact solution is sufficiently regular on some time interval $[0,T]$. In previous work, nonlinear convection was treated mainly in the context of convection-diffusion problems and the use of parabolic techniques resulted in error estimates with an exponential blow up with respect to the diffusion coefficient going to zero, cf. \cite{Moje}. 
+
+In \cite{ZhangShu}, the authors perform their analysis for various explicit schemes using an argument which relies heavily on mathematical induction. We extend the analysis to the method of lines using so-called continuous mathematical induction and a nonlinear Gronwall-type lemma. For a fully implicit scheme, we prove that there does not exist a Gronwall-type lemma capable of proving the desired estimates using standard arguments. Next, we use a suitable continuation of the discrete implicit solution and again use continuous mathematical induction to prove error estimates under a CFL-like condition. Finally, we extend the analysis from globally Lipschitz continuous convective nonlinearities to the locally Lipschitz continuous case.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ZhangShu}
+{\sc Q. Zhang and C.-W. Shu}. {Error Estimates to Smooth Solutions of Runge-Kutta Discontinuous Galerkin Methods for Scalar Conservation Laws}. SIAM J. Numer. Anal. 42, 2 (2004) 641-666.
+
+
+
+\bibitem{Moje}
+{\sc V. Ku\v{c}era}. {Optimal $L^\infty(L^2)$-error Estimates for the DG Method Applied to Nonlinear Convection-Diffusion Problems with Nonlinear Diffusion}. Numer. Func. Anal. Opt. 31, 3 (2010) 285-312.
+
+\end{thebibliography}

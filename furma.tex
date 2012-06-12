@@ -1,0 +1,34 @@
+\title{Deterministic Unsteady and Aeroelastic Simulations with High-Order FVM Schemes}
+\tocauthor{P. Furmanek} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Petr Furm{\' a}nek}\\
+VZL{\' U} a. s. \\
+{\tt petr.furmanek@fs.cvut.cz}
+\\ \vspace{4mm}{\large Ji{\v r}{\' i} F{\" u}rst,  Karel Kozel}\\
+CTU in Prague, FME\\
+{\tt jiri.furst@fs.cvut.cz,  karel.kozel@fs.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+During the last few years, unsteady simulations have become a standard part of CFD computations in aeronautical applications. They are usually coupled with various types of turbulent models the most of which are based on the Reynolds-Averaged Navier--Stokes equations (RANS). The RANS system itself is derived using time-averaging and hence it neglects certain type of unsteadiness by its own nature. It is therefore necessary to investigate the ability of the state-of-the-art numerical methods to simulate various types of unsteady flows. The authors carried out series of numerical tests of two types of unsteady compressible flows in external aerodynamics. Namely the transonic flow over harmonically oscillating NACA 0012 profile and subsonic flow over the same profile with oscillations induced by the flow. Three different high-order finite volume schemes with various turbulence models were chosen for the testing. In the first researched case the computations were carried out using: the Modified Causon's scheme \cite{furst-furmanek} (derived from TVD form of the classical MacCormack scheme), the Weighted Least Square Reconstruction scheme  \cite{furst-wlsqr} (based on the WENO approach) and solver Edge by Swedish agency FOI (n-stage Runge--Kutta scheme, multigrid, implicit residual smoothing). The tested turbulence models were: the Spalart--Allmaras model, the Kok's TNT model and the EARSM model. Unfortunately, differences between numerical and experimental data are so significant that none of the mentioned methods is usable as a reliable simulation of the first researched case (at least in its present form). For the purpose of further investigation the Modified Causon's scheme was extended to model aeroelastic interaction between profile and flow with two degrees of freedom. Results of this simulation correspond better to the real flow, but it is necessary to carry out another tests to find out causes of the observed problems.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{furst-wlsqr}
+{\sc J. F{\"u}rst }. {A Weighted Least Square Scheme for Compressible Flows}. Flow, Turbulence and Combustion [online]. 2006, vol. 76, no. 4, s. 331-342.  ISSN 1573-1987.
+
+
+
+\bibitem{furst-furmanek}
+{\sc P. Furm{\' a}nek - J. F{\" u}rst - K. Kozel}. {High Order Finite Volume Schemes for Numerical Solution of 2D and 3D Transonic Flows}. In: Kybernetika. 2009, vol. 45, no. 4, p. 567-579. ISSN 0023-5954.
+
+
+
+\bibitem{svacek2011}
+{\sc P. Sv{\' a}{\v c}ek}. {Numerical Modelling of Aeroelastic Behaviour of an Airfoil in Viscous Incompressible Flow}. In: Applied Mathematics and Computation. 2011, vol. 217, no. 11, p. 5078-5086. ISSN 0096-3003.
+
+\end{thebibliography}

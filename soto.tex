@@ -1,0 +1,70 @@
+\title{An Efficient Coupled Fluid/Structure Finite Element Scheme for Blast and Impact Loads over Reinforce Concrete Structures}
+\tocauthor{O. Soto} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Orlando Soto}\\
+Science Applications International Corporation (SAIC)\\
+{\tt orlando.a.soto@saic.com}
+
+\end{center}
+
+\section*{Abstract}
+
+An efficient finite element (FE) scheme to model coupled fluid-solid
+blast and impact problems is presented. The main ingredients are: 
+an improved OSS-Q1/P0 solid element (Orthogonal Sub-grid Scale
+Stabilized element tri-linear in velocities and constant
+piecewise-discontinuous pressures), a large-strain finite element (FE)
+convective formulation, a phenomenological concrete model to deal with damage
+and fracture of concrete structures (K\&C model \cite{kcpaper}),
+and a general contact algorithm which
+uses bin technology to perform the node-face searching operations in an
+efficient manner. All the schemes, contact included, have been fully
+parallelized 
+and coupled using an embedded procedure with the CFD
+(computational fluid dynamics) code FEFLO. Several 3D coupled CFD/CSD cases
+with experimental comparisons will be presented to validate the scheme.
+
+The main ingredient of the formulation, the OSS scheme,
+ allows to obtain locking free displacement/velocity fields and,
+furthermore, a totally
+stable (free of spurious oscillation) stress field in each time step. This last
+feature is essential to produce smooth and stable damage distributions and,
+therefore, clearly defined localization bands and fracture patterns. The OSS
+scheme consists in adding to the standard FE Galerkin terms an additional
+contribution to improve the stability of the discrete approximation. The OSS
+variational form can be written as:
+\begin{eqnarray}
+{\rm Galerkin}
++\int_{\Omega_t} \tau\nabla q\cdot\bigl(\nabla p
+-\bm \xi)~{\rm d}\Omega=0~~~;~~~\int_{\Omega_t} {\bm v}\cdot\bm \xi~{\rm d}\Omega=
+\int_{\Omega_t} {\bm v}\cdot\nabla p~{\rm d}\Omega&&
+\end{eqnarray}
+\noindent where ${\rm Galerkin}$ refers to the standard Galerkin terms, 
+$\tau$ is the stabilization parameter, $p$ is the
+pressure, and $\bm \xi$ is the projection of the pressure gradient into the FE
+space. The OSS method is clearly consistent at a continuous level in the sense that the
+exact solution of the original dynamic equilibrium 
+problem fulfills the variational form (1). It will be shown in the final paper
+that the stabilization parameter $\tau$ can be designed such that the
+convergence order of the additional terms (non-Galerkin terms) is at least
+fourth. Hence, the original accuracy of the standard FE approximation is not
+deteriorated (the standard FE scheme is second order for linear elements). Several authors have been using this
+``pressure filtering'' terms for incompressible problems, but, to our
+knowledge,  this is the
+first time that the method is presented for explicit blast and impact coupled
+fluid/solid problems. Finally, the other ingredients of the formulation may be consulted in \cite{soto2010}.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{kcpaper}
+{\sc L. Malvar and J. Crawford and J. Wesevich and D. Simons}. {A plasticity concrete material for DYNA3D}.  Int. J. Impact Engng. 19, 847--873, 1997.
+
+
+
+\bibitem{soto2010}
+{\sc O. Soto and J. Baum and R. L\"ohner}. {An efficient fluid-solid  coupled finite element scheme for weapon fragmentation simulations}. Engineering Fracture Mechanics. 77, 549-564, 2010.
+
+\end{thebibliography}

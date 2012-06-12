@@ -1,0 +1,31 @@
+\title{A Fast Deterministic Method for Stochastic Interface Problems}
+\tocauthor{H. Harbrecht} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Helmut Harbrecht}\\
+University of Basel\\
+{\tt helmut.harbrecht@unibas.ch}
+
+\end{center}
+
+\section*{Abstract}
+
+In this talk, we propose a fast deterministic numerical method to solve stochastic elliptic interface problems with random interfaces. Shape calculus is employed to derive a shape-type Taylor expansion in the framework of the asymptotic perturbation approach. Given the mean field and the two-point correlation function of the random interface variation, we can quantify the mean field and variance of the random solution in terms of certain orders of the perturbation magnitude by solving a deterministic elliptic interface problem and its tensorized counterpart with respect to the reference interface. Error estimates are derived for interface-resolved finite element approximation in both physical and stochastic dimensions. We discuss sparse grid and low-rank approximations to compute the two-point correlation function of the random solution. In particular, a fast finite difference scheme is proposed which uses a low-rank approximation based on the pivoted Cholesky decomposition. Numerical experiments are presented to validate and quantity the advantages of the proposed method.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{harbrecht-li}
+{\sc H. Harbrecht and J. Li}. {A fast deterministic method for stochastic elliptic interface problems based on low-rank approximation}. Research Report No. 2011-24, Seminar f\"ur Angewandte Mathematik, ETH Z\"urich, Switzerland, 2011.
+
+
+
+\bibitem{harbrecht}
+{\sc H. Harbrecht}. {A finite element method for elliptic problems with stochastic input data}. Appl. Numer. Math., 60(3):227-244, 2010.
+
+
+
+\bibitem{harbrecht-schneider-schwab}
+{\sc H. Harbrecht and R. Schneider and C. Schwab}. {Sparse second moment analysis for elliptic problems in stochastic domains}. Numer. Math., 109(3):385-414, 2008.
+
+\end{thebibliography}

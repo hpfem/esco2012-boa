@@ -1,0 +1,60 @@
+\title{Bayesian Parameter Identification for Nonlinear Systems}
+\tocauthor{B. Rosic} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Bojana Rosic}}\\
+TU Braunschweig\\
+{\tt bojana.rosic@tu-bs.de}
+\\ \vspace{4mm}{\large Oliver Pajonk}\\
+SPT Group GmbH Hamburg\\
+{\tt o.pajonk@tu-bs.de}
+\\ \vspace{4mm}{\large Anna Kucerova}\\
+TU Prague\\
+{\tt anicka@cml.fsv.cvut.cz}
+\\ \vspace{4mm}{\large Jan Sykora}\\
+TU Prague\\
+{\tt jan.sykora.1@fsv.cvut.cz}
+\\ \vspace{4mm}{\large Hermann G. Matthies}\\
+TU Braunschweig\\
+{\tt wire@tu-bs.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Inverse problems are important in engineering science and appear very frequently 
+such as for example in estimation of material porosity and
+properties describing irreversible behaviour, control of high-speed machining processes etc. At present,  
+most of identification procedures have to cope
+with ill-possedness as the problems are often considered in a deterministic framework. 
+However, if  the parameters are modelled as random variables the process of obtaining more information 
+through experiments in a Bayesian setting
+becomes well-posed \cite{Tarantola}. In this manner the Bayesian information update can be seen as a minimisation of 
+variance. In this work 
+we use the functional approximation of uncertainty and develop a purely deterministic procedure for the 
+updating process \cite{Rosic,Pajonk}. This is then contrasted to a fully Bayesian update based on Markov chain Monte Carlo \cite{Gamerman}
+ sampling on a few numerical nonlinear examples
+based on plasticity and nonlinear diffusion models.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Tarantola}
+{\sc A. Tarantola}. { Inverse Problem Theory and Methods for Model Parameter Estimation}. Society for Industrial and Applied Mathematics, Philadelphia, 2005.
+
+
+
+\bibitem{Pajonk}
+{\sc O. Pajonk and B. Rosic and A. Litvinenko and H. G. Matthies}. {A Deterministic Filter for Non-Gaussian Bayesian Estimation}. Informatikbericht 2011-04, TU Braunschweig, 2011..
+
+
+
+\bibitem{Rosic}
+{\sc B. Rosic and A. Litvinenko and O.Pajonk undefined and H. G. Matthies}. {Direct Bayesian Update of Polynomial Chaos Representations}. Informatikbericht 2011-02, TU Braunschweig, 2011..
+
+
+
+\bibitem{Gamerman}
+{\sc D. Gamerman and H. F. Lopes}. {Markov Chain Monte Carlo: stochastic simulation for Bayesian inference}. Chapman and Hall, Florida.
+
+\end{thebibliography}

@@ -1,0 +1,67 @@
+\title{Numerical Simulation of Generalized Oldroyd-B and Generalized Newtonian Flows}
+\tocauthor{V. Prokop} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Vladimir  Prokop}\\
+Faculty of Mechanical Engineering, CTU in Prague\\
+{\tt prouki@seznam.cz}
+\\ \vspace{4mm}{\large Karel Kozel}\\
+Faculty of Mechanical Engineering, CTU in Prague\\
+{\tt karel.kozel@fs.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This work concerns with numerical simulation of generalized Newtonian and generalized Oldroyd-B fluids.
+Newtonian model of a fluid is not able to capture all the
+phenomena in many fluids with complex microstructure, where are involved much
+larger scales than the atomic scale.  Polymeric fluids are the most studied class of
+non-Newtonian fluids.
+They are characterized by the presence of long chain molecules
+stretched out by the drag forces of the surrounding fluid. The retraction of
+molecules from stretched state induces an elastic force contributing to the
+stress tensor. In polymeric fluids exposed to shearing, polymeric molecules are aligned with
+the flow direction causing normal stress in the flow direction \cite{renardy}.
+
+The motion of polymeric fluids is described by the conservation of mass and
+momentum. One shall assume that the fluid is incompressible and temperature
+variations are negligible. The mathematical model is
+complete when a constitutive law, relating extra stress tensor $\bf{T}$ to the motion, is
+prescribed. 
+When one considers viscoelastic behavior of polymeric fluids, the extra
+stress tensor depend not only on the current motion of the fluid, but also on
+the history of the motion \cite{bodnar}. In this case the extra stress tensor
+${\bf T}$ is decomposed into its Newtonian part ${\bf T}_s$ and its elastic part ${\bf
+  T}_e$. Components of the elastic part of the extra stress tensor are computed using
+the Oldroyd-B constitutive equation \cite{owens}:
+
+The resulting systems of equations for pressure, velocity components and
+components of the elastic part of the extra stress tensor are solved using the
+artificial compressibility method. For discretization of spatial
+derivatives a finite volume method is employed \cite{prokop}. Inviscid fluxes are discretized in central manner,
+viscous fluxes are computed using dual finite volume cells of diamond type. The resulting system
+of ODEs is solved using three-stage Runge-Kutta method \cite{prokop} with steady boundary conditions.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{renardy}
+{\sc M. Renardy}. {Mathematical analysis of viscoelastic flows}. SIAM, 2000.
+
+
+
+\bibitem{owens}
+{\sc R. G. Owens and T. N. Phillips}. {Computational Rheology}. Imperial College Press, 2002.
+
+
+
+\bibitem{prokop}
+{\sc V. Prokop and K. Kozel}. {Numerical Simulation of Generalized Newtonian Flows in Bypass}. ICNAAM 2010, AIP Conference Proceedings, Volume 1281, pp 127-130, CD-ROM ISBN: 978-0-7354-0831-9.
+
+
+
+\bibitem{bodnar}
+{\sc T. Bodnar and A. Sequeira and M. Prosi}. {On the shear-thinning and viscoelastic effects of blood flow under various flow rates}. Applied Mathematics and Computation 217, pp. 5055--5067, 2011.
+
+\end{thebibliography}

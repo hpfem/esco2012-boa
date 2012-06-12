@@ -1,0 +1,55 @@
+\title{Sequential Space-Filling Design Strategies}
+\tocauthor{M. Leps} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Eva My\v{s}\'akov\'a}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt eva.mysakova@fsv.cvut.cz}
+\\ \vspace{4mm}{\large Anna Ku\v{c}erov\'a}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt anicka@cml.fsv.cvut.cz}
+\\ \vspace{4mm}{\large Mat\v{e}j Lep\v{s}}\\
+CTU in Prague, Faculty of Civil Engineering\\
+{\tt leps@cml.fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Space-Filling Design Strategies constitute an essential part of a surrogate
+modeling. Two main objectives are usually placed on the resulting designs - orthogonality
+and space-filling properties. The last decade has witnessed the development
+of several methods for the latter objective. These methods are based on totally
+different ideas and are characterized by distant complexities.
+
+In detail, our contribution presents and compares several different techniques of sequential quasi-random numbers generators.
+A part of them ensures special properties like Latin Hypercube Sampling (LHS) restrictions aimed at reliability calculations~\cite{Vor:HSLHS:Madeira:09}; the next part are simple sequential random number generators~\cite{Maaranen:2007} and the last part are algorithms incorporating Delaunay triangulations~\cite{Crombecq:2009} for recognition of unsampled space.
+
+In comparison to standard procedures for generating uniform designs, sequential strategies offer the addition of more samples in case the initial set of designs is not sufficient. This is done by superimposing new set of designs in case of LHS methodology, or adding one point in time based on the largest unsampled space within remaining approaches.
+
+An application domain of Sequential Space-Filling Strategies is very wide. From the original Design of Experiments to stochastic calculations~\cite{Vor:HSLHS:Madeira:09} up to Neural Networks training~\cite{Devabhaktuni:2000}. We will be interested especially in the latter application. Finally, the computing
+time can be the limiting constraint and therefore, we will inspect the computing demands against
+the space-filling performances.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Vor:HSLHS:Madeira:09}
+{\sc M. Vo{\v{r}}echovsk{\'{y}}}. {Hierarchical {S}ubset {L}atin {H}ypercube {S}ampling for Correlated Random Vectors}. Proceedings of the First International Conference on Soft Computing Technology in Civil, Structural and Environmental Engineering, Civil-Comp Press, 2009.
+
+
+
+\bibitem{Crombecq:2009}
+{\sc K. Crombecq and I. Couckuyt and D. Gorissen and T. Dhaene}. {Space-filling sequential design strategies for adaptive surrogate   modelling}. In {\em Proceedings of  the First International Conference on Soft Computing Technology in Civil,   Structural and Environmental Engineering}. Civil-Comp Press, 2009.
+
+
+
+\bibitem{Devabhaktuni:2000}
+{\sc V. K. Devabhaktuni and Q. J. Zhang}. {Neural network training-driven adaptive sampling algorithm for   microwave modeling}. In {\em Microwave Conference, 2000. 30th European}, pages 1--4, 2000.
+
+
+
+\bibitem{Maaranen:2007}
+{\sc H. Maaranen and K. Miettinen and A. Penttinen}. {On initial populations of a genetic algorithm for continuous   optimization problems}. {\em J. of Global Optimization}, 37:405--436, 2007.
+
+\end{thebibliography}

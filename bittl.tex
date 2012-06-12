@@ -1,0 +1,60 @@
+
+\title{An $hp$-adaptive FEM-FCT Algorithm for Convection-Dominated Transport Problems }
+\author{} \tocauthor{M. Bittl} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Melanie Bittl}}\\
+University of Erlangen-Nuremberg\\
+{\tt melanie.bittl@am.uni-erlangen.de}
+\\ \vspace{4mm}{\large Dmitri Kuzmin}\\
+University of Erlangen-Nuremberg\\
+{\tt kuzmin@am.uni-erlangen.de}
+
+\end{center}
+
+\section*{Abstract}
+This talk is concerned with the design of flux limiters for $hp$-adaptive
+finite element discretizations of a scalar transport equation. The proposed
+approach is based on a continuous Galerkin approximation with unconstrained
+high-order elements in smooth regions and constrained $P_1/Q_1$ elements in
+the neighborhood of steep fronts. The local mesh size $h$ and polynomial
+degree $p$ are chosen using two different error indicators. The first one 
+is a gradient-based error indicator \cite{zz1987gg} and the second one is a 
+hierarchical smoothness indicator based on discontinuous higher-order 
+reconstructions \cite{Kuzmin_Friedhelmgg}. The discrete maximum principle for 
+linear/bilinear finite elements is enforced using a linearized flux-corrected 
+transport (FCT) algorithm \cite{Kuzmingg}. The same limiting strategy is employed
+when it comes to constraining the $L^2$ projection of data from one 
+finite-dimensional space into another \cite{Kuzmin_2gg}. The new algorithm is 
+implemented in the open-source software package HERMES. The use of hierarchical
+ data structures that support arbitrary level hanging nodes makes the extension 
+of FCT to $hp$-FEM relatively straightforward. The accuracy of the proposed 
+method is illustrated by a numerical study for a two-dimensional benchmark 
+problem with a known exact solution \cite{Kuzmingg,Johngg}.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{zz1987gg}
+{\sc O.C.Zienkiewicz and J.Z.Zhu}. {A simple error estimator and adaptive procedure for practical engineering analysis}. Int. J. Numer. Methods Engrg. 24:2 (1987) 337-357.
+
+
+\bibitem{Kuzmin_Friedhelmgg}
+{\sc D. Kuzmin and F. Schieweck}. {A parameter-free smoothness indicator for high-resolution finite element schemes}. Submitted to the CEJM Topical Issue "Numerical Methods
+for Large Scale Scientific Computing" in February 2012. 
+
+
+\bibitem{Kuzmingg}
+{\sc D. Kuzmin}. {Explicit and implicit FEM-FCT algorithms with flux linearization}. J. Comput. Phys. 228 (2009) 2517-2534.
+
+
+
+\bibitem{Kuzmin_2gg}
+{\sc D. Kuzmin, M. Moeller, J.N. Shadid and M. Shashkov}. {Failsafe flux limiting and constrained data projections for equations of gas dynamics}. J. Comput. Phys. 229 (2010) 8766-8779.
+
+
+
+\bibitem{Johngg}
+{\sc V. John and E. Schmeyer}. {On finite element methods for 3D time-dependent convection-diffusion-reaction equations with small diffusion}. Comput. Meth. Appl. Mech. Engrg. 198 (2008) 475-494.
+
+\end{thebibliography}

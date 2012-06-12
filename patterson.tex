@@ -1,0 +1,74 @@
+\title{Stochastic Methods for Particle Populations in Flows}
+\tocauthor{R. Patterson} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Robert Patterson}\\
+Weierstrass Institute\\
+{\tt Robert.Patterson@wias-berlin.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Particle formation and growth in flows has a wide range of physical and
+engineering applications, from combustion synthesis of nano-particles
+to soot formation and from ice and water precipitation in clouds to
+pharmaceutical crystallisation.  A range numerical methods
+exist for solving population balance equations in these settings.
+These include moment methods \cite{Frenklach,Marchisio}, sectional
+and finite volume
+methods \cite{Kumar} and finite element methods such as \cite{John}.
+For simple particle models, these and other methods are very successful,
+but they suffer from the `curse of dimensionality' when considering
+complex particle models in which particles have many internal coordinates.
+In the case of detailed physical models stochastic particle methods
+offer a practical way forward that is not limited by model dimension
+\cite{Sander}.
+
+The development of stochastic particle methods for population balance
+problems describing particle formation has been carried out in the
+spatially homogeneous setting \cite{Wagner}.  Extension to spatially
+resolved problems with advection is computationally practical, but
+numerical tests show that only newer statistically weighted particle
+methods \cite{Pat11} provide satisfactory results.  We will provide
+some illustrations of what can go wrong; discuss the underlying causes
+and demonstrate the application of the method to a problem from
+combustion science.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Frenklach}
+{\sc M. Frenklach}. {Method of moments with interpolative closure}. Chem. Eng. Sci. 57 (2002) 2229-2239.
+
+
+
+\bibitem{Marchisio}
+{\sc D. L. Marchisio and R. O. Fox}. {Solution of population balance equations using the direct quadrature method of moments}. J. Aerosol Sci. 36 (2005) 43-73.
+
+
+
+\bibitem{Kumar}
+{\sc J. Kumar and G. Warnecke and M. Peglow and S. Heinrich}. {Comparison of numerical methods for solving population balance equations incorporating aggregation and breakage}. Powder Tech. 189 (2009) 218-229.
+
+
+
+\bibitem{John}
+{\sc W. Hackbusch and V. John and A. Khachatryan and C. Suciu}. {A numerical method for the simulation of an aggregation-driven population balance system}. Int. J. Numer. Meth. Fluids, in press, doi:10.1002/fld.2656.
+
+
+
+\bibitem{Sander}
+{\sc M. Sander and R. I. A. Patterson and A. Braumann and A. Raj and M. Kraft}. {Developing the PAH-PP soot particle model using process informatics and uncertainty propagation}. Proc. Combust. Inst 33 (2011) 675-683.
+
+
+
+\bibitem{Wagner}
+{\sc A. Eibeck and W. Wagner}. {Stochastic interacting particle systems and nonlinear kinetic equations}. Ann. Appl. Prob. 13 (2003) 845-889.
+
+
+
+\bibitem{Pat11}
+{\sc R. I. A. Patterson and W. Wagner and M. Kraft}. {Stochastic weighted particle methods for population balance equations}. J Comput. Phys. 230 (2011) 7456-7472.
+
+\end{thebibliography}

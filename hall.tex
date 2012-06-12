@@ -1,0 +1,36 @@
+\title{Adaptive Discontinuous Galerkin Methods for Eigenvalue Problems Arising in Incompressible Fluid Flows}
+\tocauthor{E. Hall} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Edward Hall}}\\
+University of Nottingham\\
+{\tt edward.hall@nottingham.ac.uk}
+\\ \vspace{4mm}{\large K. Andrew Cliffe}\\
+University of Nottingham\\
+{\tt andrew.cliffe@nottingham.ac.uk}
+\\ \vspace{4mm}{\large Paul Houston}\\
+University of Nottingham\\
+{\tt paul.houston@nottingham.ac.uk}
+
+\end{center}
+
+\section*{Abstract}
+
+The accurate location of bifurcation points  in fluid flows is important, especially in the investigation of transition to turbulence. One method for doing this is to investigate the linear stability of steady state solutions to the Navier--Stokes equations  by computing eigenvalues of the discrestised Jacobian evaluated at some Reynolds number. In this talk we will advocate the use of a discontinuous Galerkin method for the numerical solution of the incompressible
+Navier-Stokes equations and develop goal-oriented error estimation techniques specifically for the eigenvalues, together with an $hp$--adaptive refinement strategy. In this way, we can confidently predict whether a steady state solution is linearly stable for some particular Reynolds number.
+
+After comparing our method to a number of benchmark problems, we apply the techniques to the study of bifurcation phenomena of flow in a cylindrical pipe with a sudden expansion, where previous investigations have proven inconclusive. In order to make the problem tractable, we exploit the O(2)-symmetric properties of the system, thus reducing a 3-dimensional problem to a series of
+ 2-dimensional ones. In addition, we modify our method to accurately predict the critical Reynolds number at which a bifurcation occurs and compare our results to physical experiments. Finally, we report some new research into this problem.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{CHP2010}
+{\sc K.A. Cliffe and E. Hall and P. Houston}. {Adaptive Discontinuous Galerkin Methods for Eigenvalue Problems arising in Incompressible Fluid Flows}. SIAM Journal on Scientific Computing 31 (2010) 4607-4632.
+
+
+
+\bibitem{CHPTS2010}
+{\sc K.A. Cliffe and E. Hall and P. Houston and E.T. Phipps and A.G. Salinger}. {Adaptivity and A Posteriori Error Control for Bifurcation Problems III: Incompressible fluid flow in Open Systems with O(2) Symmetry}. Journal of Scientific Computing (in press).
+
+\end{thebibliography}

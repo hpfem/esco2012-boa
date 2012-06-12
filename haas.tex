@@ -1,0 +1,30 @@
+\title{Modelling the Effect of Lateral Nutrient Transport on Biogeochemical Soil Processes: A Coupling Prototype Using Python}
+\tocauthor{E. Haas} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Edwin  Haas, Steffen Klatt, Martin Wlotzka}\\
+Karlsruhe Institute of Technology\\
+{\tt edwin.haas@kit.edu, steffen.klatt@kit.edu, martin.wlotzka@kit.edu}
+\\ \vspace{4mm}{\large Philipp Kraft}\\
+Justus-Liebig-University Giessen\\
+{\tt Philipp.Kraft@umwelt.uni-giessen.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Greenhouse gas (GHG) emission models and field studies are mainly designed for the plot scale. Lateral fluxes of reactive substances as a driver for GHG emissions are only scarcely considered and explored. The processes to investigate and simulate biogeochemistry along one spatial dimension, the depth, are already complex and numerous, therefore a second or third spatial dimension is likely to introduce more uncertainty than helpful information, especially in the face of highly complex hydro-biogeochemical processes. However, plot scale models, inspired and validated by plot scale studies underestimate by design processes occurring in laterally connected environments, like denitrification in unfertilized riparian zones with strong subsurface nitrate input from upslope areas. Integrated model systems can help to identify processes and ecosystem conditions in connected ecosystems, thus guiding the design of later field studies where lateral transport is of importance.
+In this study, a complex biogeochemical model, LandscapeDNDC (Haas et al., 2011) is coupled with a two dimensional model of water and matter transport, based on the hydrological model toolbox Catchment Modelling Framework (CMF) (Kraft et al., 2011). States, fluxes and parameters are exchanged between the models using Python on high temporal and spatial resolution. A virtual hillslope of 200 m length and different land uses, ranging from extremely intensive maize cropping to unfertilized grasslands and a coniferous forested strip has been setup. After 10 years of model runtime a significant amount of N2O emits from the unfertilized riparian zone, driven by dissolved nitrogen from upslope. By reducing the reactive nitrogen input to zero on the entire upslope and running the model for another ten years, the N2O emissions in the formerly intensively fertilized areas drop to nearly zero, while the N2O emissions in the riparian zone prevail for several years, driven by the upslope fertilizer inputs from the first years . 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Haas 2011}
+{\sc Haas E and Klatt S and Froehlich A and Kraft P and et al.}. {Towards a new approach to simulating regional N2O emissions - the LandscapeDNDC Model,}. submitted to Landscape Ecology (2011).
+
+
+
+\bibitem{Kraft 2010}
+{\sc Kraft P and Vache KB and Frede H-G and Breuer L}. {CMF: A Hydrological Programming Language Extension For Integrated Catchment Models}. Environ Modell Softw 26 doi:10.1016/j.envsoft.2010.12.009 (2010).
+
+\end{thebibliography}

@@ -1,0 +1,63 @@
+\title{Towards New Polymer Foam Insulation Material by the Use of Mathematical Modeling}
+\tocauthor{R. Pokorny} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Richard Pokorny}}\\
+ICT Prague, Dept. of Chemical Engineering, Technicka 5, 166 28, Prague 6, Czech Republic\\
+{\tt Richard.Pokorny@vscht.cz}
+\\ \vspace{4mm}{\large Pavel Ferkl}\\
+ICT Prague, Dept. of Chemical Engineering, Technicka 5, 166 28, Prague 6, Czech Republic\\
+{\tt ferklp@vscht.cz}
+\\ \vspace{4mm}{\large Kosek Juraj}\\
+ICT Prague, Dept. of Chemical Engineering, Technicka 5, 166 28, Prague 6, Czech Republic\\
+{\tt Juraj.Kosek@vscht.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+Some modern micro- and nano-structured materials (e.g., polymer
+nano-foams) represent an industrially important class of materials
+in today's technology, as they are widely used as heat insulation
+materials due to their low thermal conductivity and light weight.
+This contribution is thus concerned with two main topics: (i) the
+development of the algorithm which is able to solve the coupled
+conduction-radiation heat transfer problem on very fine
+discretization grid, and (ii) the study and modeling of various
+heat transfer phenomena which have to be considered at nano-scale.
+The algorithm of Voronoi tessellation was used for the digital
+reconstruction of the spatially two and three dimensional media
+with the morphology of the polymer foam. Finite difference (FDM),
+finite volume (FVM) and finite element method (FEM) were used for
+the processing of heat transfer equations. We also report on the
+experience with the new algebraic multigrid method, which is used
+for the solution of large systems of algebraic equations. This
+multigrid method, based on the aggregation of unknowns, allowed us
+to calculate the heat conduction on cubic domains containing up to
+ $500 \times 500 \times 500$ voxels (finite volumes) in 3D and
+the coupled conduction-radiation problem on $2000 \times 2000$
+pixels (in 2D). The concepts of both the gray medium and the
+spectrally-dependent medium are employed in the modeling of heat
+radiation. Intuitively, we expect that the effective thermal
+conductivity of foam decreases with increasing porosity, because
+polymers have about ten times higher thermal conductivity than
+gases. However, the higher porosity also means less polymer phase,
+which acts as a barrier for the thermal radiation. The combined
+effect of conduction-radiation thus results in the minimum
+effective thermal conductivity observed on the thermal
+conductivity versus porosity curve. In common heat insulations
+about 30\% of heat is transferred by radiation.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Notay}
+{\sc Notay Y}. {An aggregation-based algebraic multigrid method}. Tech. Rep. GANMN 08-02, ULB, Belgium, 2008.
+
+
+
+\bibitem{Wang}
+{\sc Wang M. and Pan N}. {Prediction of effective physical properties of complex multiphase materials}. Mat. Sci. Eng. R., 63:1 (2008). doi: 10.1016/j.mser.2008.07.001.
+
+\end{thebibliography}

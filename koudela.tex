@@ -1,0 +1,53 @@
+\title{Modeling of Loud-Speaker with $hp$-Adaptive Methods}
+\tocauthor{L. Koudela} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Lukas Koudela}\\
+University of West Bohemia\\
+{\tt koudela@kte.zcu.cz}
+\\ \vspace{4mm}{\large Pavel Karban}\\
+University of West Bohemia\\
+{\tt karban@kte.zcu.cz}
+\\ \vspace{4mm}{\large Antonin Predota}\\
+University of West Bohemia\\
+{\tt apredota@kte.zcu.cz}
+\\ \vspace{4mm}{\large Oldrich Turecek}\\
+University of West Bohemia\\
+{\tt turecek@ket.zcu.cz}
+\\ \vspace{4mm}{\large Ladislav Zuzjak}\\
+University of West Bohemia\\
+{\tt zuzjak@ket.zcu.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This paper deals with the numerical solution of the acoustic field. Two objectives are followed. The first one is to create a computational model of the loud-speaker with respecting the possibility of diaphragm stiffness. \cite{1kk} The second goal is to obtain directional characteristics of the model with the help of the finite element method. \cite{3kk}
+
+The mathematical model is described by the Helmhotz differential equation describing
+the distribution of the acoustic field. The numerical solution is performed by a fully adaptive higher-order finite element method developed by the hpfem.org group. \cite{2kk} The results of modeling are compared with the results obtained using a commercial software and verified by measurement.
+
+The measurement is realized in the anechoic chamber and based on standard. \cite{4kk} The low-frequency speaker is used in suitable frequency range to avoid the diaphragm uncontrolled breakup. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{1kk}
+{\sc J. Borwick}. {Loudspeaker and Headphone Handbook}. Focal Press 2001.
+
+
+
+\bibitem{2kk}
+{\sc P.Solin et al.}. {Hermes - Higher-Order Modular Finite Element System}. http://hpfem.org/.
+
+
+
+\bibitem{3kk}
+{\sc P. Solin and J. Cerveny and I. Dolezel}. {Arbitrary-Level Hanging Nodes and Automatic Adaptivity in the hp-FEM}. Math. Comput. Simul., Vol. 77, p. 117-132, 2008.
+
+
+
+\bibitem{4kk}
+{\sc CSN JC 60268-5}. {Electroacoustic devices}. Part 5: Loudspeakers.
+
+\end{thebibliography}

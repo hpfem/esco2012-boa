@@ -1,0 +1,73 @@
+\title{On an Optimal Node and Degree Distribution in the $hp$-FEM}
+\tocauthor{J. Chleboun} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Jan Chleboun}\\
+Czech Technical University, Faculty of Civil Engineering, Prague\\
+{\tt chleboun@mat.fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+The accuracy of an $hp$-FE approximation of a solution
+to a weakly formulated problem originating from differential equations
+can be controlled by both the position of mesh nodes and
+by the maximum degree of (polynomial) basis functions forming the 
+finite-dimensional space where the approximate solution
+is searched for, see \cite{BG,Sch,SSD,DKP}. The degree need not be uniformly distributed
+over the set of mesh elements. In fact, nonuniformly distributed
+degree of basis functions is desirable because it allows 
+to use high-degree (that is, more complex) functions at areas
+where they substantially contribute to the accuracy of 
+the approximate solution whereas the other part of the
+solution is sufficiently accurately captured by low-degree basis functions.
+ 
+Although the $hp$-FEM flexibility in controlling the error
+of an approximate solution is one of the strong points of the method,
+it also causes difficulties. Indeed, unlike the $h$-FEM adaptivity
+where only the mesh is modified, adaptive $hp$-FEM algorithms have
+to solve the problem what combination of a mesh modification and polynomial
+degree redistribution to choose. 
+
+To better understand the approximation potential of the $hp$-FEM,
+the following goal has been set: given a fixed number of degrees
+of freedom (DOF), find its optimal distribution between the mesh
+and the basis functions, and optimize the position of the mesh nodes. 
+The difference between the known exact solution and the calculated 
+$hp$-FEM solution
+measured by the $H^1$-norm serves as the optimization criterion.
+Even if the underlying problem is only a 1D elliptic boundary
+value problem, the entire optimization problem is rather demanding
+due to its combinatorial character. The number of possible degree
+distributions increases as fast as $2^n$ where $n$ is equal to
+the DOF. Each polynomial degree distribution determines the number
+of mesh nodes; their position is afterwards optimized.
+The problem of the optimal DOF utilization has been solved numerically
+in the Matlab environment.
+
+
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{BG}
+{\sc I. Babu\v{s}ka and B.Q. Guo}. {The $h$, $p$ and $h-p$ version of the finite element method: basis theory and applications}. Advances in Engineering Software, Volume 15, Issue 3-4, 1992.
+
+
+
+\bibitem{Sch}
+{\sc C. Schwab}. {$p$- and $hp$- Finite Element Methods: Theory and Applications in Solid and Fluid Mechanics}. Oxford University Press, 1998.
+
+
+
+\bibitem{SSD}
+{\sc P. \v{S}ol\'{\i}n and K. Segeth and I. Dole\v{z}el}. {Higher-Order Finite Element Methods}. Chapman \&\ Hall/CRC Press, 2003.
+
+
+
+\bibitem{DKP}
+{\sc L. Demkowicz and J. Kurtz and D. Pardo and W. Rachowicz and M. Paszynski and A. Zdunek}. {Computing with $hp$-Adaptive Finite Elements}. Chapman \&\ Hall/CRC Press, 2007.
+
+\end{thebibliography}

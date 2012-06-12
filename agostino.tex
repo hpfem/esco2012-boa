@@ -1,0 +1,28 @@
+\title{A QoS-Aware Broker for Hybrid Clouds}
+\tocauthor{D. D'Agostino} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Daniele D'Agostino, Antonella Galizia Andrea Clematis, Alfonso Quarati}\\
+CNR-IMATI\\
+{\tt \{dagostino, galizia,clematis,quarati\}@ge.imati.cnr.it}
+\\ \vspace{4mm}{\large Matteo Mangini}\\
+Network Integration and Solutions\\
+{\tt matteo.mangini@nispro.it}
+
+\end{center}
+
+\section*{Abstract}
+
+According to a 2011 Cisco report, global Cloud IP traffic will increase twelvefold over the next 5 years and, by 2014, more than 50\% of all workloads will be processed in the Cloud. Thanks to these premises Cloud Computing is particularly appealing to small and medium enterprises (SMEs) that are continuously seeking for innovative solutions able to optimize investments in IT resources and reduce operative costs. 
+Cloud Computing will favor IT SMEs in the enlargement of their own business,  if able to offer their customers with solutions capable to provide more and personalized guarantees with respect the basic service availability as the  main actual Cloud solutions offer.
+Hybrid Clouds integrating internal  and external infrastructures/services may help to reach this goal. By neatly separating the boundaries between the two areas it will be possible, for example, to enforce security policies as well as to supply several levels of performance. Hybrid solutions require the deployment of tools for the management of well defined QoS requirements and the negotiation of properly calibrated SLAs. A central role is played by a QoS-aware broker capable to deal with user requests and address them to the ``right'' Cloud zone.
+In the context of a national project aimed to transfer ICT advancements from research centers towards SMEs, CNR-IMATI and Network Integration and Solutions (NIS) collaborated to establish a shared understanding of the technological and business perspectives brought about by Cloud technology.  The project focuses on the design of a broker for hybrid Clouds capable to adequately respond to QoS constraints raised by two existing product lines, respectively in the field of risk analysis and education. A NIS customer could require a service at the best conditions she has agreed to pay. To this end the QoS-aware broker will transparently manage the allocation of the request service/VM to the zone that better fit with the quality expectations. For example, the internal NIS managed Cloud, based on OpenNebula, will handle high-level SLA services, while the external ones will allow to process demanding e-learning  requests (e.g. HD-video content).
+To proficiently operate in such a mixed scenario it is crucial to pursue the highest degree of interoperability amongst the different Clouds and the user requests especially for what concern the definition of precise, unambiguous SLAs and the description of Cloud resources. Particularly valuable are, therefore, the contributions of several recently established projects and initiatives proposing the definition of Cloud and SOA standards \cite{WP}.  We availed ourselves of these features by extending the SLA@SOI schema.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{WP}
+{\sc S. Agassi et al.}. {RESERVOIR \& SLA@SOI Collaboration}. White Paper.
+
+\end{thebibliography}

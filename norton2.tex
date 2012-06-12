@@ -1,0 +1,32 @@
+\title{Planewave Expansion Methods for Photonic Crystal Fibres}
+\author{} \tocauthor{R. Norton} \institute{}
+\maketitle
+\begin{center}
+{\large Richard Norton}\\
+La Trobe University\\
+{\tt richard.norton@latrobe.edu.au}
+
+\end{center}
+
+\section*{Abstract}
+
+Photonic crystal fibres are novel optical devices that can be designed to guide light of a particular frequency. In this talk the performance of planewave expansion methods for computing spectral gaps and trapped eigenmodes in photonic crystal fibres is carefully analysed. The occurrence of discontinuous coefficients in the governing equation means that exponential convergence is impossible due to the limited regularity of the eigenfunctions.  However, planewave expansion methods can be at least as good as standard finite element schemes on uniform meshes in both error convergence and computational efficiency.  More importantly, we also consider the performance of two commonly used variants of the planewave expansion method: (a) coupling the planewave expansion method with a regularisation technique where the discontinuous coefficients in the governing equation are approximated by smooth functions, and (b) approximating the Fourier coefficients of the discontinuous coefficients in the governing equation. There is no evidence that regularisation improves the planewave expansion method, but with the correct choice of parameters both variants can be used efficiently without adding significant errors.  References include \cite{nortonsinum}, \cite{nortonthesis} and \cite{nortonapnum}.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{nortonsinum}
+{\sc R. Norton and R. Scheichl}. {Convergence analysis of planewave expansion methods for 2D Schr\"{o}dinger operators with discontinuous periodic potentials}. SIAM J. Numer. Anal. 47 (2010) 4356-4380.
+
+
+
+\bibitem{nortonthesis}
+{\sc R. Norton}. {Numerical computation of band gaps in photonics crystal fibres}. PhD thesis, University of Bath (2008).
+
+
+
+\bibitem{nortonapnum}
+{\sc R.A. Norton and R. Schecihl}. {Planewave expansion methods for photonic crystal fibres}. Submitted to Appl. Numer. Math. 4 Nov 2011.
+
+\end{thebibliography}

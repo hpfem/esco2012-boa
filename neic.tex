@@ -1,0 +1,32 @@
+\title{Parallelzation of a PCG-AMG Solver in Multi-CPU/GPU Environments}
+\tocauthor{A. Neic} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Aurel Neic}}\\
+University of Graz\\
+{\tt aurel.neic@uni-graz.at}
+\\ \vspace{4mm}{\large Manfred Liebmann}\\
+University of Graz\\
+{\tt manfred.liebmann@uni-graz.at}
+\\ \vspace{4mm}{\large Gernot Plank}\\
+Medical University of Graz\\
+{\tt gernot.plank@medunigraz.at }
+\\ \vspace{4mm}{\large Gundolf Haase}\\
+University of Graz\\
+{\tt gundolf.haase@uni-graz.at}
+
+\end{center}
+
+\section*{Abstract}
+
+We present a parallel conjugate gradient solver with an algebraic multigrid preconditioner for second-order elliptic PDEs called: Parallel Toolbox (PT). The PT is designed for multi-CPU and multi-GPU environments and uses non-overlapping domain decomposition as parallelization approach \cite{ptamg}. 
+We discuss in detail the parallelization strategy, the resulting parallel performance properties, and possible future optimizations.
+Strong scalability benchmarks are presented for the bidomain equations of a state-of-the-art model of rabbit ventricles using the CARP (Cardiac Arrythmias Research Package) simulator.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ptamg}
+{\sc G. Haase and M. Liebmann and C. C. Douglas and and G. Plank }. {A parallel algebraic multigrid solver on graphics processing units}. HPCA (China), Revised Selected Papers, ser. Lecture Notes in Computer Science, W. Zhang, Z. Chen, C. C. Douglas, and W. Tong, Eds., vol. 5938. Springer, 2009, pp. 38-47.
+
+\end{thebibliography}

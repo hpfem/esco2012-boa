@@ -1,0 +1,51 @@
+\title{An Iterative Finite Element Method with Adaptivity for Multiple Eigenvalues}
+\tocauthor{S. Giani} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Stefano Giani}\\
+University of Nottingham\\
+{\tt Stefano.Giani@nottingham.ac.uk}
+\\ \vspace{4mm}{\large Pavel Solin}\\
+University of Nevada\\
+{\tt solin@unr.edu}
+
+\end{center}
+
+\section*{Abstract}
+
+We consider the task of resolving accurately the $n$th eigenpair of a generalized
+eigenproblem rooted in some elliptic partial differential equation (PDE), using an adaptive finite
+element method (FEM). 
+Conventional adaptive FEM algorithms call a generalized eigensolver after
+each mesh refinement step. This is not practical in our situation since the generalized eigensolver
+needs to calculate $n$ eigenpairs after each mesh refinement step, it can switch the order of eigenpairs,
+and for repeated eigenvalues it can return an arbitrary linear combination of eigenfunctions from
+the corresponding eigenspace. Especially when adaptivity is used to target an eigenpair of a multiple
+eigenvalue, the change in the linear combination of eigenfunctions may reduce the convergence rate of 
+the method.
+
+In order to circumvent these problems, we propose a novel adaptive
+algorithm that only calls the eigensolver once at the beginning of the computation, and then employs
+an iterative method to pursue a selected eigenvalue-eigenfunction pair on a sequence of locally refined
+meshes. Both Picard's and Newton's variants of the iterative method are presented. The underlying
+partial differential equation (PDE) is discretized with higher-order finite elements (hp-FEM) but
+the algorithm also works for standard low-order FEM. 
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{luka}
+{\sc L. Grubisic And J. S. Ovall}. {On estimators for eigenvalue/eigenvector approximations}. Mathematics of Computation, 78:266 (2008), pp. 739-770.
+
+
+
+\bibitem{hp}
+{\sc P. Solin and D. Andrs and J. Cerveny And M. Simko}. {PDE-independent adaptive hp-fem based on hierarchic extension of finite element spaces}. J. Comput. Appl. Math., 233 (2010), pp. 3086-3094..
+
+
+
+\bibitem{solin}
+{\sc P. Solin and K. Segeth and I. Dolezel}. {Higher-order finite element methods}. Chapman \& Hall, CRC Press, London, 2003..
+
+\end{thebibliography}

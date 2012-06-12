@@ -1,0 +1,27 @@
+\title{Application of the Level-Set Method to a Mixed-Mode Driven Stefan Problem}
+\tocauthor{D. den Ouden} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Dennis den Ouden}\\
+Materials innovation institute\\
+{\tt d.denouden@m2i.nl}
+
+\end{center}
+
+\section*{Abstract}
+
+This study focusses on the growth of small particles within a matrix phase (see also \cite{ouden}). The growth of the particle is assumed to be affected by concentration gradients of a single chemical element within the matrix phase at the particle/matrix boundary and by an interface reaction, resulting into a mixed-mode formulation. The mathematical formulation of the growth is described by a Stefan problem, in which the location of the interface changes in time. At the interface two conditions are present, one governs the mass balance at the interface and results into an equation of motion, and another describes the reaction at the interface which results into a Robin boundary condition. Within the matrix phase we assume that the standard diffusion equation applies to the concentration of the considered chemical element.
+
+The formulated Stefan problem is solved using a level-set method by introducing a time-dependent signed-distance function for which the zero-level contour describes the particle/matrix interface. The evolution of this signed distance function is described by a standard convection equation in which the convection speed is derived from the interface velocity. To ensure the signed-distance property of the level-set function we employ the technique of reinitialization.
+
+Both the convection equation for the signed-distance function and the diffusion equation are discretized by the use of finite-element techniques. The convection equations for evolution of the signed-distance function and the reinitialization of the signed-distance function are solved on a pre-defined grid using a Streamline Upwind Petrov Galerkin finite-element method. The diffusion equation is solved on a part of the pre-defined grid, which is determined by the negative value of the signed-distance function. The convection equation for the computation of the convection speed is solved on the pre-defined grid which is enriched with extra nodes which are located on the zero-level of the signed-distance function.
+
+Simulations with the implemented methods for the growth of various particle shapes show that the methods employed in this study correctly capture the evolution of the particle/matrix interface, especially for non-smooth interfaces. At the later stages of growth physical equilibrium is attained. We have also seen that our solutions show mass conservation when we let the time-step and mesh-coarseness tend to zero.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ouden}
+{\sc D. den Ouden and F.J. Vermolen and L. Zhao and C. Vuik and J. Sietsma}. {Modelling of particle nucleation and growth in binary alloys under elastic deformation: An application to a Cu-0.95$\%$Co alloy}. Comp. Mater. Sci. 50 (2011) 2397-2410.
+
+\end{thebibliography}

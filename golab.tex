@@ -1,0 +1,34 @@
+\title{Development of Distributed Cellular Automata Modeling Framework}
+\tocauthor{R. Golab} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Rafal Golab}\\
+AGH University of Science and Technology\\
+{\tt rgolab@agh.edu.pl}
+\\ \vspace{4mm}{\large Lukasz Madej}\\
+AGH University of Science and Technology\\
+{\tt lmadej@agh.edu.pl}
+\\ \vspace{4mm}{\large Lukasz Rauch}\\
+AGH University of Science and Technology\\
+{\tt lrauch@agh.edu.pl}
+
+\end{center}
+
+\section*{Abstract}
+
+The main aim in numerical modeling is to obtain the greatest possible accuracy of the solutions with minimal computational cost. In metalforming applications, where microstructure evolution is investigated various multi scale models based on discrete methods e.g. cellular automata or monte carlo are becoming more popular [1]. These methods are very powerful but unfortunately extremely time consuming. Additionally, to create a robust microstructure evolution model detailed knowledge about physics of material behavior as well as about numerical programming is required. Such combination of knowledge is a limiting factor in wider development and application of these models. That is why authors decided to develop a user friendly cellular automata framework that will provide to scientists not familiar with implementation issues a complex numerical tool where they will easily incorporate knowledge about mechanisms of particular phenomenon. Initial authors work on this subject is presented elsewhere [2]. It was found that developed CA framework may be a useful tool that support scientist and facilitates development of complicated microstructure evolution models. However, the computational time remained a limiting factor. 
+\\Therefore the extension of the CA framework to distributed calculations is the main objective of this work. Detailed information about test environment, communication technology between subsequent nodes (Message Passing Interface), memory management, as well as CA space partitioning are addresses within the paper. Finally developed algorithm is tested according to the obtained acceleration based on the developed CA austenite-ferrite phase transformation model. 
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{madej-hodson-pietrzyk-1}
+{\sc Madej L. and Hodgson P.D. and Pietrzyk M}. {The validation of a multi scale rheological model of discontinuous phenomena during metal rolling}. Computational Materials Science, 41, 2007, 236-241.
+
+
+
+\bibitem{rauch-madej-perzynski-1}
+{\sc Rauch L. and Madej L. and Perzynski K}. {Numerical simulations of the microscale material phenomena based on cellular automata framework and workflow idea}. Proceedings of the 17th ISPE international conference on Concurrent Engineering, 539-546, 2010.
+
+\end{thebibliography}

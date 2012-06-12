@@ -1,0 +1,61 @@
+\title{Computationally Challenging Two-Phase Incompressible Flow Problems on Multi-GPU Systems}
+\tocauthor{P. Zaspel} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Michael Griebel}\\
+University of Bonn\\
+{\tt griebel@ins.uni-bonn.de}
+\\ \vspace{4mm}{\large \underline{Peter Zaspel}}\\
+University of Bonn\\
+{\tt zaspel@ins.uni-bonn.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Scaling multi-GPU codes are a key component for the Exascale generation of
+compute clusters. We thus recently implemented a fully multi-GPU-based scientific
+CFD solver for two-phase incompressible fluids
+\cite{Griebel2010,Zaspel2011submitted}. Consequently, we are now able to perform
+highly scaling simulations of the interaction of two fluids like air and water on
+large GPU clusters. This kind of simulation is applied in e.g.~the design of
+hydraulic constructions or the study of droplet / bubble dynamics.
+
+Our model for incompressible fluids are the three-dimensional
+Navier-Stokes equations. Two-phase flows are introduced by the
+level-set technique and the continuum surface force approach. We have discretized the system of equations
+with Chorin's projection approach and a finite difference method. High-order WENO
+schemes are applied for most space discretizations. Time discretizations are done
+with the Adams-Bashforth and the Runge-Kutta method of second and third order.
+The necessary pressure Poisson equation is iteratively solved with a
+Jacobi-preconditioned conjugate gradient solver. The GPU-code is implemented with
+CUDA. For the multi-GPU parallelization, we use MPI and a domain decomposition
+method.
+
+Based on the widely improved compute performance of our multi-GPU code over our
+original CPU code \cite{Croce2009}, we now look into fields of application which
+were often strongly limited by compute performance. These fields include, but are not limited to uncertainty
+quantification, optimization and inverse problems. 
+
+In our talk, we will briefly describe our model for two-phase flows and outline
+some technical details of our multi-GPU parallel implementation. Beside of some
+performance benchmark results, we then present preliminary results of our
+latest developments in e.g.~uncertainty quantification on GPUs.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Croce2009}
+{\sc  R. Croce and M. Griebel and M. A. Schweitzer}. {Numerical simulation of bubble and droplet-deformation by a level set approach with surface tension in three dimensions}.  International Journal for Numerical Methods in Fluids, 62(9):963-993, 2009.
+
+
+
+\bibitem{Griebel2010}
+{\sc  M. Griebel and P. Zaspel}. {A multi-GPU accelerated solver for the three-dimensional two-phase incompressible Navier-Stokes equations}. Computer Science - Research and Development, 25(12):65-73, May 2010.
+
+
+
+\bibitem{Zaspel2011submitted}
+{\sc P. Zaspel and M. Griebel.}. {Solving incompressible two-phase flows on massively parallel multi-GPU clusters}. Computers and Fluids, 2011, submitted, INS Preprint no. 1113.
+
+\end{thebibliography}

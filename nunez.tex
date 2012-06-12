@@ -1,0 +1,34 @@
+\title{Spectral Discontinuous Galerkin Methods for Magnetohydrodynamics}
+\author{} \tocauthor{J. Nunez} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Jonatan Nunez}}\\
+Institute of Aerodynamics and Gas Dynamics, University of Stuttgart\\
+{\tt nunez@iag.uni-stuttgart.de}
+\\ \vspace{4mm}{\large Claus-Dieter Munz}\\
+Institute of Aerodynamics and Gas Dynamics, University of Stuttgart\\
+{\tt munz@iag.uni-stuttgart.de}
+
+\end{center}
+
+\section*{Abstract}
+
+In computational fluid dynamics, high order numerical methods have gained quite popularity in the last years due to the need of high fidelity predictions in the simulations. Among these methods, the family of Discontinuous Galerkin schemes are in discussion as future solvers in hydrodynamic flow problems because of their excellent properties and efficiency for complex flows and geometries. In this talk we will discuss the implementation of the Spectral Discontinuous Galerkin Methods for the numerical solution of the Magnetohydrodynamics equations in two and three space dimensions \cite{canuto2006,kopriva2009}. In this framework, the efficiency of element-wise operations is highly improved compared to standard DG schemes because of the collocated interpolation and integration points and tensor product nodal basis functions inside the quadrilateral/hexahedron. Due to this simple and efficient formulation of the method, a parallelization aiming at one-element-per-processor calculations is feasible. Regarding the time discretization, we employ the third and fourth order explicit Runge-Kutta methods. Because of the numerical solution of the MHD equations have to satisfy the solenoidal constraint, we make use of the Generalized Lagrange Multiplier hyperbolic transport correction in order to achieve this goal \cite{dedner2002}. We carry out a convergence study in two space dimensions based on the manufactured solution method, showing convergence results up to sixth order of accuracy in space on quadrilateral meshes. Additionally, we perform several standard test problems for the MHD equations in 2D and 3D, including the compressible Orszag-Tang vortex and the magnetic blast problem.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{canuto2006}
+{\sc C. Canuto and M. Hussaini and A. Quarteroni and T. Zang}. {Spectral methods: fundamentals in single domains}. Springer-Verlag, Berlin, 2006.
+
+
+
+\bibitem{kopriva2009}
+{\sc D. Kopriva}. {Implementing spectral methods for partial differential equations}. Springer-Verlag, Berlin, 2009.
+
+
+
+\bibitem{dedner2002}
+{\sc A. Dedner and F. Kemm and D. Kr{\"{o}}ner and C.-D. Munz and T. Schnitzer and M. Wesenberg}. {Hyperbolic divergence cleaning for the {MHD} equations}. J. Comput. Phys., 175(2):645-673, 2002.
+
+\end{thebibliography}

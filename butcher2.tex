@@ -1,0 +1,45 @@
+\title{Stepsize and Order Control in Ordinary Differential Equation Solvers}
+\tocauthor{J. Butcher} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large John Butcher}\\
+University of Auckland\\
+{\tt butcher@math.auckland.ac.nz}
+
+\end{center}
+
+\section*{Abstract}
+
+When a step of size $h$ of a differential equation solver is performed, along with the approximation
+to the next solution value, is a quantity which is asymptotically proportional to $h^{q+1}$.
+This is used to represent the local truncation error for stepsize control purposes.
+As a result of comparing the error estimate with the user-supplied tolerance, a decision
+is made whether to accept the step or not and what the new stepsize should be.
+Traditionally the new step is taken to be something like
+\[
+h \times \max\left(0.5, \min\left(2.0, 0.9\left(\frac{\mbox{\small tolerance}}{\mbox{\small estimate}}\right)^{1/(q+1)}\right)\right),
+\]
+where the ``magic numbers" $0.5$, $2.0$ and $0.9$ are somwhat arbitrary safety factors.
+In recent years the choice of the new stepsize has usually been modified according to the principles of PI-control [2].
+
+In an attempt to put these ideas on a rational basis, a new approach has been proposed [1].  This makes it possible 
+to switch also between stiff and non-stiff options and between different orders in a systematic way.
+The principle is to attempt to minimize 
+\[
+\{\mbox{rate of error production}\} + T\times \{\mbox{rate of  work expenditure}\}.
+\]
+The Lagrange multiplier $T$ plays a similar role to the user-supplied tolerance and expresses a request to emphasise accuracy versus cost depending on the value of $T$.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{buu1}
+{\sc J. C. Butcher}. {Order, stepsize and stiffness switching}. Computing 44, (1990) 209-220.
+
+
+
+\bibitem{buu2}
+{\sc K. Gustafsson and M. Lundh and G. S\"oderlind}. {A PI stepsize control for the numerical solution of ordinary differential equations}. BIT 28 (1988) 270-287.
+
+\end{thebibliography}

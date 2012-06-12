@@ -1,0 +1,41 @@
+\title{Mesh Adaptation Method with Directionality and Anisotropy Control for Large Deformation Finite Element Analysis}
+\author{} \tocauthor{A. Dheeravongkit} \institute{}
+\maketitle
+\begin{center}
+{\large Arbtip Dheeravongkit}\\
+Institute of Field Robotics, King Mongkut's University of Technology Thonburi\\
+{\tt arbtip@fibo.kmutt.ac.th}
+
+\end{center}
+
+\section*{Abstract}
+
+This research proposes an alternative adaptive remeshing method for two-dimensional finite element analysis involving large deformation. The concept of the method is to reduce the severity of the element distortion by locally refining the mesh around the areas that are likely to experience large deformation, adjusting the mesh directionality, and pre-specifying the anisotropy utilizing the bubble mesh technique. During the remeshing process, the proposed method generates a new mesh, where the element sizes are determined based on the strain rate values at the current stage, and the element orientations are adjusted to align with the boundary of the part. Moreover, the element anisotropy is specified as the inverse of the element deformation tensor, which is predicted using the deformation information from the previous steps. This tactic keeps mesh quality within an acceptable range for a longer period of time than a traditional mesh that starts with an optimal quality and rapidly degrades to an unacceptable quality level as analysis continues. The general framework of the proposed method consists of four steps. On the first step, the pre-analysis is carried out until it reaches the analysis step where remeshing is needed. Then, on the second step the deformed mesh domain and strain information from the pre-analysis are utilized to determine the appropriate element size, orientation and anisotropy. With these pieces of information in hand,  on the third step, a new mesh can be generated employing the bubble mesh technique. And lastly, the solution variables will be mapped from the old mesh to the new mesh, and then the analysis may continue. If another remeshing is needed, the whole process can be repeated. Two examples of large deformation processes are examined. The result section analyzes the element shape quality, solution error, geometric interference error, and the number of nodes and elements to evaluate the method.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{kwak-im}
+{\sc D.Y Kwak and Y.T. Im}. {Remeshing for Metal Forming Simulations Part I : Two-dimensional Quadrilateral Remeshing}. International Journal for Numerical Methods in Engineering. 53 (2002) 2463-2500.
+
+
+
+\bibitem{wan-kocak-shephard}
+{\sc J. Wan and S. Kocak and M.S. Shephard}. {Automated Adaptive Forming Simulations}. In Proceedings of 12th International Meshing Roundtable. (2003) 323-334.
+
+
+
+\bibitem{shimada}
+{\sc K. Shimada}. {Current Issues and Trends in Meshing and Geometric Processing for Computational Engineering Analyses}. J. Comput. Inf. Sci. Eng. 11 (2011) 21008.
+
+
+
+\bibitem{shimada-liao-itoh}
+{\sc K. Shimada and J. Liao and T. Itoh}. {Quadrilateral Meshing with Directionality Control through the Packing of Square Cells}. In Proceedings of 7th International Meshing Roundtable. (1998) 61-76.
+
+
+
+\bibitem{dheeravongkit-shimada}
+{\sc A. Dheeravongkit and K. Shimada}. {Inverse Pre-deformation of Finite Element Mesh for Large Deformation Analysis}. Journal of Computing and Information Science in Engineering. 5 (2004) 338-347.
+
+\end{thebibliography}

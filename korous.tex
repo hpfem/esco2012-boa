@@ -1,0 +1,31 @@
+\title{Adaptive $hp$-DG Method with Dynamically Changing Meshes  for Compressible Euler Equations}
+\tocauthor{L. Korous} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Lukas Korous}, Pavel Solin}\\
+hp-FEM group, University of Nevada, Reno\\
+{\tt lukas.korous@gmail.com, solin@unr.edu}
+
+\end{center}
+
+\section*{Abstract}
+
+The compressible Euler equations describe the motion of compressible inviscid fluids. Mathematically, the compressible Euler equations represent a hyperbolic system consisting of several nonlinear partial differential equations (conservation laws). These equations are solved most frequently by means of Finite Volume Methods (FVM) and low-order Finite Element Methods (FEM). However, the most promising approach to the approximate solution of the compressible Euler equations is the discontinuous Galerkin (DG) method that combines the stability of FVM, with excellent approximation properties of higher-order FEM. This talk is about implementation and usage of the hp-DG method in the framework of the open source library Hermes for the non-stationary compressible Euler equations. The basis for the new methods were the space-time adaptive hp-FEM algorithms on dynamical meshes for non-stationary second-order problems already implemented in the Hermes library.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{1}
+{\sc Feistauer M. and Felcman J. and StraÅ¡kraba I.}. {Mathematical  and Computational Methods for Compressible Flow}. Oxford University Press, 2003.
+
+
+
+\bibitem{2}
+{\sc P. Solin and L. Korous}. {Adaptive Higher-Order Finite Element Methods for Transient PDE Problems Based on Embedded Higher-Order Implicit Runge-Kutta Methods}. Journal of Computational Physics, 2011, published online, doi:10.1016/j.jcp.2011.10.023.
+
+
+
+\bibitem{3}
+{\sc L. Dubcova and P. Solin and G. Hansen and H. Park}. {Comparison of Multimesh hp-FEM to Interpolation and Projection Methods for Spatial Coupling of Reactor Thermal and Neutron Diffusion Calculations}. J. Comput. Phys. 230 (2011) 1182-1197.
+
+\end{thebibliography}

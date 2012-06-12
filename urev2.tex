@@ -1,0 +1,37 @@
+\title{The Method of Regularization of Quasi-Stationary Maxwell Equations in Inhomogeneous Conducting Medium}
+\author{} \tocauthor{M. Urev} \institute{}
+\maketitle
+\begin{center}
+{\large Mikhail Urev}\\
+Institute of Computational Mathematics and Mathematical Geophysics SB RAS\\
+{\tt mih.urev2010@yandex.ru}
+\\ \vspace{4mm}{\large Igor Kremer}\\
+JSC "Centre RITM", Novosibirsk \\
+{\tt Kremer@aoritm.com}
+\\ \vspace{4mm}{\large Maxim Ivanov}\\
+JSC "Centre RITM", Novosibirsk \\
+{\tt Maxim@aoritm.com}
+
+\end{center}
+
+\section*{Abstract}
+
+In this paper we consider a numerical solution of quasi-stationary Maxwell problem in time domain. Same theoretical solutions of the problem are presented in [1], [2], [3]. We propose an original method of regularization for the quasi-stationary Maxwell equations in inhomogeneous conducting medium. Under this method we consider the issues of finite-element solution of quasi-stationary Maxwell equations written in terms of the vector magnetic potential with a special calibration, taking into account the conductivity of the medium. Discretization in time is carried out by the Crank-Nicholson scheme, and over the space of Nedelek`s vector finite elements. The optimal energy error estimation for approximate solutions in polyhedral Lipschitz domains has been proven. We propose an optimal preconditioner for the solution obtained at each time step system of linear equations. The rate of convergence of this method does not depend on the step size h. The results of the numerical calculations showing stability of the proposed method are demonstrated.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{1uu}
+{\sc M. Urev}. {Convergence of a discrete scheme in a regularization method for the quasistationary Maxwell system in a non-homogeneous conducting medium}. Numerical Analysis and Applications. 4(2011) 258-269.
+
+
+
+\bibitem{2uu}
+{\sc Z. Chen and Q. Du and J. Zou }. {Finite Element Methods with Matching and Nonmatching Meshes for Maxwell Equations with Discontinuous Coefficients }. SIAM Journal on Numerical Analysis. 37(2000) 1542-1570.
+
+
+
+\bibitem{3uu}
+{\sc Patrick Ciarlet and Jr. and Jun Zou }. {Fully discrete finite element approaches for time-dependent Maxwell's equations}. Numerische Mathematik. 82(1999) 193-219.
+
+\end{thebibliography}

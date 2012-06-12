@@ -1,0 +1,25 @@
+\title{Flux Vector Splitting Methods for the Euler Equations on 3D Unstructured Meshes for CPU/GPU Clusters}
+\author{} \tocauthor{M. Liebmann} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Manfred Liebmann}}\\
+University of Graz, Graz, Austria\\
+{\tt manfred.liebmann@uni-graz.at}
+\\ \vspace{4mm}{\large Zolt\'an Horv\'ath}\\
+Sz\'echenyi Istv\'an University, Gy\"or, Hungary\\
+{\tt horvathz@sze.hu}
+
+\end{center}
+
+\section*{Abstract}
+
+We discuss the design and implementation of a flux vector splitting method for the Euler equations on CPU and GPU clusters~\cite{liebmann}. A first order scheme, the Vijayasundaram method, is used as the underlying algorithm to solve the Euler equations. The computational kernel of the Vijayasundaram method is derived from an algebraic eigenspace decomposition of the Jacobian matrix of the flux vector using the computer algebra system Mathematica. Furthermore the advantages of algebraically manipulating and optimizing the computational kernel of the Vijayasundaram method within Mathematica to generate efficient CPU and GPU code are outlined. A domain decomposition method is then used as a parallelization approach for the CPU and GPU cluster code. Finally, the efficiency and scalability of the Euler simulation code is demonstrated for selected benchmark examples on CPU and GPU clusters.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{liebmann}
+{\sc Manfred Liebmann and Craig C. Douglas and Gundolf Haase and Zoltan Horvath}. {Large Scale Simulations of the Euler Equations on GPU Clusters}. Proceedings of the 2010 Ninth International Symposium on Distributed Computing and Applications to Business, Engineering and Science, DCABES '10 (2010) 50--54.
+
+\end{thebibliography}

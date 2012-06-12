@@ -1,0 +1,52 @@
+\title{Lazy Global Feedbacks for Quantized Nonlinear Event Systems}
+\author{} \tocauthor{O. Junge} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Oliver Junge}}\\
+Technische Universit\"at M\"unchen\\
+{\tt oj@tum.de}
+\\ \vspace{4mm}{\large Stefan Jerg}\\
+Technische Universit\"at M\"unchen\\
+{\tt jerg@ma.tum.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Traditionally, controllers for (nonlinear) systems have been designed using a continuum as the underlying time domain.  With the rise of digital information processing, \emph{time-triggered} or \emph{sampled-data} controller designs have become popular. There, a regular grid of time instances serves as the time domain, cf.\ \cite{AsWi97a}. Both schemes close the control loop independently of the system's behavior.  This might lead to unnecessary communication between the controller and the plant.  In the case that the communication is implemented via a digital network, restrictions like the maximal bandwith or load dependent stochastic effects might play a role and influence the behavior of the closed loop system.  In order to decrease the network load and possibly avoid these effects, in \emph{event based} control, information is only transmitted  when necessary in order to ensure stability of the closed loop system. 
+
+Another means of reducing the amount of data which has to be transmitted (and thus further reducing the network load) is to use a \emph{quantization} of an underlying continuous state space.  While any real number which is transmitted digitally, necessarily comes from a quantized set since only finitely many digits can be transmitted, here one aims for quantizations which are as coarse as possible since then fewer bits will suffice to encode the data.  We refer to, e.g., \cite{Lu94a}.
+
+Recently, a new approach for the construction of controllers for quantized systems has been proposed which relies on a set oriented approach in combination with graph theoretic techniques, cf.\ \cite{GrJu08a}.  In \cite{GrMu09a}, this approach has been extended to event systems.
+
+Here we extend this approach such that the number of times that data has to be transmitted from the controller to the plant is minimized along a feedback trajectory.  The construction is based on the optimality principle with a suitably chosen state space and cost function.
+The construction is illustrated by two numerical examples, an inverted pendulum and a thermofluid batch process.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{As08a}
+{\sc K. Astr\"om}. {Event based control}. In A. Astolfi and L. Marconi, editors, Analysis and Design of   Nonlinear Control Systems, pages 127--147. Springer-Verlag, 2008..
+
+
+
+\bibitem{GrJu08a}
+{\sc L. Gr\"une and O. Junge}. {Global optimal control of perturbed systems}. J. Optim. Theory Appl., 136(3):411-429, 2008.
+
+
+
+\bibitem{Lu94a}
+{\sc J. Lunze}. {Qualitative modelling of linear dynamical systems with quantized state measurements}. Automatica, 30(3):417-431, 1994.
+
+
+
+\bibitem{AsWi97a}
+{\sc K. J. Astr\"om and B. Wittenmark}. {Computer-Controlled Systems}. Prentice Hall, 1997.
+
+
+
+\bibitem{GrMu09a}
+{\sc L. Gr\"une and F. M\"uller}. {An algorithm for event-based optimal feedback control}. In Proc. of the 48th IEEE CDC, pages 5311-5316, 2009.
+
+\end{thebibliography}

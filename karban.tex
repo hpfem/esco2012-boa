@@ -1,0 +1,49 @@
+\title{Using $hp$-adaptive Methods in Shielding Effectiveness Calculations}
+\tocauthor{P. Karban} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Zdenek Kubik}\\
+University of West Bohemia\\
+{\tt zdekubik@kae.zcu.cz}
+\\ \vspace{4mm}{\large David Panek}\\
+University of West Bohemia\\
+{\tt panek50@kte.zcu.cz}
+\\ \vspace{4mm}{\large \underline{Pavel Karban}}\\
+University of West Bohemia\\
+{\tt karban@kte.zcu.cz}
+\\ \vspace{4mm}{\large Jiri Skala}\\
+University of West Bohemia\\
+{\tt skalaj@kae.zcu.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+This paper deals with the numerical solution of the effectiveness of an electromagnetic shielding~\cite{emc} with the help of the finite element method. Two main objectives are followed. The first one is to propose a new approach to shielding effectiveness  theory based on the high frequency numerical model. Our model uses integral characteristics on contrary to standard models~\cite{celozzi}. The second main goal is to find an appropriate method for the field model calculation.     
+
+The mathematical model consists of partial differential equations describing the distribution of the electromagnetic wave~\cite{hermes-electromagnetics}. Its numerical solution is performed by a fully adaptive higher-order finite element method~\cite{hermes-project} developed by the hpfem.org group. The results are compared with the results obtained by using a commercial software. 
+
+The proposed method is illustrated on the solution of shielding enclosures and the results are verified by experimental measurements.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{emc}
+{\sc EMC: Electromagnetic Theory to Practical Design}. {P. A. Chatterton, M. A. Houlden}. John Wiley \& Sons, 1992.
+
+
+
+\bibitem{celozzi}
+{\sc New Figures of Merit for the Characterization of the Performence of Shielding Enclosures}. {S. Celozzi}. IEEE Transactions on Electromagnetic Compatibility, Vol. 46, No. 1., February 2004.
+
+
+
+\bibitem{hermes-project}
+{\sc P. Solin et al.}. {Hermes - Higher-Order Modular Finite Element System}. http://hpfem.org/.
+
+
+
+\bibitem{hermes-electromagnetics}
+{\sc L. Dubcova and P. Solin and J. Cerveny and P. Kus}. {Space and Time Adaptive Two-Mesh hp-FEM for Transient Microwave Heating Problems}. Electromagnetics, Vol. 30, p. 23 - 40, 2010.
+
+\end{thebibliography}

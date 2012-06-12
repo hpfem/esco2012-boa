@@ -1,0 +1,35 @@
+\title{Fast Parallel Random Generator with High Entropy for a Biological Processes Simulations}
+\author{} \tocauthor{K. Gugala} \institute{}
+\maketitle
+\begin{center}
+{\large Karol Gugala}\\
+Poznan University of Technology, Faculty of Computing, Chair of Computer Engineering\\
+{\tt karol.gugala@put.poznan.pl}
+\\ \vspace{4mm}{\large Aleksandra Swietlicka}\\
+Poznan University of Technology, Faculty of Computing, Chair of Computer Engineering\\
+{\tt aleksandra.swietlicka@put.poznan.pl}
+\\ \vspace{4mm}{\large Michal Burdajewicz}\\
+Poznan University of Technology, Faculty of Computing, Chair of Computer Engineering\\
+{\tt mburdajewicz@gmail.com}
+\\ \vspace{4mm}{\large Andrzej  Rybarczyk}\\
+Poznan University of Technology, Faculty of Computing, Chair of Computer Engineering\\
+{\tt andrzej.rybarczyk@put.poznan.pl}
+
+\end{center}
+
+\section*{Abstract}
+
+Simulations of a biological processes (e.g. an electric potential flow on a neural cell membrane) often requires large amount of random values \cite{gugala2011}. Quality of the projection of a natural stochastic processes in simulation environment forces use of a high entropy random generators. Building the high speed random generator without losing its level of randomness could be a milestone in the biological processes simulations. 	\par Recently an often approach in a random number generation tasks is use of GPU$â€™$s implementations enabling implementation of the very fast parallel pseudorandom generators. \par On the other hand there is a number of the truly random hardware generators available on the market. The main disadvantage of this solution is the generation speed, and often the random data transfer rate.\par In this presentation we show the random number generation system containing the True Random Generator based on an inverter oscillators \cite{sunar2007}, implemented in FPGA, and a fast parallel pseudorandom generator implemented in CUDA C running on a NVIDIA GPU. Periodical swap of pseudorandom generator seed with true random values allowed to construct very fast and effective random number generator. We will also demonstrate fast transformation algorithm from the uniform to approximation of the normal distribution.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{gugala2011}
+{\sc 1. Karol Gugala and Aleksandra Swietlicka and Agata Jurkowlaniec and Andrzej Rybarczyk}. {Parallel Simulation of Stochastic Dendritic Neurons using NVidia GPUs with CUDA C}. Elektronika konstrukcje technologie zastosowania, Vol. 12/2011, pp. 59-61, Dec. 2011.
+
+
+
+\bibitem{sunar2007}
+{\sc B. Sunar and W. J. Martin and D. R. Stinson}. {A Provably Secure True Random Number Generator with Built-in Tolerance to Active Attacks}. Journal IEEE Transactions on Computers Vol. 56 (1), pp. 109-119, 2007.
+
+\end{thebibliography}

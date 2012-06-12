@@ -1,0 +1,65 @@
+\title{The Finite Cell Method for Transient, Non-linear Heat Conduction}
+\tocauthor{N. Zander} \author{} \institute{}
+\maketitle
+\begin{center}
+
+{\large Nils Zander, Stefan Kollmannsberger, Ernst Rank}\\
+Technische Universit\"{a}t M\"{u}nchen\\
+{\tt \{zander, kollmannsberger, rank\}@bv.tum.de}
+
+\\
+
+{\large Patrick Erbts, Alexander D\"{u}ster}\\
+Technische Universit\"{a}t Hamburg-Harburg\\
+{\tt \{patrick.erbts, alexander.duester\}@tu-harburg.de}
+
+\\
+
+
+
+\end{center}
+
+\section*{Abstract}
+
+Since the early years of computational engineering, the classical Finite
+Element Method (FEM) has become the state-of-the-art approach to solve initial
+boundary value problems numerically. 
+Although major enhancements allowed for highly sophisticated
+simulations, the idea to geometrically
+resolve the physical domain on the discretization level remained unchanged.
+In cases of complex geometries, this intrinsic need for a conform mesh
+is still a burden in today's engineering practice.
+
+
+The recently introduced Finite Cell Method (FCM) overcomes this problem by
+combining the benefits of high-order Finite Elements ($p$-FEM) with the idea of
+fictitious domains \cite{Parvizian:07.1}.
+The approach embeds  the possibly complex physical domain $\Omega_{phys}$
+in a fictitious domain $\Omega_{fict}$ and solves the problem on their simply
+shaped union. 
+The localization factor $\alpha$ allows to recover the original geometry on the 
+integration level. 
+Recent research results confirm the excellent applicability
+of this new method in the fields of
+non-linear continuum mechanics, 
+topology optimization, 
+thin-walled structures, 
+bone mechanics
+and advection-diffusion problems.
+Also the method's potential for multi-physical problems has been demonstrated
+in the context of linear thermoelasticity.
+
+In the present work, the Finite Cell Method is employed to solve the
+transient, non-linear heat equation on non-conforming meshes.
+In particular, the weak enforcement of Dirichlet boundary conditions is
+addressed.
+The results of a conventional $p$-FEM simulation serve as reference and the
+convergence characteristics of both approaches are compared.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Parvizian:07.1}
+{\sc J. Parvizian and A. D\"uster and and E. Rank}. {Finite Cell Method-h- and p-extension for embedded domain problems in solid mechanics.}. Computational Mechanics, 41:121-133, 2007..
+
+\end{thebibliography}

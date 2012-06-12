@@ -1,0 +1,44 @@
+\title{Algebraic Multigrid for Saddle Point Systems}
+\tocauthor{B. Metsch} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Bram Metsch}\\
+University of Bonn\\
+{\tt metsch@ins.uni-bonn.de}
+
+\end{center}
+
+\section*{Abstract}
+
+We present an Algebraic Multigrid (AMG) approach to the solution of Stokes-type saddle point problems of the form
+\begin{equation*}
+  \mathcal{K}: \begin{pmatrix} \mathcal{V} \\ \mathcal{W} \end{pmatrix} \rightarrow\begin{pmatrix} \mathcal{V} \\ \mathcal{W} \end{pmatrix}, \qquad  \mathcal{K} = \begin{pmatrix} A & B^T \\ B & -C \end{pmatrix}
+\end{equation*}
+where $A$ is positive definite and $C$ is positive semidefinite.\\
+Algebraic Multigrid methods (see e.g. \cite{Ruge.Stueben:1987}) provide robust and optimal solvers for symmetric positive definite matrices where geometric multigrid algorithms cannot be applied, e.g. in the case of diffusion coefficient jumps or complicate problem geometries. To this end, a setup phase is carried out to automatically construct a suitable multigrid hierarchy.\\
+However, the heuristics used in the AMG setup phase are based on the assumption that the matrix is a symmetric positive M-matrix.\\
+%
+Our starting point for the construction of an AMG method for saddle point systems is the inexact symmetric Uzawa smoothing scheme introduced in \cite{Schoeberl.Zulehner:2003}. We show how to construct the interpolation and restriction operators $\mathcal{P}$ and $\mathcal{R}$ such that an inf-sup condition for $K$ implies an inf-sup-condition for the coarse system computed by the Galerkin product
+\begin{equation*}
+\mathcal{K}^C = \mathcal{R} \mathcal{K} \mathcal{P}.
+\end{equation*}
+Especially, our approach does not require that the coarse grids for $\mathcal{V}$ and $\mathcal{W}$ are adapted to each other. We will show that the stability can always be ensured by the choice of the interpolation operator $\mathcal{P}$.\\
+In addition, we give a two-grid convergence proof for our method based on the framework of \cite{Notay:2009}.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Schoeberl.Zulehner:2003}
+{\sc J. Sch\"oberl and W. Zulehner}. {On Schwarz-type Smoothers for Saddle Point Problems}. Numerische Mathematik 95 (2003) 377-399.
+
+
+
+\bibitem{Notay:2009}
+{\sc Y. Notay}. {Algebraic analysis of two-grid methods: The nonsymmetric case}. Numer. Linear Algebra Appl. 17 (2009) 73-96.
+
+
+
+\bibitem{Ruge.Stueben:1987}
+{\sc J. Ruge and K. St\"uben}. {Algebraic Multigrid}. In S. F. McCormick (ed.) Frontiers in Applied Mathematics 4 (1987) 73-130.
+
+\end{thebibliography}

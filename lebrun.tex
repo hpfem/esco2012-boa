@@ -1,0 +1,53 @@
+\title{Simulation of Thermo-Mechanical Contact Between Fuel Pellets and Cladding in UO$_2$ Nuclear Fuel Rods}
+\tocauthor{D. Lebrun-Grandie} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Damien Lebrun-Grandie}, Jean Ragusa}\\
+Texas A\&M University\\
+{\tt dalg24@ne.tamu.edu, ragusa@ne.tamu.edu}
+
+\end{center}
+
+\section*{Abstract}
+
+As fission process heats up nuclear fuel, its UO$_2$ pellets, stacked atop of each other, swell both radially and axially, while the surrounding Zircaloy cladding creeps, so that cladding and pellet eventually come into contact.
+This exacerbates chemical degradation of the protective cladding, further enables the propagation of cracks and, thus, threatens the integrity of the clad \cite{Aas1972}.
+Along these lines, pellet-cladding interaction is a major concern in fuel rod design and reactor core operation in light water reactors.
+Accurately modeling fuel behavior is a challenging task because the mechanical contact problem strongly depends on temperature distribution,
+and the coupled pellet-cladding heat transfer problem, in turn, is affected by changes in geometry induced by body deformations and stresses generated at the contact interface.
+Previous approaches either focused on mechanics and only loosely coupled to the thermal problem (operator split) \cite{Denis2003},
+or, although handling coupling between the various physics components in a consistent way, yet ignored pellet-cladding mechanical interaction \cite{Mihaila2009,Newman2009}.
+We use Lagrange multipliers to enforce the non-penetration condition (in a weak sense).  Lagrange multipliers account for reaction forces between the bodies involved in contact.
+The multibody thermo-mechanical contact problem is tackled using modern numerics, with higher-order finite elements and a Newton-based monolithic strategy \cite{Solin2010} to handle both nonlinearities
+(coming from the non-linearity of the contact condition but as well as from the temperature-dependence of the fuel thermal conductivity for instance)
+and coupling between the various physics components (gap conductance dependent upon the clad- pellet distance, thermal expansion coefficient or Young's modulus affected by temperature changes, etc.).
+We will provide different numerical examples for one- and multiple-body contact problems to demonstrate the performance of the method.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Aas1972}
+{\sc S. Aas}. {Mechanical interaction between fuel and cladding}. Nuclear Engineering and Design, 21(2):237--253, 1972.
+
+
+
+\bibitem{Denis2003}
+{\sc A. Denis and A. Soba}. {Simulation of pellet-cladding thermomechanical interaction and fission gas release}. Nuclear Engineering and Design, 223(2):211--229, 2003.
+
+
+
+\bibitem{Mihaila2009}
+{\sc B. Mihaila and M. Stan and J. Ramirez and A. Zubelewicz and and P. Cristea}. {Simulations of coupled heat transport, oxygen diffusion, and thermal expansion in UO$_2$ nuclear fuel elements}. Journal of Nuclear Materials, 394(2-3):182--189, 2009.
+
+
+
+\bibitem{Newman2009}
+{\sc C. Newman and G. Hansen and and D. Gaston}. {Three dimensional coupled simulation of thermomechanics, heat, and oxygen diffusion in UO$_2$ nuclear fuel rods}. Journal of Nuclear Materials, 392(1):6--15, 2009.
+
+
+
+\bibitem{Solin2010}
+{\sc P. Solin and J. Cerveny and L. Dubcova and and D. Andrs}. {Monolithic discretization of linear thermoelasticity problems via adaptive multimesh $hp$-fem}. Journal of Computational and Applied Mathematics, 234(7):2350--2357, 2010.
+
+
+\end{thebibliography}

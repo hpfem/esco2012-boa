@@ -1,0 +1,66 @@
+\title{Aero-Acoustic Simulation on Massively Parallel Octree Meshes}
+\tocauthor{H. Klimach} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Harald Klimach}}\\
+German Research School for Simulation Sciences GmbH and RWTH Aachen University\\
+{\tt h.klimach@grs-sim.de}
+\\ \vspace{4mm}{\large Manuel Hasert}\\
+German Research School for Simulation Sciences GmbH and RWTH Aachen University \\
+{\tt m.hasert@grs-sim.de}
+\\ \vspace{4mm}{\large Sabine Roller}\\
+German Research School for Simulation Sciences GmbH and RWTH Aachen University\\
+{\tt s.roller@grs-sim.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Multi-scale problems are hard to tackle with rigorous
+models, but some important engineering tasks are related to them.
+But with increasing available computational power they get into reach of 
+numerical simulations, which allows a better design process of technical devices,
+for example to reduce generated noise.
+In this work we present a strategy, based on the separation of spatial regions
+with different numerical requirements.
+This separation allows us to deploy the best-suited numerical methods in each
+domain \cite{utzmann-2006}.
+Such an approach also has the benefit to take advantage of specialized hardware
+as shown in \cite{klimach-2009}. We now take this one step further and use a octree mesh discretization defined across the complete computational domain.
+This allows for efficient determination of arbitrarily shaped coupling
+interfaces in logarithmic complexity \cite{meagher-1982}. A key benefit of the globally known topology is the possibility to search the
+neighborhood in parallel on distributed systems, with minimal requireddata from remote.
+We therefore show a fully parallel, highly distributed framework based on such 
+meshes, which enables the simulation of large multi-scale problems with coupled 
+spatial domains on massively parallel computing systems.
+We emphasize, that the octree is deployed throughout the complete processing
+chain from the mesh generation over the solver to the parallel output for
+visualization.
+As described in \cite{tu-2006}, the consideration of the full simulation process 
+is essential for large scale simulations to avoid bottlenecks.
+In our simulation aero-acoustics for technical devices with complex geometry we show that this fully distributed data structure allows a
+deployment on hundred thousand MPI processes.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{meagher-1982}
+{\sc D. Meagher}. {Geometric Modeling Using Octree Encoding}. Computer Graphics and Image Processing 19(2): 129--147 (1982).
+
+
+
+\bibitem{tu-2006}
+{\sc T. Tu and H. Yu and L. Ramirez-Guzman and J. Bielak and O. Ghattas and K.-L. Ma and D. R. O'Hallaron}. {From Mesh Generation to Scientific Visualization: an End-to-End approach to parallel supercomputing}. SC'06, ISBN 0-7695-2700-0, ACM (2006).
+
+
+
+\bibitem{utzmann-2006}
+{\sc J. Utzmann and T. Schwartzkopff and C.-D. Munz and M. Dumbser}. {Heterogeneous Domain Decomposition for Computational Aeroacoustics}. AIAA Journal 44(10): 2231--2250 (2006).
+
+
+
+\bibitem{klimach-2009}
+{\sc H. Klimach and S. Roller and C.-D. Munz}. {Heterogeneous Parallelism of Aero-Acoustic Applications Using PACX-MPI}. Interdisciplinary Information Sciences 15(1): 79--83 (2009).
+
+\end{thebibliography}

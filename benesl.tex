@@ -1,0 +1,55 @@
+\title{Numerical Modeling of the Flow Structures around Thin Body in  the  Stratified Fluid}
+\tocauthor{L. Benes} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Lud\v{e}k Bene\v{s}}\\
+Dept. of Technical Mathematics CTU Prague, Karlovo   n\'{a}m. 13, CZ-121\,35 Prague 2\\
+{\tt benes@marian.fsik.cvut.cz}
+\\ \vspace{4mm}{\large Tom\'{a}\v{s} Bodn\'{a}r}\\
+Dept. of Technical Mathematics CTU Prague, Karlovo   n\'{a}m. 13, CZ-121\,35 Prague 2, Czech Republic\\
+{\tt bodnar@marian.fsik.cvut.cz}
+\\ \vspace{4mm}{\large Philippe Frauni\'{e}}\\
+Universit\'{e} du Sud Toulon-Var, Laboratoire de Sondages Electromagn\'{e}tiques de l'Environnement Terrestre, B\^{a}timent F, BP 132, 83957 La Garde Cedex, France\\
+{\tt Philippe.Fraunie@lseet.univ-tln.fr}
+
+\end{center}
+
+\section*{Abstract}
+
+ Numerical simulation of an internal gravity waves past a moving body in a
+ stably stratified flow is performed in   comparison with  laboratory
+  experiments. The flow field in the towing tank  with a moving thin
+  horizontal strip is modeled using different computational ways and
+   different numerical schemes. 
+
+The  mathematical model is based on the 
+Boussinesq approximation of the averaged Navier--Stokes equations.  The
+resulting set of partial 
+differential equations is then solved  by two different numerical schemes. The
+first method is the second-order finite volume AUSM MUSCL scheme
+combined with the artificial compressibility method in dual time . For the
+time integration the second order BDF method is used in physical time, while
+the third order Runge-Kutta method is used in artificial time. The second
+scheme is based on the high order compact finite-difference discretizations.
+The time integration is carried out by the Strong Stability Preserving
+Runge-Kutta scheme. 
+
+The developing of the internal waves is studied by different ways. The
+obstacle is supposed either as the stationary in the incoming flow or as the
+moving body in the stratified fluid.
+ In the simplest case, the thin body is modeled only by the appropriate boundary
+ condition, then via penalization technique or by simple immersed boundary
+ method.  All computations are compared  each other and also with the experiment. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ben1}
+{\sc  L. Bene\v{s} and J. F\''{u}rst and Ph. Frauni\'{e}}. {Comparison of Two  Numerical Methods for the Stratified Flow}. Computers \& Fluids Vol. 46, Issue 1,  2011, p.148-154.
+
+
+
+\bibitem{ben2}
+{\sc T. Bodn\'{a}r and L. Bene\v{s} and Ph. Frauni\'{e} and K. Kozel}. {Application of   Compact Finite--Difference Schemes to Simulations of Stably Stratified Fluid Flows}. Applied Mathematics and Computations, doi:10.1016/j.amc.2011.08.058, in press.
+
+\end{thebibliography}

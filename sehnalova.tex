@@ -1,0 +1,44 @@
+\title{Predictor--Corrector Obreshkov Pairs}
+\tocauthor{P. Sehnalova} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Pavla Sehnalov\'{a}}\\
+Brno University of Technology, Faculty of Mechanical Engineering, Institute of Mathematics, Technick\'{a} 2, 616 69 Brno, Czech Republic\\
+{\tt sehnalova@fme.vutbr.cz}
+\\ \vspace{4mm}{\large John Butcher}\\
+University of Auckland, Faculty of Science, Department of Mathematics, 38 Princes Street, 1142 Auckland, New Zealand\\
+{\tt butcher@math.auckland.ac.nz}
+
+\end{center}
+
+\section*{Abstract}
+
+The combination of predictor--corrector (PEC) pairs of Adams methods can be generalized to high derivative methods using Obreshkov quadrature formulae. It is convenient to construct predictor--corrector pairs using a combination of explicit (Adams--Bashforth for traditional PEC methods) and implicit (Adams--Moulton for traditional PEC methods) forms of the methods. This paper will focus on one special case of a fourth order method consisting of a two-step predictor followed by a one-step corrector, each using second derivative formulae. There is always a choice in predictor-corrector pairs of the so-called mode of the method and we will consider both PEC and PECE modes. The Nordsieck representation of Adams methods, as developed by C. W. Gear and others, adapts well to the multiderivative situation and will be used to make variable stepsize convenient. In the first section we explain the basic approximations used in the predictor--corrector formula. Those can be written in terms of Obreshkov quadrature. In next section we discuss the equations in terms of Nordsieck vectors. This provides an opportunity to extend the Gear Nordsieck factorization to achieve a variable stepsize formulation. Numerical tests with the new method are also discussed. The paper will present the Prothero--Robinson and Kepler problem to illustrate the power of the approach. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{butcher-john}
+{\sc J. C. Butcher}. {Numerical methods for ordinary differential equations}. John Wiley \& Sons, Chichester, United Kingdom (2008).
+
+
+
+\bibitem{hairerwanner}
+{\sc E. Hairer and S. P. N\o rsett and G. Wanner}. {Solving Ordinary Differential Equations I: Nonstiff Problems}. Springer-Verlag Berlin Heidelberg (1987).
+
+
+
+\bibitem{gear}
+{\sc W. C. Gear}. {Numerical initial value problems in ordinary differential equations}. Prentice-Hall Inc., Englewood Cliffs, N.J. (1971).
+
+
+
+\bibitem{nordsieck}
+{\sc A. Nordsieck}. {On numerical integration of ordinary differential equations}. Math. Comp. (1962) 16(77):22-49.
+
+
+
+\bibitem{obreshkov}
+{\sc N. Obreshkov}. {Sochineniya. Tom 2}. B\u ulgar. Akad. Nauk (1981).
+
+\end{thebibliography}

@@ -1,0 +1,39 @@
+\title{Adaptive Moving Meshes in Large Eddy Simulation for Turbulent Flows}
+\tocauthor{J. Lang} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Jens Lang}\\
+Technical University of Darmstadt\\
+{\tt lang@mathematik.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+In the last years considerable progress has been made in the development of Large Eddy Simulation (LES) for turbulent flows. The characteristic 
+length scale of the turbulent fluctuation varies substantially over the computational domain and has to be resolved by an appropriate numerical 
+grid. We propose to adjust the grid size in an LES by adaptive moving meshes \cite{lchr03,hr11}. The monitor function, which is the main ingredient of a moving
+mesh method, is determined with respect to a quantity of interest (QoI) and has to be chosen in an LES-specific manner \cite{ldfhkl09,hslfj11}. These QoIs can be physically motivated, like gradient of streamwise velocity or production rate of turbulent kinetic energy, as well as mathematically motivated, like some adjoint-based error estimator. The main advantage of mesh moving methods is that during the integration process the mesh topology is preserved and no new degrees of freedom are added and therefore the data structures are preserved as well. This makes the method an attractive add-on for the many fluid flow solvers available. We will present results for meteorological applications.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{lchr03}
+{\sc J. Lang and W. Cao and W. Huang and R.D. Russell}. {A Two-Dimensional Moving Finite Element Method with Local Refinement Based  on A Posteriori Error Estimates}. Appl. Numer. Math. 46 (2003), pp. 75-94.
+
+
+
+\bibitem{ldfhkl09}
+{\sc  S. L\"obig and A. D\"ornbrack and J. Fr\"ohlich and C. Hertel and Ch. K\"uhnlein and J. Lang}. {Towards large eddy simulation on moving grids}. Proc. Appl. Math. Mech. 9, 445-446 (2009).
+
+
+
+\bibitem{hslfj11}
+{\sc C. Hertel and M. Sch\"umichen and S. L\"obig and J. Fr\"ohlich and J. Lang}. {Adaptive Large Eddy Simulation with Moving Meshes}. Preprint 2011, Technical University of Dresden, submitted to Theoretical  and Computational Fluid Dynamics, 2011.
+
+
+
+\bibitem{hr11}
+{\sc W. Huang and R.D. Russell}. {Adaptive Moving Mesh Methods}. Applied Mathematical Science, Vol. 174, Springer 2011.
+
+\end{thebibliography}

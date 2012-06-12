@@ -1,0 +1,34 @@
+\title{Efficient Time-Integration for Discontinuous Galerkin Discretizations of Maxwell's Equations}
+\tocauthor{J. Niegemann} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Jens Niegemann}\\
+Laboratory for Electromagnetic Fields and Microwave Electronics, Swiss Federal Institute of Technology (ETH), Z\"urich, Switzerland\\
+{\tt jens.niegemann@ifh.ee.ethz.ch}
+
+\end{center}
+
+\section*{Abstract}
+
+In recent years, the discontinuous Galerkin (DG) approach has gained considerable attention as an efficient and accurate method for solving Maxwell's equations in time-domain. Its ability to allow explicit time integration while offering a higher-order spatial discretization on unstructured meshes makes it a very attractive method for complex electromagnetic systems \cite{Koenig11}. In order to match the accurate spatial discretization one also requires an efficient higher-order time integration
+method. In practice, explicit low-storage Runge-Kutta (LSRK) schemes have been shown to offer an excellent compromise of accuracy, performance and memory consumption.
+
+Here, we will discuss a numeric approach to generate new LSRK schemes with specifically tailored stability domains \cite{Niegemann12}. It will be demonstrated that such schemes can provide performance enhancements of up to 50\% over the best previously known schemes. In addition we will show how such optimized methods can be combined with a multistep Adams integrator \cite{Hochbruck11} to allow for a very efficient local timestepping in strongly refined meshes.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Koenig11}
+{\sc K. Busch and M. K\"onig and J. Niegemann}. {Discontinuous Galerkin methods in nanophotonics}. Laser Photonics Rev. 5, 773-809 (2011).
+
+
+
+\bibitem{Niegemann12}
+{\sc J. Niegemann and R. Diehl and K. Busch}. {Efficient low-storage Runge-Kutta schemes with optimized stability regions}. J. Comput. Phys. 231, 364-372 (2012) .
+
+
+
+\bibitem{Hochbruck11}
+{\sc M. Hochbruck and A. Ostermann}. {Exponential multistep methods of Adams-type}. BIT Numer. Math. 51, 889-908 (2011).
+
+\end{thebibliography}

@@ -1,0 +1,47 @@
+\title{An Optimal Control Approach to Enforcing the Eikonal Equation}
+\tocauthor{C. Basting} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Christopher Basting}}\\
+University Erlangen-Nuremberg\\
+{\tt christopher.basting@am.uni-erlangen.de}
+\\ \vspace{4mm}{\large Dmitri Kuzmin}\\
+University Erlangen-Nuremberg\\
+{\tt kuzmin@am.uni-erlangen.de}
+
+\end{center}
+
+\section*{Abstract}
+
+A finite element level set method for problems with evolving interfaces is presented. Special emphasis is laid on preserving the distance function
+property of the level set function. In contrast to the standard two-step
+approach (convection + reinitialization), an optimal control approach is
+proposed. The first method to be discussed imposes the Eikonal equation
+as a constraint on the weak solution to the transport equation.
+The constrained variational formulation incorporates a nonlinear
+(anti-)diffusive term that adjusts the gradients of the level set
+function whenever they become too steep or too flat. To ensure the
+well-posedness of the discrete problem, the correction term may need
+to be deactivated in regions where the gradient of the level set
+function changes its direction. In the second method, the strong
+form of the Eikonal equation is replaced with a PDE-constrained optimization problem. The cost functional is defined so as to
+minimize the residual of the Eikonal equation in the least-squares
+sense. The optimality conditions are written as a nonlinear system
+of equations for the primal solution, control variable, and the dual
+solution. No ad hoc deactivation of selected elements is required in
+this version of the constrained level set algorithm. The resultant
+nonlinear saddle-point problems are solved in an iterative fashion.
+A numerical study is performed for representative test problems. 
+\nocite{glowinski-tallec}
+\nocite{becker-meidner-vexler}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{glowinski-tallec}
+{\sc R. Glowinski and Patrick Le Tallec}. {Augmented Lagrangian and operator-splitting methods in nonlinear mechanics}. Society for Industrial Mathematics; ISBN-13: 978-0898712308.
+
+\bibitem{becker-meidner-vexler}
+{\sc R. Becker and D. Meidner and B. Vexler}. {Efficient numerical solution of parabolic optimization problems by finite element methods}. Optimization Methods and Software, 22:813-833, 2007
+
+\end{thebibliography}

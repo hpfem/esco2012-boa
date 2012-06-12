@@ -1,0 +1,48 @@
+\title{Hybrid Parallel Solvers for Finite Element Approximation of PDEs}
+\author{} \tocauthor{J. Principe} \institute{}
+\maketitle
+\begin{center}
+{\large Santiago Badia}\\
+Centre Internacional de M\`etodes Num\`erics en Enginyeria (CIMNE), Universitat Polit\`ecnica de Catalunya\\
+{\tt sbadia@cimne.upc.edu}
+\\ \vspace{4mm}{\large Alberto F. Mart\'in}\\
+Centre Internacional de M\`etodes Num\`erics en Enginyeria (CIMNE), Universitat Polit\`ecnica de Catalunya\\
+{\tt amartin@cimne.upc.edu}
+\\ \vspace{4mm}{\large \underline{Javier Pr\'incipe}}\\
+Centre Internacional de M\`etodes Num\`erics en Enginyeria (CIMNE), Universitat Polit\`ecnica de Catalunya\\
+{\tt principe@cimne.upc.edu}
+
+\end{center}
+
+\section*{Abstract}
+
+Future increases of the computational power of  
+distributed-memory architectures will 
+most likely be achieved with a substantially higher degree 
+of multicore parallelism per node, which
+in turn will be accompanied with more complex hierarchical
+cache/memory designs. On the algorithmic level,
+hybrid algorithms and software appear to be best-suited 
+for the hierarchical organization
+of the underlying parallel hardware~\cite{RBH}. 
+Under this scenario, domain decomposition (DD) techniques provide a natural 
+framework for the development of hybrid parallel solvers 
+tailored for FE analysis. In this work, we consider message-passing (MPI) scalable DD algorithms with 
+coarse solver combined with several multi-threaded subdomain solvers, comprising
+multi-threaded sparse direct solvers (e.g., PARDISO) as well as a recursive/nested
+approaches based on multi-threaded DD subdomain solvers (implemented in OpenMP).
+This software machinery allows to leverage the two levels of hardware parallelism
+(inter-node and intra-node) in several ways, ranging from a pure one-level MPI approach, 
+in which we have as many subdomains/MPI ranks as cores, to a hybrid approach, in which we
+have one subdomain/MPI rank per node/socket, and as many threads as cores in a node/socket.
+Extensive numerical experiments are performed in order to evaluate which is the best
+setting in every case, depending on subdomain problem size, number of nodes and cores. Several 
+DD techniques and coarse solvers will be discussed.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{RBH}
+{\sc S. Rajamanickam and E. G. Boman and M. A. Heroux}. {ShyLU: A Hybrid-Hybrid Solver for Multicore Platforms}. Technical Report. Available on-line at {\tt http://www.cise.ufl.edu/{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}srajaman/papers/ShyLU.pdf}.
+
+\end{thebibliography}

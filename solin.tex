@@ -1,0 +1,46 @@
+\title{Using Butcher's Tables in Transient PDE Solvers}
+\tocauthor{P. Solin} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Pavel Solin}}\\
+University of Nevada, Reno\\
+{\tt solin@unr.edu}
+\\ \vspace{4mm}{\large Lukas Korous}\\
+FEMhub Inc.\\
+{\tt lukas@femhub.com}
+
+\end{center}
+
+\section*{Abstract}
+
+We present a new class of adaptivity algorithms for time-dependent partial differential 
+equations (PDE) that combine adaptive higher-order finite elements ($hp$-FEM) in space with 
+arbitrary (embedded, higher-order, implicit) Runge-Kutta methods in time. Weak formulation 
+is only created for the stationary residual, and the Runge-Kutta
+methods are specified via their Butcher's tables. Around 30 Butcher's 
+tables for various Runge-Kutta methods with numerically verified 
+orders of local and global truncation errors are provided. A time-dependent benchmark 
+problem with known exact solution that contains a sharp moving front 
+is introduced, and it is used to compare the quality of seven embedded implicit higher-order Runge-Kutta 
+methods. Numerical experiments also include a comparison of adaptive low-order FEM and 
+$hp$-FEM with dynamically changing meshes. All numerical results presented in this paper 
+were obtained using the open source library Hermes (http://hpfem.org/hermes) and they are
+reproducible in the Networked Computing Laboratory (NCLab) at http://nclab.com. 
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{ref1}
+{\sc J. C. Butcher}. {Numerical Methods for Ordinary Differential Equations}. J. Wiley \& Sons, 2003.
+
+
+
+\bibitem{ref2}
+{\sc P. Solin and L. Korous}. {Adaptive Higher-Order Finite Element Methods for Transient PDE Problems Based on }. Journal of Computational Physics, Volume 231, Issue 4, 20 February 2012, pp. 1635-1649.
+
+
+
+\bibitem{ref3}
+{\sc P. Solin. K. Segeth and I. Dolezel}. {Higher-Order Finite Element Methods}. CRC Press, 2004.
+
+\end{thebibliography}

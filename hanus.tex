@@ -1,0 +1,44 @@
+\title{Adaptive Finite Element Solution of Second-Order Approximations of Neutron Transport}
+\tocauthor{M. Hanus} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Milan Hanu{\v s}}\\
+University of West Bohemia in Pilsen\\
+{\tt mhanus@kma.zcu.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+In this talk, we will be interested in computational modeling of processes induced by neutral particles, relevant to economical and safe operation of nuclear facilities. 
+
+The general mathematical model of radiative transfer of energy by elementary particles is provided by the linear form of the Boltzmann's transport equation. This first-order PDE with integral terms describes dependence of the radiation field on six phase-space variables (position, direction and energy of the transported particles). 
+
+High-dimensionality and complicated structure of the equation for real-world problems preclude analytical solution and present serious difficulties when a full-scale computational solution is attempted. Various dimension-reduction techniques are therefore usually employed along with appropriate numerical solution schemes. In this talk, we will be particularly interested in approximations allowing to transform the governing equation into a second-order PDE (or system of such equations). Advanced, well-developed numerical methods for elliptic PDEs can then be used to obtain the solution. 
+
+The diffusion and the so called simplified $P_N$ approximations are some of the widely used approximations from this class. It has been pointed out (\cite{Larsen2,Larsen4}) recently, that by using cleverly precomputed parameters in the associated equations, these approximations can quite accurately capture selected transport phenomena while being much cheaper to solve than the original first-order transport equation. 
+
+In this talk, we will present a general framework for solving diffusion and simplified $P_N$ equations, built upon the hp-FEM library Hermes (\cite{Hermes}). Use of this framework will be demonstrated on several neutron transport problems and performance of various h- and hp-adaptivity options available in Hermes will be discussed. Special tuning of these adaptivity techniques for the aforementioned transport approximations will also be covered. Finally, comparing the results with those from a recently published article (\cite{Ragusa1}) on the implementation of the simplified $P_3$, hp-FE approximation in an older version of the Hermes library may also reveal the progress made in the development of the library itself.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Larsen2}
+{\sc E. W. Larsen}. {Asymptotic Diffusion and Simplified PN Approximations for Diffusive and Deep Penetration Problems. Part 1: Theory}. Transp. Theory Stat. Phys. 39 (2011), 110-163.
+
+
+
+\bibitem{Larsen4}
+{\sc E. W. Larsen}. {2-D Anisotropic Diffusion in Optically Thin Channels}. Trans. Am. Nucl. Soc. 101 (2009), 387.
+
+
+
+\bibitem{Ragusa1}
+{\sc J. C. Ragusa}. {Application of h-, p-, and hp-mesh adaptation techniques to the SP3 equations}. Transp. Theory Stat. Phys. 39 (2011), 234-254.
+
+
+
+\bibitem{Hermes}
+{\sc P. Solin et al.}. {Hermes - Higher-Order Modular Finite Element System (User's Guide)}. url: http://hpfem.org/.
+
+\end{thebibliography}

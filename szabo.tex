@@ -1,0 +1,54 @@
+\title{Numerical Modeling of the PEM Fuel Cell's Potential Field at the Cathode in 3D}
+\tocauthor{T. Szabo} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Istv\'an Farag\'o}\\
+Department of Applied Analysis and Computational Mathematics, E\"otv\"os Lor\'and University\\
+{\tt faragois@cs.elte.hu}
+\\ \vspace{4mm}{\large Ferenc Izs\'ak}\\
+Department of Applied Analysis and Computational Mathematics, E\"otv\"os Lor\'and University\\
+{\tt izsakf@cs.elte.hu}
+\\ \vspace{4mm}{\large Tam\'as Szab\'o}\\
+Basque Center for Applied Mathematics\\
+{\tt tszabo@bcamath.org}
+
+\end{center}
+
+\section*{Abstract}
+
+\newcommand{\nnu}{\textrm{\boldmath$\nu$}}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\II}{\mathbf{I}}
+
+Fuel cells are galvanic batteries that are able to convert the chemical energy of the fuel directly to electrical energy. However, one of the biggest differences between fuel cells and galvanic batteries is the fact that while the galvanic batteries need changing or charging, the fuel cells can operate constantly by continuous reloading of its fuel. 
+
+Considering Ohm's law, the electro-neutrality and a mass conservation law to compute the overpotential (later the potential loss) at the cathode of a fuel cell we arrive to the following three-dimensional problem:
+\begin{align}
+aC_{\textrm{dl}} \partial_t \eta(t,{\bf x}) = -\nabla\cdot \left( \kappa\nabla\phi_2 (t,{\bf x})\right)-ai_0\left(\exp\left( \frac{ \alpha F}{R T} \eta (t,{\bf x})\right) -\exp\left(-\frac{ \alpha F}{R T} \eta (t,{\bf x}) \right)\right), \\
+\nabla \cdot \left((\kappa+\sigma)\nabla\phi_2 (t,{\bf x})\right)=-\nabla\cdot\left(\sigma\nabla\eta (t,{\bf x})\right),
+\end{align}
+where  $t\in(0,T), {\bf x} = (x,y,z)\in (0,L)\times Q$ and $Q=(0,1)\times(0,1)$, and $L$ is the thickness of the cathode. 
+In addition, the following boundary conditions at the membrane ($0\times Q$) and the current collector ($L\times Q$) for the unknown functions $\eta(t,{\bf x})=\phi_1(t,{\bf x})-\phi_2(t,{\bf x})$ and $\phi_2(t,{\bf x})$ are imposed
+\begin{equation}
+\label{bc_cases}
+\partial_\nnu \eta(t,{\bf x}) = 
+\begin{cases}
+  \partial_\nnu \phi_{1}(t,{\bf x}) = \nnu\cdot \left( -\frac{1}{\sigma_0} \ii_1 \right) = 
+  -\frac{1}{\sigma_0} \ii_1\{1\}\quad \textrm{on}\; L\times Q, \ \textrm{where}\; 
+\nnu = (1,0,0),\\
+- \partial_\nnu \phi_{2}(t,{\bf x}) = - \nnu\cdot \left( -\frac{1}{\kappa_0} \ii_2 \right) = 
+  -\frac{1}{\kappa_0} \ii_2\{1\}\quad \textrm{on}\;0\times Q, \ \textrm{where}\; 
+\nnu = (-1,0,0),
+\end{cases}
+\end{equation}
+where \{1\} denotes the $x$ component of a vector.
+
+In order to solve the system above, we have applied the finite difference method (implicit in the linear and explicit in the non-linear terms)  \cite{kriston}.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{kriston}
+{\sc \'A. Kriston and G. Inzelt and I. Farag\'o and T. Szab\'o}. {Simulation of the transient  behavior of fuel cells by using operator splitting techniques for real-time applications}. Computers and Chemical Engineering 34 (2010), 339-348.
+
+\end{thebibliography}

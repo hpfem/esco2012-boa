@@ -1,0 +1,56 @@
+\title{Modeling of Heterogeneous Large Deforming Perfused Media Using Homogenization-based Preconditioning}
+\tocauthor{E. Rohan} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Eduard Rohan}\\
+New Technologies Research Center, Pilsen\\
+{\tt rohan@kme.zcu.cz}
+\end{center}
+
+\section*{Abstract}
+
+We propose a computational homogenization framework for two-scale
+modeling of fluid-saturated porous media with material and kinematical
+nonlinearity, cf. \cite{Rohan2009-draft,RohanCimrman2009} for small deformation. In \cite{rohan-lukes-ect2010} we derived homogenized
+model for large deforming media using an incremental formulation based
+on the updated Lagrangian configuration where, due to assumed local
+periodicity, microstructures are represented by local reference cells
+(LRCs) associated with the finite element approximation of the
+homogenized problem. Two-scale algorithm comprises the following
+steps: 1) for given local microscopic configurations compute the local
+response functions and the effective constitutive parameters, 2)
+compute the macroscopic response (MR) for given external loads, 3)
+compute the deformation and stresses at each reference microstructure
+using MR and update the LRCs. This algorithm is implemented in the
+Sfepy code \cite{sfepy}. The homogenized model is an approximate tool to solve
+the direct nonlinear problem which, for a given size of
+heterogeneities, typically results in vast computations on very fine
+meshes. We study a ``physical'' preconditioner for solving the ``direct
+problem''. Its construction is based on the two-scale framework:
+homogenized parameters and local solution recovery using
+characteristic responses of the microstructure. We discuss modeling approximation properties of the homogenized model for a given size of microstructures.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{rohan-lukes-ect2010}
+{\sc E. Rohan and V. Luke\v{s}}. {Homogenization of perfusion in large-deforming medium using the Updated Lagrangean Formulation.}. In Proc. 7th Int. Conf. ECT 2010, Saxe-Coburg Publ., Edinburgh, Paper 83.
+
+\bibitem{Rohan2009-draft}
+E. Rohan, R. Cimrman. 
+Multiscale FE simulation of diffusion-deformation processes in
+homogenized dual-porous media. 
+Math. and Comp. Simul., In Press (2011)
+
+\bibitem{RohanCimrman2009}
+E. Rohan, R. Cimrman. 
+Two-scale modelling of tissue perfusion problem using homogenization 
+of dual porous media. 
+Int. Jour. Multiscale Comput. Eng., 8 (2010), 81-102.
+
+\bibitem{sfepy}
+R. Cimrman et~al. Software, finite element code and applications, \emph{SfePy} home page.
+{\tt http://sfepy.org}, 2009.
+
+\end{thebibliography}
+

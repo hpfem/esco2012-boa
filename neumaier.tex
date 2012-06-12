@@ -1,0 +1,53 @@
+\title{Worst Case Error Bounds for the Solution of Uncertain Poissson 
+Equations with Mixed Boundary Conditions}
+\tocauthor{A. Neumaier} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Arnold Neumaier}}\\
+Faculty of Mathematics, University of Vienna, Austria\\
+{\tt Arnold.Neumaier@univie.ac.at}
+\\ \vspace{4mm}{\large Tanveer Iqbal}\\
+Faculty of Mathematics, University of Vienna, Austria\\
+{\tt Tanveer.Iqbal@univie.ac.at}
+
+\end{center}
+
+\section*{Abstract}
+
+We consider the solution of linear elliptic partial differential 
+equations with mixed boundary conditions on 2-dimensional domains with 
+a polygonal boundary, not necessarily convex. The equation may contain 
+uncertain parameters constrained by inequalities.
+
+We show how to use finite element approximations to compute worst case 
+a posteriori error bounds for linear response functionals determined 
+by the solution. All discretization errors are taken into account. 
+
+Our bounds are based on the dual weighted residual (DWR) method of 
+{\sc Becker and Rannacher} \cite{BecR}, and treat the uncertainties 
+with the optimization approach described in {\sc Neumaier} \cite{Neu}. 
+To get the error bounds, we use a first order formulation whose 
+solution with linear finite elements produces compatible piecewise 
+linear approximations of the solution and its gradient. For each 
+iteration of the optimization procedure, we need to solve three related
+boundary value problems, from which we produce the bounds. No knowledge 
+of domain-dependent apriori constants is necessary.
+
+We implemented the method for Poisson-type equations with an uncertain 
+mass distribution and mixed Dirichlet/Neumann boundary conditions.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{BecR}
+{\sc R. Becker and R. Rannacher}. {An optimal control approach to a posteriori error estimation in finite
+element methods}. pp. 1--102 in:
+Acta Numerica 2001 (A. Iserles, ed.), Cambridge Univ. Press 2001..
+
+
+
+\bibitem{Neu}
+{\sc A. Neumaier}. {Certified error bounds for uncertain elliptic equations}. J. Comput. Appl. Math. 218 (2008), 125--136.
+
+\end{thebibliography}

@@ -1,0 +1,57 @@
+\title{Thin-Sheet Modeling in Frequency Domain using Local Analytic Solutions - Applied to Low-Frequency Examples}
+\tocauthor{J. Trommler} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Jens Trommler}}\\
+Technische Universit\"at Darmstadt\\
+{\tt trommler@temf.tu-darmstadt.de}
+\\ \vspace{4mm}{\large Stephan Koch}\\
+Technische Universit\"at Darmstadt\\
+{\tt koch@temf.tu-darmstadt.de}
+\\ \vspace{4mm}{\large Thomas Weiland}\\
+Technische Universit\"at Darmstadt\\
+{\tt thomas.weiland@temf.tu-darmstadt.de}
+
+\end{center}
+
+\section*{Abstract}
+
+Modeling thin sheets in combination with volume discretization methods,
+e.g., the finite-element method (FEM), is often cumbersome. Resolving thin
+sheets in the volumetric mesh leads to large numerical models and, in turn,
+to a high computational effort. Depending on the mesh generator,
+the mesh of a thin layer consists either of degenerated elements, i.e.,
+elements with a bad aspect ratio, or, alternatively, is strongly refined
+in the vicinity of the thin layer.\\
+In \cite{Trommler2011}, a new thin-sheet approach based on the finite-element method is derived.
+The focus is on the condition number of the system matrix, namely
+to keep this measure preferably independent of the sheet thickness.
+Constant sheet elements \cite{Nakata1990} are used for the tangential variation in the sheet,
+in which a priori no variation is considered across the thickness direction.
+The determination of the normal variation can be reduced
+to a 1D problem which can be solved analytically.
+In contrast to existing work \cite{Gyse2008}\cite{Krahen1993}, no double-layer of degrees of freedoms, which still leads to ill-conditioned system matrices, needs to be introduced.
+Instead, the information about the discontinuity in thickness direction is incorporated into the basis functions of the volume elements that are connected to the sheet elements.\\The method is applied to 2D and 3D examples in the low-frequency domain to demonstrate the superior performance in higher dimensions in respect of the condition number.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{Trommler2011}
+{\sc J. Trommler and S. Koch and T. Weiland}. {A Finite-Element Approach in Order to Avoid Ill-Conditioning in Thin-Sheet Problems in Frequency Domain - Application to Magneto-Quasistatics}. presented at FEMTEC 2001, May 9-13, South Lake Tahoe, USA, Book of Abstracts p. 78.
+
+
+
+\bibitem{Nakata1990}
+{\sc T. Nakata and N. Takahashi and K. Fujiwara and Y. Shiraki}. {3D magnetic field analysis using special elements}. IEEE Trans. Magn. 26 (1990) 2379-2381.
+
+
+
+\bibitem{Gyse2008}
+{\sc J. Gyselinck and R.V. Sabariego and P. Dular and C. Geuzaine}. {Time-Domain Finite-Element Modeling of Thin Electromagnetic Shells}. IEEE Trans. Magn. (44) 742-745.
+
+
+
+\bibitem{Krahen1993}
+{\sc L. Kr\"ahenb\"uhl and D. Muller}. {Thin layers in electrical engineering-example of shell models in analysing eddycurrents by boundary and finite element methods}. IEEE Trans. Magn. (29) 1450-1455.
+
+\end{thebibliography}

@@ -1,0 +1,43 @@
+\title{Improving User Experience for 3D HTML5 Viewer}
+\tocauthor{B. Sawicki} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Bartosz Sawicki}}\\
+Warsaw University of Technology\\
+{\tt sawickib@iem.pw.edu.pl}
+\\ \vspace{4mm}{\large Sebastian Maciejewski}\\
+Warsaw University of Technology\\
+{\tt maciejes@iem.pw.edu.pl}
+\\ \vspace{4mm}{\large Bartosz Chaber}\\
+Warsaw University of Technology\\
+{\tt chaberb@iem.pw.edu.pl}
+
+\end{center}
+
+\section*{Abstract}
+
+New HTML5 standard is opening new possibilities for visualizing 3D objects. WebGL and Canvas components controlled by Javascript code running inside the browser window can vanish last differences between desktop and web applications. The authors present software module designed to interactively display 3D meshes based on Three.js library. Developed module is a part of cloud computing system (Result AS a Service) devoted for scientific simulations.
+
+Web-based application introduce new challenges for mesh visualization. Standard modes used for interacting with 3D object (pivot, zoom, pan)~\cite{hand97} has to be recreated in a new environment. Today graphical user interface (GUI) with mouse as a pointer is often replaced by multi-touch displays. Browser sandbox has some limitations so not all of interface features are available for programmers. 
+
+All data has to be transmitted over the network, so special attention has to be turned on interface delay limitation. Authors dealt with this issue by introducing progressive mesh algorithms~\cite{hopp98}. Another problem is a variety of computer devices which could operate Internet browser. Apart from standard PCs they can have lower computational power, like internet-tables or smart-phones. This means that mesh complexity should be matched to the device compatibility. Some devices has GPU based rendering engine which can be accessed by WebGL, but on the other we have to rely on Canvas.
+
+Authors created software module capable to interactively display 3D mesh on devices running browsers supporting HTML5 standard. We were focused to provide natural experience for a user even if it is the first time when he investigate 3D object. All configuration parameters of display windows automatically fit to the processed mesh and device capabilities. User interaction is supervised by the system to reduce misunderstanding of 3D navigation~\cite{fitz08}.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{hand97}
+{\sc Chris Hand}. {A Survey of 3D Interaction Techniques}. Computer Graphics Forum, Volume 16 (1997), number 5 pp. 269-281.
+
+
+
+\bibitem{fitz08}
+{\sc George Fitzmaurice and Justin Matejka and Igor Mordatch and Azam Khan and Gordon Kurtenbach}. {Safe 3D Navigation}. I3D '08, Proceedings of the 2008 symposium on Interactive 3D graphics and games.
+
+
+
+\bibitem{hopp98}
+{\sc H. Hoppe}. {Efficient implementation of progressive meshes}. Computers - Graphics, Volume 22, Issue 1, 1998.
+
+\end{thebibliography}

@@ -1,0 +1,54 @@
+\title{Maxwell Equations with New Dissipative Memory Boundary Conditions  }
+\tocauthor{M. Urev} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Mikhail Urev}\\
+ Institute of Computational Mathematics and Mathematical Geophysics SB RAS\\
+{\tt mih.urev2010@yandex.ru}
+
+\end{center}
+
+\section*{Abstract}
+
+
+The paper considers the initial-boundary value problem for Maxwell
+equations in a bounded domain and finite time interval.
+Dissipative memory boundary conditions that are discussed in the
+paper are different from those used at present [1], [2]. This
+boundary condition was obtained in author's paper [3]
+
+$$
+\mathbf{E}_\tau(\mathbf{x},t) = \frac{1}{2\pi}
+\sqrt{\frac{\mu}{\sigma} } \frac{\partial}{\partial t}\int_{t_0}^t
+\frac{\mathbf{H} (\mathbf{x},\xi) \times \mathbf{n}(\mathbf{x}) d
+\xi }{\sqrt{t-\xi} }  \equiv C_\sigma (D^{1/2}_{0+,t} \mathbf{H})
+(\mathbf{x},t) \times \mathbf{n}(\mathbf {x}),
+$$
+
+where $ D^{1/2}_{0+,t} $ denotes the operator of fractional
+differentiation with respect to $t$ of Riemann-Liouville order
+$1/2$. In case of a harmonic time dependency of the
+electromagnetic field this boundary condition becomes equal to the
+classical Leontovich impedance condition. Maxwell operator with
+these boundary conditions has been studied in suitable function
+spaces and theorem of existence and uniqueness of the
+corresponding initial-boundary value problem has been proven.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{1urev}
+{\sc  M. Fabrizio and A. Morro }. {A boundary condition with memory in electromagnetism}. Arch. Rational Mech. Anal. 136, 359-381 (1996).
+
+
+
+\bibitem{2urev}
+{\sc S. Nicaise and C. Pignotti}. { Energy decay rates for solutions of Maxwell's system with a memory boundary condition}. Collectanea Mathematica, North America, 58, 1-16 (2007).
+
+
+
+\bibitem{3urev}
+{\sc  M.V. Urev }. {Boundary conditions for Maxwell equations with arbitrary time dependence}. Comput. Math. Math. Phys., 37:12, 1444-1451 (1997).
+
+\end{thebibliography}

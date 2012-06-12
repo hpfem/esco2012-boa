@@ -1,0 +1,45 @@
+\title{Trefftz-Discontinuous Galerkin Methods for Time-Harmonic Maxwell's Equations}
+\tocauthor{A. Moiola} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Andrea Moiola}}\\
+ETH Zurich - Seminar for Applied Mathematics\\
+{\tt moiola@sam.math.ethz.ch}
+\\ \vspace{4mm}{\large Ralf Hiptmair}\\
+ETH Zurich - Seminar for Applied Mathematics\\
+{\tt hiptmair@sam.math.ethz.ch}
+\\ \vspace{4mm}{\large Ilaria Perugia}\\
+Dipartimento di Matematica, Universita` di Pavia\\
+{\tt ilaria.perugia@unipv.it}
+
+\end{center}
+
+\section*{Abstract}
+
+The propagation and the interaction of time-harmonic electric waves are described by the Maxwell equations. The need of resolving oscillating solutions and the so-called pollution effect make their numerical discretization through standard FEM extremely expensive for high
+frequencies. In Trefftz methods, the trial and the test functions are solution of the PDE inside each element, thus they are oscillating functions
+and we can expect to be able to approximate the solution with smaller discrete spaces. The basis functions are often chosen as vector plane waves.
+
+We formulate a class of Trefftz-discontinuous Galerkin (TDG) methods that includes the well-known Ultra Weak Variational Formulation
+(UWVF), we study the convergence of their spectral version, and we show well-posedness and quasi-optimality in a mesh skeleton norm. A novel vector Rellich-type identity allows to prove new (wavenumber-independent) stability estimates for the considered boundary value problem in star-shaped polyhedral domains; we use them in a duality argument to prove error bounds in a mesh-independent norm.
+
+The abstract convergence analysis is carried out for any Trefftz trial space. In the case of vector plane or spherical waves, concrete error
+bounds are obtained by proving the corresponding best approximation estimates.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{MaxwellPDE}
+{\sc R. Hiptmair and A. Moiola and I. Perugia}. {Error analysis of Trefftz-discontinuous Galerkin methods for the time-harmonic Maxwell equations}. To appear in Math. Comput..
+
+
+
+\bibitem{MaxwellTrefftz}
+{\sc R. Hiptmair and A. Moiola and I. Perugia}. {Stability results for the time-harmonic Maxwell equations with impedance boundary conditions}. Math. Models Methods Appl. Sci. (2011).
+
+
+
+\bibitem{AndreaPhD}
+{\sc A. Moiola}. {Trefftz-discontinuous Galerkin methods for time-harmonic wave problems}. Ph.D. thesis, ETH Zurich (2011).
+
+\end{thebibliography}

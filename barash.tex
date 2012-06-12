@@ -1,0 +1,52 @@
+\title{Parallel Pseudorandom Number Generators for Monte Carlo Simulations: Using Most Reliable Algorithms and Applying Parallelism of Modern CPUs and GPUs  to Accelerate Computations}
+\tocauthor{L. Barash} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Lev Barash}\\
+Landau Institute for Theoretical Physics\\
+{\tt barash@itp.ac.ru}
+
+\end{center}
+
+\section*{Abstract}
+
+The new library for parallel pseudorandom number generation for modern CPUs and GPUs is presented~\cite{barash1}. It contains both single-threaded and multithreaded realizations of a number of modern and most reliable generators and includes the ability to initialize up to $10^{19}$ independent pseudorandom number streams. In particular, the library includes the pseudorandom number generators recently proposed and studied in ~\cite{barash2,barash3,barash4,barash5,barash6} and the efficient SIMD realizations presented in~\cite{barash7}. Using massive parallelism of modern GPUs and SIMD parallelism of modern CPUs allows to substantially improve performance of the generators.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{barash1}
+{\sc L.Yu. Barash}. {-}. unpublished.
+
+
+
+\bibitem{barash2}
+{\sc L. Yu. Barash}. {Applying dissipative dynamical systems to pseudorandom number generation: Equidistribution property and statistical independence of bits at distances up to logarithm of mesh size}. Europhysics Letters 95 (2011) 10003.
+
+
+
+\bibitem{barash3}
+{\sc F. Panneton and P. L'Ecuyer and and M. Matsumoto}. {Improved Long-Period Generators Based on Linear Recurrences Modulo 2}. ACM Trans. on Mathem. Softw., 32, 1 (2006), 1-16.
+
+
+
+\bibitem{barash4}
+{\sc M. Matsumoto and T. Nishimura}. {Mersenne twister: a 623-dimensionally equidistributed uniform pseudo-random number generator}. ACM Trans. on Mod. and Comp. Sim., 8 (1998) 3.
+
+
+
+\bibitem{barash5}
+{\sc P. L'Ecuyer}. {Good Parameter Sets for Combined Multiple Recursive Random Number Generators}. Oper. Res., 47 (1999) 159.
+
+
+
+\bibitem{barash6}
+{\sc P. L'Ecuyer}. {Tables of Maximally-Equidistributed Combined LFSR Generators}. Math. of Comp., 68 (1999), 261.
+
+
+
+\bibitem{barash7}
+{\sc L.Yu. Barash and L.N. Shchur}. {RNGSSELIB: Program library for random number generation, SSE2 realization}. Comp. Phys. Commun. 182 (2011) 1518.
+
+\end{thebibliography}

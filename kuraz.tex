@@ -1,0 +1,36 @@
+\title{Domain Decomposition Method for the Nonstationary Richards' Equation Problem}
+\tocauthor{M. Kuraz} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large \underline{Michal Kuraz}}\\
+Czech University of Life Sciences Prague, Faculty of Environmental Sciences, Department of Water Resources and Environmental Modeling, Czech Republic\\
+{\tt michal.kuraz@fsv.cvut.cz}
+\\ \vspace{4mm}{\large Petr Mayer}\\
+Czech Technical University in Prague, Faculty of Civil Engineering, Department of Mathematics, Czech Republic\\
+{\tt pmayer@mat.fsv.cvut.cz}
+
+\end{center}
+
+\section*{Abstract}
+
+The problem of predicting fluid movement in an unsaturated/saturated zone is important in many fields, ranging from agriculture, via hydrology to technical applications of dangerous waste disposal in deep rock formations.
+
+  Richards' equation model on engineering problems typically involves solving systems of linear equations of  huge dimensions, and thus multi-thread methods are often preferred in order to decrease the computational time required. 
+  
+  In case of non-homogenous materials, if splitting the computational domain efficiently, the problem conditionality can be significantly improved, as  each subdomain can contain only a certain material set within some defined parameter range. For linear problems, as e.g. heat conduction, the domain splitting in such a way can be performed very easily.
+  
+  The problem arises in case of the non-linear Richards' equation, where the coefficients of a single material can vary within several orders of magnitude, see e.g. \cite{kuraz}. If Euler method is considered for the time integration, then a robust algorithm will be obtained if the domain is splitted adaptively over the time integration levels.
+  The domain decomposition technique  considered here is the standard multiplicative Schwarz method with coarse level, see e.g. \cite{widlund}. Method of the domain decomposition adaptivity will be studied in this presentation.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+
+\bibitem{kuraz}
+{\sc M. Kuraz and P. Mayer and V. Havlicek and P. Pech and J. Pavlasek}. {Dual permeability variably saturated flow and contaminant transport modeling of a nuclear waste repository with capillary barrier protection}. Applied Mathematics and Computation, In Press.
+
+
+
+\bibitem{widlund}
+{\sc A. Toselli and O. Widlund}. {Domain Decomposition - Methods Algorithms and Theory}. Springer-Verlag, Berlin, Heidelberg 2005.
+
+\end{thebibliography}
